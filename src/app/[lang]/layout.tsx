@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import { poppinsRegularFont } from "fonts";
+import Providers from "@/shared/Providers";
+import TopHeader from "@/components/main/header/TopHeader";
+import MainHeader from "@/components/main/header/MainHeader";
 
 export const metadata: Metadata = {
   title: "E-Commerce",
@@ -16,7 +17,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${poppinsRegularFont.className} flex flex-col min-h-screen`}
+      >
+        {/* chackra ui providers */}
+        <Providers>
+          <header >
+            <TopHeader />
+            <MainHeader />
+          </header>
+          <main className="flex-grow bg-color-bg text-color-text-3">
+            {children}
+          </main>
+          <footer>footer</footer>
+        </Providers>
+      </body>
     </html>
   );
 }

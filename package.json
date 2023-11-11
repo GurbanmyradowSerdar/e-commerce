@@ -19,7 +19,8 @@
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "recoil": "^0.7.7",
-    "swiper": "^11.0.4"
+    "swiper": "^11.0.4",
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
