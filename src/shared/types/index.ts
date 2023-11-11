@@ -23,3 +23,16 @@ export interface IFooterLink {
   href: string;
   isIndependent: boolean;
 }
+
+// ! product card
+export interface IProductCard {
+  discount?: number;
+  images: string[];
+  name: string;
+  price: number;
+  rating: number[];
+  ratingAmount: number;
+  isFavorite?: boolean;
+  isNew?: boolean;
+  colors?: string[];
+}
