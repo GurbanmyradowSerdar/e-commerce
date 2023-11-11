@@ -16,3 +16,10 @@ export interface IHeaderLink {
   text: string;
   href: string;
 }
+
+// ! footer nav link
+export interface IFooterLink {
+  text: string;
+  href: string;
+  isIndependent: boolean;
+}

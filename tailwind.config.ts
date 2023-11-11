@@ -25,6 +25,7 @@ const config: Config = {
         "color-bg-1": "#000000",
         "color-rating-star": "#FFAD33",
         "color-divider": "#B3B3B3",
+        "color-footer-copyright": "#3D3D3D",
       },
     },
   },

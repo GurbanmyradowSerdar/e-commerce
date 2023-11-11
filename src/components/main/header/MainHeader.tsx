@@ -15,7 +15,7 @@ export default function MainHeader() {
           horizontalMarginLimit
         )}
       >
-        <Link href={"/"} className={tw("text-2xl", interBoldFont.className)}>
+        <Link href={"/"} className={tw("text-3xl", interBoldFont.className)}>
           Exlusive
         </Link>
         <div className="flex items-center gap-52">
