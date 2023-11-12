@@ -13,6 +13,7 @@ const config: Config = {
         "color-primary-1": "#363738",
         "color-text-1": "#FAFAFA",
         "color-text-2": "#7D8184",
+        "color-text-2-hover": "#000000",
         "color-text-3": "#000000",
         "color-secondary": "#F5F5F5",
         "color-secondary-1": "#FEFAF1",

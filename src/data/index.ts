@@ -8,15 +8,15 @@ export const headerNav: IHeaderLink[] = [
   },
   {
     text: "contact",
-    href: "contact",
+    href: "/contact",
   },
   {
     text: "about",
-    href: "about",
+    href: "/about",
   },
   {
     text: "sign up",
-    href: "sign-up",
+    href: "/sign-up",
   },
 ];
 

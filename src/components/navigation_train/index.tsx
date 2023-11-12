@@ -19,16 +19,21 @@ export default function NavigationTrain({ isNotFound }: INavigationTrain) {
       <div className="flex items-center gap-3 text-color-text-2">
         {isNotFound ? (
           <>
-            <Link href={"/en"}>Home</Link>
+            <Link
+              href={"/en"}
+              className="duration-300 transition-colors hover:text-color-text-2-hover"
+            >
+              Home
+            </Link>
             <span className="italic">/</span>
             <span className="text-color-text-3">404 Error</span>
           </>
         ) : (
           pathArray.map((item, i) =>
             pathArray.length - 1 !== i ? (
-              <PlainLink t={item} />
+              <PlainLink t={item} key={i} />
             ) : (
-              <LastLink t={item} />
+              <LastLink t={item} key={i} />
             )
           )
         )}

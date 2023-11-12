@@ -8,9 +8,11 @@ export default function HeaderLink({ href, text }: IHeaderLink) {
 
   return (
     <Link
-      href={`${pathname}/${href}`}
+      href={`/en${href}`}
       className={`capitalize ${
-        pathname.includes(href) ? "underline underline-offset-4" : ""
+        pathname.split("/")[2] === href.slice(1)
+          ? "underline underline-offset-4"
+          : ""
       } `}
     >
       {text}

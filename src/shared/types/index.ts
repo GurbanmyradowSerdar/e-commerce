@@ -1,3 +1,5 @@
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+
 // ! children
 export interface IChildren {
   children: React.ReactNode;
@@ -66,4 +68,12 @@ export interface IServiceCard {
 // ! navigation train
 export interface INavigationTrain {
   isNotFound?: boolean;
+}
+
+// ! input without label
+export interface IInputWithoutLabel {
+  props: DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >;
 }
