@@ -5,6 +5,7 @@ import SecondaryButton from "@/components/buttons/SecondaryButton";
 import CategoryCard from "@/components/cards/category_card";
 import PhoneIcon from "@/components/cards/category_card/icons/PhoneIcon";
 import ProductCard from "@/components/cards/product_card/ProductCard";
+import ServiceCard from "@/components/cards/service_card";
 import CustomLink from "@/components/custom_link";
 
 export default function Home() {
@@ -31,6 +32,12 @@ export default function Home() {
 
       {/* <OutlinedButton>return to shop</OutlinedButton> */}
       {/* <SecondaryButton>xs</SecondaryButton> */}
+
+      {/* <ServiceCard
+        image="delivery.svg"
+        subtitle="Free delivery for all orders over $140"
+        title="FREE AND FAST DELIVERY"
+      /> */}
     </div>
   );
 }

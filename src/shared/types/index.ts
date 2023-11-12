@@ -55,3 +55,10 @@ export interface ICustomLink extends IChildren, IClassName {
 export interface IBannerButton {
   text: string;
 }
+
+// ! service card
+export interface IServiceCard {
+  image: string;
+  title: string;
+  subtitle: string;
+}
