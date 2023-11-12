@@ -42,3 +42,16 @@ export interface ICategoryCard {
   title: string;
   Icon: React.ReactNode;
 }
+
+// ! primary button
+export interface IPrimaryButton extends IChildren, IClassName {}
+
+// ! custom link
+export interface ICustomLink extends IChildren, IClassName {
+  href: string;
+}
+
+// ! banner button
+export interface IBannerButton {
+  text: string;
+}

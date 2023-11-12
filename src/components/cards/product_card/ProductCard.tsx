@@ -1,5 +1,5 @@
 "use client";
-import { IProductCard } from "@/shared/types";
+import { IProductCard } from "types";
 import Image from "next/image";
 import {
   PiHeart as HeartIcon,
@@ -11,9 +11,20 @@ import EmptyStar from "./EmptyStar";
 import SemiStar from "./SemiStar";
 import { useState } from "react";
 import { twMerge as tw } from "tailwind-merge";
+import PrimaryButton from "@/components/buttons/PrimaryButton";
 
-export default function ProductCard(props: IProductCard) {
-  const [color, setColor] = useState(props.colors ? props.colors[0] : "");
+export default function ProductCard({
+  images,
+  name,
+  price,
+  rating,
+  ratingAmount,
+  colors,
+  discount,
+  isFavorite,
+  isNew,
+}: IProductCard) {
+  const [color, setColor] = useState(colors ? colors[0] : "");
   function getStar(item: number, i: number) {
     if (item === 1) {
       return <RatingStar key={i} />;
@@ -25,42 +36,69 @@ export default function ProductCard(props: IProductCard) {
   }
 
   return (
-    <div className="flex flex-col items-start gap-5">
+    <div className="flex flex-col items-start gap-3 group">
       <div className="bg-color-secondary p-10 px-14 flex items-center justify-center relative">
         <Image
-          alt={props.name}
-          src={`/images/products/${props.images[0]}`}
+          alt={name}
+          src={`/images/products/${images[0]}`}
           width={100}
           height={100}
           className="w-32 h-32 object-contain"
         />
-        {props.isFavorite ? (
+        <PrimaryButton
+          className="absolute bottom-0 w-full py-1 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
+        transition-all duration-300 opacity-0 group-hover:opacity-100"
+        >
+          add to cart
+        </PrimaryButton>
+        {isFavorite ? (
           <FilledHeartIcon className="w-10 h-10 absolute top-2 right-3 text-color-secondary-2 cursor-pointer bg-color-bg rounded-full p-2" />
         ) : (
           <HeartIcon className="w-10 h-10 absolute top-2 right-3 text-color-bg-1 cursor-pointer bg-color-bg rounded-full p-2" />
         )}
-        {props.isNew ? (
-          <p className="uppercase text-color-text-1 rounded-md px-3 py-2 bg-color-button absolute top-2 left-2 text-sm">
-            new
-          </p>
-        ) : null}
+
+        <div className="absolute top-2 left-2 flex text-center gap-2">
+          {isNew ? (
+            <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button text-sm">
+              new
+            </p>
+          ) : null}
+          {discount ? (
+            <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button-1 text-sm">
+              -{discount}%
+            </p>
+          ) : null}
+        </div>
       </div>
       <div
-        className={`${poppinsMediumFont.className} flex flex-col items-start gap-2`}
+        className={`${poppinsMediumFont.className} flex flex-col items-start gap-1`}
       >
-        <p className="text-lg text-color-text-3 capitalize">{props.name}</p>
-        <div className="flex items-center gap-3">
-          <p className="text-color-secondary-2 text-lg">${props.price}</p>
-          <div className="flex items-center gap-1">
-            {props.rating.map(getStar)}
+        <p className="text-lg text-color-text-3 capitalize">{name}</p>
+        <div
+          className={tw(
+            "flex items-center gap-3",
+            discount ? "flex-col items-start gap-1" : ""
+          )}
+        >
+          <div className="flex items-center gap-2">
+            <p className="text-color-secondary-2 text-lg">
+              ${discount ? `${price - (price / 100) * discount}` : price}
+            </p>
+            {discount ? (
+              <p className="text-color-text-2 line-through text-lg">${price}</p>
+            ) : null}
           </div>
-          <p
-            className={`${poppinsSemiBoldFont.className} text-color-text-2`}
-          >{`(${props.ratingAmount})`}</p>
-        </div>
-        {props.colors ? (
           <div className="flex items-center gap-1">
-            {props.colors.map((item, i) => {
+            <div className="flex items-center gap-1">{rating.map(getStar)}</div>
+            <p
+              className={`${poppinsSemiBoldFont.className} text-color-text-2`}
+            >{`(${ratingAmount})`}</p>
+          </div>
+        </div>
+
+        {colors ? (
+          <div className="flex items-center gap-2 mt-3">
+            {colors.map((item, i) => {
               return (
                 <div
                   className={tw(

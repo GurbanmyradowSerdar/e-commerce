@@ -1,5 +1,5 @@
 "use client";
-import { IFooterLink } from "@/shared/types";
+import { IFooterLink } from "types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

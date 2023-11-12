@@ -5,7 +5,7 @@ import Providers from "@/shared/Providers";
 import TopHeader from "@/components/main/header/TopHeader";
 import MainHeader from "@/components/main/header/MainHeader";
 import Footer from "@/components/main/footer/Footer";
-import { IChildren } from "@/shared/types";
+import { IChildren } from "types";
 
 export const metadata: Metadata = {
   title: "E-Commerce",
