@@ -1,4 +1,14 @@
-import { IFooterLink, IHeaderLink } from "types";
+import BagIcon from "@/components/cards/about_card/icons/BagIcon";
+import MoneyBagIcon from "@/components/cards/about_card/icons/MoneyBagIcon";
+import MoneyIcon from "@/components/cards/about_card/icons/MoneyIcon";
+import ServiceIcon from "@/components/cards/about_card/icons/ServiceIcon";
+import {
+  IAboutCard,
+  IAboutEmployeeCard,
+  IFooterLink,
+  IHeaderLink,
+  IServiceCard,
+} from "types";
 
 // ! header
 export const headerNav: IHeaderLink[] = [
@@ -73,5 +83,142 @@ export const footerNav2: IFooterLink[] = [
   {
     text: "Contact",
     href: "contact",
+  },
+];
+
+// ! about card
+export const aboutCards: IAboutCard[] = [
+  {
+    title: "10.5k",
+    subtitle: "Sallers active our site",
+    Icon: ServiceIcon(),
+  },
+  {
+    title: "33k",
+    subtitle: "Mopnthly Produduct Sale",
+    Icon: MoneyIcon(),
+  },
+  {
+    title: "45.5k",
+    subtitle: "Customer active in our site",
+    Icon: BagIcon(),
+  },
+  {
+    title: "25k",
+    subtitle: "Anual gross sale in our site",
+    Icon: MoneyBagIcon(),
+  },
+];
+
+// ! about services cards
+export const aboutServicesCards: IServiceCard[] = [
+  {
+    title: "FREE AND FAST DELIVERY",
+    subtitle: "Free delivery for all orders over $140",
+    image: "delivery.svg",
+  },
+  {
+    title: "24/7 CUSTOMER SERVICE",
+    subtitle: "Friendly 24/7 customer support",
+    image: "support.svg",
+  },
+  {
+    title: "MONEY BACK GUARANTEE",
+    subtitle: "We reurn money within 30 days",
+    image: "safety.svg",
+  },
+];
+
+// ! about employee swiper
+export const aboutEmployeeSwiper: IAboutEmployeeCard[] = [
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-1.png",
+    name: "tom crouise",
+    status: "founder & chairman",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-2.png",
+    name: "emma watson",
+    status: "managing director",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-3.png",
+    name: "will smith",
+    status: "product designer",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-1.png",
+    name: "tom crouise",
+    status: "founder & chairman",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-2.png",
+    name: "emma watson",
+    status: "managing director",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-3.png",
+    name: "will smith",
+    status: "product designer",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-1.png",
+    name: "tom crouise",
+    status: "founder & chairman",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-2.png",
+    name: "emma watson",
+    status: "managing director",
+  },
+  {
+    href: {
+      instagram: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
+    image: "employee-3.png",
+    name: "will smith",
+    status: "product designer",
   },
 ];

@@ -30,10 +30,17 @@ const interMediumFont = Inter({
   display: "swap",
 });
 
+const interSemiboldFont = Inter({
+  weight: "600",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export {
   poppinsRegularFont,
   poppinsSemiBoldFont,
   poppinsMediumFont,
   interBoldFont,
   interMediumFont,
+  interSemiboldFont,
 };

@@ -77,3 +77,23 @@ export interface IInputWithoutLabel {
     HTMLInputElement
   >;
 }
+
+// ! about card
+export interface IAboutCard {
+  Icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+}
+
+// ! about swiper card
+interface IAboutEmplayeeCardHref {
+  twitter: string;
+  instagram: string;
+  linkedin: string;
+}
+export interface IAboutEmployeeCard {
+  image: string;
+  name: string;
+  status: string;
+  href: IAboutEmplayeeCardHref;
+}
