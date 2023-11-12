@@ -1,4 +1,4 @@
-import { IPrimaryButton } from "@/shared/types";
+import { IPrimaryButton } from "types";
 import PrimaryButton from "./PrimaryButton";
 import { twMerge as tw } from "tailwind-merge";
 

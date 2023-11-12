@@ -23,9 +23,17 @@ const interBoldFont = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+const interMediumFont = Inter({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export {
   poppinsRegularFont,
   poppinsSemiBoldFont,
   poppinsMediumFont,
   interBoldFont,
+  interMediumFont,
 };

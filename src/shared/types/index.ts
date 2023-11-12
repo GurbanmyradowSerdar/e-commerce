@@ -62,3 +62,8 @@ export interface IServiceCard {
   title: string;
   subtitle: string;
 }
+
+// ! navigation train
+export interface INavigationTrain {
+  isNotFound?: boolean;
+}

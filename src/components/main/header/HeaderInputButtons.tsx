@@ -1,4 +1,3 @@
-"use client";
 import { PiHeart as HeartIcon } from "react-icons/pi";
 import { GrCart as CartIcon } from "react-icons/gr";
 import { FiSearch as SearchIcon } from "react-icons/fi";

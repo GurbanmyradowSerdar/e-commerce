@@ -1,4 +1,4 @@
-import { IServiceCard } from "@/shared/types";
+import { IServiceCard } from "types";
 import Image from "next/image";
 import { poppinsSemiBoldFont } from "fonts";
 

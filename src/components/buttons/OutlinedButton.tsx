@@ -1,4 +1,4 @@
-import { IPrimaryButton } from "@/shared/types";
+import { IPrimaryButton } from "types";
 import SecondaryButton from "./SecondaryButton";
 
 export default function OutlinedButton({ children }: IPrimaryButton) {

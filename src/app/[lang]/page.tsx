@@ -23,16 +23,12 @@ export default function Home() {
       /> */}
 
       {/* <CategoryCard title="phones" Icon={<PhoneIcon />} /> */}
-
       {/* <CustomLink href="all-products">
         <PrimaryButton>view all products</PrimaryButton>
       </CustomLink> */}
-
       {/* <BannerButton text="shop now" /> */}
-
       {/* <OutlinedButton>return to shop</OutlinedButton> */}
       {/* <SecondaryButton>xs</SecondaryButton> */}
-
       {/* <ServiceCard
         image="delivery.svg"
         subtitle="Free delivery for all orders over $140"

@@ -8,7 +8,7 @@ export default function PrimaryButton({ children, className }: IPrimaryButton) {
       className={tw(
         `flex items-center justify-center py-4 px-12 rounded-sm bg-color-button-1 
       transition-colors duration-300 hover:bg-color-button-1-hover 
-      text-color-text-1 capitalize text-lg`,
+      text-color-text-1 capitalize text-lg text-center`,
         poppinsMediumFont.className,
         className
       )}

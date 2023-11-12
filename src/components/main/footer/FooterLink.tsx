@@ -7,6 +7,11 @@ export default function FooterLink({ href, text, isIndependent }: IFooterLink) {
   const pathname = usePathname();
 
   return (
-    <Link href={isIndependent ? href : `${pathname}/${href}`}>{text}</Link>
+    <Link
+      href={isIndependent ? href : `${pathname}/${href}`}
+      className="hover:text-color-text-2 transition-colors duration-300"
+    >
+      {text}
+    </Link>
   );
 }
