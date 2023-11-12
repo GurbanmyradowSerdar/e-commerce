@@ -21,7 +21,7 @@ export interface IHeaderLink {
 export interface IFooterLink {
   text: string;
   href: string;
-  isIndependent: boolean;
+  isIndependent?: boolean;
 }
 
 // ! product card
@@ -35,4 +35,10 @@ export interface IProductCard {
   isFavorite?: boolean;
   isNew?: boolean;
   colors?: string[];
+}
+
+// ! category card
+export interface ICategoryCard {
+  title: string;
+  Icon: React.ReactNode;
 }
