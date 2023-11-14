@@ -11,6 +11,7 @@ import CustomLink from "@/components/custom_link";
 import BannerContent from "@/components/titles/BannerContent";
 import SectionDescription from "@/components/titles/SectionDescription";
 import SectionTitle from "@/components/titles/SectionTitle";
+import { calculateTimeLeft } from "@/shared/utils";
 
 export default function Home() {
   return (
