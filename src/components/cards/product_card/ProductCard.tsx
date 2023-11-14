@@ -47,7 +47,7 @@ export default function ProductCard({
         />
         <PrimaryButton
           className="absolute bottom-0 w-full py-1 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
-        transition-all duration-300 opacity-0 group-hover:opacity-100"
+        transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
         >
           add to cart
         </PrimaryButton>

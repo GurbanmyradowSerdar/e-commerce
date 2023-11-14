@@ -21,7 +21,7 @@ export default function NavigationTrain({ isNotFound }: INavigationTrain) {
           <>
             <Link
               href={"/en"}
-              className="duration-300 transition-colors hover:text-color-text-2-hover"
+              className="duration-300 ease-in-out transition-colors hover:text-color-text-2-hover"
             >
               Home
             </Link>

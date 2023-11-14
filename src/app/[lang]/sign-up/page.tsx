@@ -74,7 +74,7 @@ export default function page() {
             <p>Already have account</p>
             <Link
               href={"/en/login"}
-              className={`${poppinsMediumFont.className} duration-300 transition-colors underline underline-offset-8 hover:text-color-text-2-hover`}
+              className={`${poppinsMediumFont.className} duration-300 ease-in-out transition-colors underline underline-offset-8 hover:text-color-text-2-hover`}
             >
               Log in
             </Link>

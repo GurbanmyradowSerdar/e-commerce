@@ -14,7 +14,7 @@ export default function BannerButton({ text }: IBannerButton) {
       <p className="underline capitalize underline-offset-[10px] text-lg">
         {text}
       </p>
-      <ArrowIcon className="w-6 h-6 opacity-0 -translate-x-4 duration-300 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
+      <ArrowIcon className="w-6 h-6 opacity-0 -translate-x-4 duration-300 ease-in-out transition-all group-hover:translate-x-0 group-hover:opacity-100" />
     </button>
   );
 }

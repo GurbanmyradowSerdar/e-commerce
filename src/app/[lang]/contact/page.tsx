@@ -90,7 +90,7 @@ export default function page() {
           cols={10}
           placeholder="Enter your message..."
           className="placeholder:text-color-text-2 px-4 py-3 bg-color-secondary rounded-sm
-          outline-color-secondary duration-300 transition-all resize-none
+          outline-color-secondary duration-300 ease-in-out transition-all resize-none
           focus-within:outline-2 focus-within:outline-color-primary-1"
           required
         ></textarea>

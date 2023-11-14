@@ -97,3 +97,9 @@ export interface IAboutEmployeeCard {
   status: string;
   href: IAboutEmplayeeCardHref;
 }
+
+// ! arrow button
+export interface IArrowButton {
+  direction: "left" | "right" | "up";
+  clickHandle: () => void;
+}

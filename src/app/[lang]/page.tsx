@@ -2,6 +2,7 @@ import BannerButton from "@/components/buttons/BannerButton";
 import OutlinedButton from "@/components/buttons/OutlinedButton";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
+import TopArrowButton from "@/components/buttons/arrow_buttons/ArrowButton";
 import CategoryCard from "@/components/cards/category_card";
 import PhoneIcon from "@/components/cards/category_card/icons/PhoneIcon";
 import ProductCard from "@/components/cards/product_card/ProductCard";
@@ -27,13 +28,8 @@ export default function Home() {
         <PrimaryButton>view all products</PrimaryButton>
       </CustomLink> */}
       {/* <BannerButton text="shop now" /> */}
-      {/* <OutlinedButton>return to shop</OutlinedButton> */}
-      {/* <SecondaryButton>xs</SecondaryButton> */}
-      {/* <ServiceCard
-        image="delivery.svg"
-        subtitle="Free delivery for all orders over $140"
-        title="FREE AND FAST DELIVERY"
-      /> */}
+
+      <TopArrowButton direction="up" clickHandle={() => {}} />
     </div>
   );
 }
