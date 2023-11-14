@@ -103,3 +103,9 @@ export interface IArrowButton {
   direction: "left" | "right" | "up";
   clickHandle: () => void;
 }
+
+// ! banners content
+export interface IBannerContent {
+  title: string;
+  description: string;
+}

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderRadius: {
+        sm: "4px",
+      },
       colors: {
         "color-primary": "#FFFFFF",
         "color-primary-1": "#363738",
