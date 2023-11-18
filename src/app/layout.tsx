@@ -27,9 +27,7 @@ export default function RootLayout({ children }: IChildren) {
           <main className="flex-grow bg-color-bg text-color-text-3 relative">
             {children}
           </main>
-          <>
-            <Footer />
-          </>
+          <Footer />
         </Providers>
       </body>
     </html>

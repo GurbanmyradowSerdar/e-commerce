@@ -48,11 +48,6 @@ export interface ICategoryCard {
 // ! primary button
 export interface IPrimaryButton extends IChildren, IClassName {}
 
-// ! custom link
-export interface ICustomLink extends IChildren, IClassName {
-  href: string;
-}
-
 // ! banner button
 export interface IBannerButton {
   text: string;
@@ -99,13 +94,31 @@ export interface IAboutEmployeeCard {
 }
 
 // ! arrow button
-export interface IArrowButton {
+export interface IArrowButton extends IClassName {
   direction: "left" | "right" | "up";
-  clickHandle: () => void;
+  isScrolling: boolean;
 }
 
 // ! banners content
 export interface IBannerContent {
   title: string;
   description: string;
+}
+
+// ! main divider
+type TDirection = "horizontal" | "vertical";
+export interface IMainDivider {
+  dir: TDirection;
+}
+
+// ! home banner section > sidebar > menu link
+export interface IHomeSideBarMenuLink {
+  menuName: string;
+  menuItems: { href: string; name: string }[];
+}
+
+// ! name and href
+export interface INameAndHref {
+  name: string;
+  href: string;
 }

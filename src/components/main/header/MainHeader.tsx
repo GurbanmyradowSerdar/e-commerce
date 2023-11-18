@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function MainHeader() {
   return (
-    <div className="bg-color-bg text-color-text-3 border-b-[1px] border-color-divider">
+    <div className="bg-color-bg text-color-text-3 border-b border-color-divider">
       <div
         className={tw(
           `flex items-center justify-between pt-9 pb-4`,

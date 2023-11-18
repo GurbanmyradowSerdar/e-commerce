@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export default function PlainLink({ t }: { t: string }) {
+export default function PlainLink({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-3 text-color-text-2">
       <Link
-        href={t.length === 0 ? "/en" : t}
+        href={text.length === 0 ? "/en" : text}
         className="capitalize duration-300 ease-in-out transition-colors hover:text-color-text-2-hover"
       >
-        {t.length === 0 ? "home" : t}
+        {text.length === 0 ? "home" : text}
       </Link>
       <span className="italic">/</span>
     </div>

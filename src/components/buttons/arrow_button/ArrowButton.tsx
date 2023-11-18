@@ -1,8 +1,14 @@
+"use client";
+
 import { FaArrowUp as ArrowIcon } from "react-icons/fa";
 import { IArrowButton } from "types";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function TopArrowButton({ direction }: IArrowButton) {
+export default function TopArrowButton({
+  direction,
+  className,
+  isScrolling,
+}: IArrowButton) {
   function applyDirectionToArrow(): string {
     switch (direction) {
       case "up":
@@ -14,8 +20,26 @@ export default function TopArrowButton({ direction }: IArrowButton) {
     }
   }
 
+  function detectClick() {
+    if (isScrolling) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: 0,
+      });
+    } else {
+    }
+  }
+
   return (
-    <button className="bg-color-secondary rounded-full duration-300 ease-in-out transition-colors hover:bg-color-secondary-hover">
+    <button
+      onClick={() => {
+        detectClick();
+      }}
+      className={tw(
+        "bg-color-secondary rounded-full duration-300 ease-in-out transition-colors hover:bg-color-secondary-hover",
+        className
+      )}
+    >
       <ArrowIcon className={tw("m-3 w-5 h-5", applyDirectionToArrow())} />
     </button>
   );

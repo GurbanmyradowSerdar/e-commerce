@@ -31,9 +31,9 @@ export default function NavigationTrain({ isNotFound }: INavigationTrain) {
         ) : (
           pathArray.map((item, i) =>
             pathArray.length - 1 !== i ? (
-              <PlainLink t={item} key={i} />
+              <PlainLink text={item} key={i} />
             ) : (
-              <LastLink t={item} key={i} />
+              <LastLink text={item} key={i} />
             )
           )
         )}
