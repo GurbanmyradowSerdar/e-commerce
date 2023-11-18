@@ -1,8 +1,8 @@
 interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
+  days: string;
+  hours: string;
+  minutes: string;
+  seconds: string;
 }
 
 export function calculateTimeLeft(targetDate: Date): TimeLeft {
@@ -17,11 +17,19 @@ export function calculateTimeLeft(targetDate: Date): TimeLeft {
   const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   const secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
+  const validatingZero = (value: number): string => {
+    if (value < 10) {
+      return `0${value}`;
+    } else {
+      return `${value}`;
+    }
+  };
+
   // ! Returning the time left as an object
   return {
-    days: daysLeft,
-    hours: hoursLeft,
-    minutes: minutesLeft,
-    seconds: secondsLeft,
+    days: validatingZero(daysLeft),
+    hours: validatingZero(hoursLeft),
+    minutes: validatingZero(minutesLeft),
+    seconds: validatingZero(secondsLeft),
   };
 }

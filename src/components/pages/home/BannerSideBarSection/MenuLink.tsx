@@ -1,6 +1,6 @@
 "use client";
 
-import { IHomeSideBarMenuLink } from "@/shared/types";
+import { IHomeSideBarMenuLink } from "types";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowRight as ArrowIcon } from "react-icons/md";

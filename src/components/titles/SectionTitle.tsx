@@ -1,9 +1,15 @@
 import { twMerge as tw } from "tailwind-merge";
 import { poppinsSemiBoldFont } from "fonts";
 
-export default function SectionTitle({ text }: { text: string }) {
+export default function SectionTitle({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   return (
-    <div className="flex items-center gap-3">
+    <div className={tw("flex items-center gap-3", className)}>
       <div className="h-10 w-5 bg-color-secondary-2 rounded-sm" />
       <h2
         className={tw(

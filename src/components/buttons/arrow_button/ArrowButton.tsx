@@ -4,7 +4,7 @@ import { FaArrowUp as ArrowIcon } from "react-icons/fa";
 import { IArrowButton } from "types";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function TopArrowButton({
+export default function ArrowButton({
   direction,
   className,
   isScrolling,

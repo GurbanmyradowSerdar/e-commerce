@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { SwiperProps } from "swiper/react";
 
 // ! children
 export interface IChildren {
@@ -96,7 +97,7 @@ export interface IAboutEmployeeCard {
 // ! arrow button
 export interface IArrowButton extends IClassName {
   direction: "left" | "right" | "up";
-  isScrolling: boolean;
+  isScrolling?: boolean;
 }
 
 // ! banners content
@@ -107,7 +108,7 @@ export interface IBannerContent {
 
 // ! main divider
 type TDirection = "horizontal" | "vertical";
-export interface IMainDivider {
+export interface IMainDivider extends IClassName {
   dir: TDirection;
 }
 
@@ -121,4 +122,24 @@ export interface IHomeSideBarMenuLink {
 export interface INameAndHref {
   name: string;
   href: string;
+}
+
+// ! product swiper
+export interface IProductSwiper {
+  swiperProps: SwiperProps;
+  data: IProductCard[];
+}
+
+// ! time type
+export type TTime = {
+  days: string;
+  hours: string;
+  minutes: string;
+  seconds: string;
+};
+
+// ! home category swiper home > category section
+export interface ICategorySwiper {
+  swiperProps: SwiperProps;
+  data: ICategoryCard[];
 }

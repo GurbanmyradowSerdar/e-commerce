@@ -1,4 +1,4 @@
-import { IInputWithoutLabel } from "@/shared/types";
+import { IInputWithoutLabel } from "types";
 
 export default function InputWithLine({ props }: IInputWithoutLabel) {
   return (

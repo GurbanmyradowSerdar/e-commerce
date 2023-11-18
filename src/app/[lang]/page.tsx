@@ -1,17 +1,27 @@
-import TopArrowButton from "@/components/buttons/arrow_button/ArrowButton";
+import ArrowButton from "@/components/buttons/arrow_button/ArrowButton";
 import BannerSideBarSection from "@/components/pages/home/BannerSideBarSection";
+import CategoriesSection from "@/components/pages/home/CategoriesSection";
+import SalesSection from "@/components/pages/home/SalesSection";
 import { bottomMarginSaving, horizontalMarginLimit } from "@/shared/constants";
 import { twMerge as tw } from "tailwind-merge";
 
 export default function Home() {
   return (
-    <div className={tw(bottomMarginSaving, horizontalMarginLimit)}>
-      <TopArrowButton
+    <div
+      className={tw(
+        `flex flex-col gap-52`,
+        bottomMarginSaving,
+        horizontalMarginLimit
+      )}
+    >
+      <ArrowButton
         direction="up"
         className="fixed bottom-12 right-20"
         isScrolling
       />
       <BannerSideBarSection />
+      <SalesSection salesUntil={new Date("12-30-2023")} />
+      <CategoriesSection />
     </div>
   );
 }

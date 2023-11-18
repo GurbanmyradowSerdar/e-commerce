@@ -1,4 +1,4 @@
-import { IBannerContent } from "@/shared/types";
+import { IBannerContent } from "types";
 import BannerButton from "../buttons/BannerButton";
 import { twMerge as tw } from "tailwind-merge";
 import { poppinsSemiBoldFont } from "fonts";

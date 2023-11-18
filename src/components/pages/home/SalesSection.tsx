@@ -1,3 +1,43 @@
-export default function SalesSection() {
-  return <section></section>;
+import PrimaryButton from "@/components/buttons/PrimaryButton";
+import ArrowButton from "@/components/buttons/arrow_button/ArrowButton";
+import ProductSwiper from "@/components/swiper/ProductSwiper";
+import PrimaryTimeCalc from "@/components/time_calculating/PrimaryTimeCalc";
+import SectionDescription from "@/components/titles/SectionDescription";
+import SectionTitle from "@/components/titles/SectionTitle";
+import { homeSalesSwiper } from "@/data";
+import Link from "next/link";
+
+export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
+  return (
+    <section className="flex flex-col gap-7 border-b border-color-divider pb-14">
+      <SectionTitle text="today's" />
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-20">
+          <SectionDescription text="flash sales" />
+          <PrimaryTimeCalc date={salesUntil} />
+        </div>
+        <div className="flex items-center gap-2">
+          <ArrowButton direction="left" />
+          <ArrowButton direction="right" />
+        </div>
+      </div>
+      <div>
+        <ProductSwiper
+          data={homeSalesSwiper}
+          swiperProps={{
+            slidesPerView: 4.5,
+            spaceBetween: 50,
+            style: {
+              marginRight: "-135px",
+            },
+          }}
+        />
+      </div>
+      <div className="flex items-center justify-center mt-20">
+        <Link href={"/en/products/sales"}>
+          <PrimaryButton>view all products</PrimaryButton>
+        </Link>
+      </div>
+    </section>
+  );
 }

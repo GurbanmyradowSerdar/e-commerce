@@ -2,14 +2,21 @@ import BagIcon from "@/components/cards/about_card/icons/BagIcon";
 import MoneyBagIcon from "@/components/cards/about_card/icons/MoneyBagIcon";
 import MoneyIcon from "@/components/cards/about_card/icons/MoneyIcon";
 import ServiceIcon from "@/components/cards/about_card/icons/ServiceIcon";
-import { m } from "framer-motion";
+import CameraIcon from "@/components/cards/category_card/icons/CameraIcon";
+import ComputerIcon from "@/components/cards/category_card/icons/ComputerIcon";
+import GamingIcon from "@/components/cards/category_card/icons/GamingIcon";
+import HeadPhonesIcon from "@/components/cards/category_card/icons/HeadPhonesIcon";
+import PhoneIcon from "@/components/cards/category_card/icons/PhoneIcon";
+import WatchIcon from "@/components/cards/category_card/icons/WatchIcon";
 import {
   IAboutCard,
   IAboutEmployeeCard,
+  ICategoryCard,
   IFooterLink,
   IHeaderLink,
   IHomeSideBarMenuLink,
   INameAndHref,
+  IProductCard,
   IServiceCard,
 } from "types";
 
@@ -320,4 +327,112 @@ export const homeSideBarItems: [INameAndHref[], IHomeSideBarMenuLink[]] = [
       menuName: "men's fashion",
     },
   ],
+];
+
+// ! home page > sales > swiper
+export const homeSalesSwiper: IProductCard[] = [
+  {
+    images: ["gamepad-red.png"],
+    name: "HAVIT HV-G92 Gamepad",
+    price: 160,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 88,
+    discount: 40,
+  },
+  {
+    images: ["keyboard.png"],
+    name: "AK-900 Wired Keyboard",
+    price: 1160,
+    rating: [1, 1, 1, 1, 0],
+    ratingAmount: 75,
+    discount: 35,
+  },
+  {
+    images: ["monitor.png"],
+    name: "IPS LCD Gaming Monitor",
+    price: 400,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 99,
+    discount: 30,
+  },
+  {
+    images: ["chair.png"],
+    name: "S-Series Comfort Chair ",
+    price: 400,
+    rating: [1, 1, 1, 1, 0.5],
+    ratingAmount: 38,
+    discount: 25,
+  },
+  {
+    images: ["keyboard.png"],
+    name: "AK-900 Wired Keyboard",
+    price: 1160,
+    rating: [1, 1, 1, 1, 0],
+    ratingAmount: 75,
+    discount: 35,
+  },
+  {
+    images: ["monitor.png"],
+    name: "IPS LCD Gaming Monitor",
+    price: 400,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 99,
+    discount: 30,
+  },
+  {
+    images: ["chair.png"],
+    name: "S-Series Comfort Chair ",
+    price: 400,
+    rating: [1, 1, 1, 1, 0.5],
+    ratingAmount: 38,
+    discount: 25,
+  },
+  {
+    images: ["gamepad-red.png"],
+    name: "HAVIT HV-G92 Gamepad",
+    price: 160,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 88,
+    discount: 40,
+  },
+];
+
+// ! home page > categories > swiper
+export const homeCategoriesSwiper: ICategoryCard[] = [
+  {
+    title: "phones",
+    Icon: PhoneIcon(),
+  },
+  {
+    title: "computers",
+    Icon: ComputerIcon(),
+  },
+  {
+    title: "smart watch",
+    Icon: WatchIcon(),
+  },
+  {
+    title: "camera",
+    Icon: CameraIcon(),
+  },
+  {
+    title: "head phones",
+    Icon: HeadPhonesIcon(),
+  },
+  {
+    title: "gaming",
+    Icon: GamingIcon(),
+  },
+  {
+    title: "computers",
+    Icon: ComputerIcon(),
+  },
+  {
+    title: "smart watch",
+    Icon: WatchIcon(),
+  },
+  {
+    title: "head phones",
+    Icon: HeadPhonesIcon(),
+  },
 ];

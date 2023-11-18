@@ -41,13 +41,13 @@ export default function ProductCard({
         <Image
           alt={name}
           src={`/images/products/${images[0]}`}
-          width={100}
-          height={100}
-          className="w-32 h-32 object-contain"
+          width={200}
+          height={200}
+          className="w-40 h-40 object-contain"
         />
         <PrimaryButton
           className="absolute bottom-0 w-full py-1 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
-        transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+        transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 rounded-tr-none rounded-tl-none"
         >
           add to cart
         </PrimaryButton>
