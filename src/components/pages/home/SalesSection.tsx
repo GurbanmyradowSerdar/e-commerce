@@ -1,11 +1,11 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
-import ArrowButton from "@/components/buttons/arrow_button/ArrowButton";
-import ProductSwiper from "@/components/swiper/ProductSwiper";
 import PrimaryTimeCalc from "@/components/time_calculating/PrimaryTimeCalc";
 import SectionDescription from "@/components/titles/SectionDescription";
 import SectionTitle from "@/components/titles/SectionTitle";
-import { homeSalesSwiper } from "@/data";
 import Link from "next/link";
+import ProductSwiper from "@/components/swiper/ProductSwiper";
+import { homeSalesSwiper } from "@/data";
+import ArrowButton from "@/components/buttons/arrow_button/ArrowButton";
 
 export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
   return (

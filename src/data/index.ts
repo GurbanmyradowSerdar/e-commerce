@@ -436,3 +436,61 @@ export const homeCategoriesSwiper: ICategoryCard[] = [
     Icon: HeadPhonesIcon(),
   },
 ];
+
+// ! home page > best selling > swiper
+export const homeBestSellingSwiper: IProductCard[] = [
+  {
+    images: ["coat.png"],
+    name: "the north coat",
+    price: 360,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 65,
+    discount: 27,
+  },
+  {
+    images: ["bag.png"],
+    name: "gucci duffle bag",
+    price: 1160,
+    rating: [1, 1, 1, 1, 0.5],
+    ratingAmount: 21,
+    discount: 17,
+  },
+  {
+    images: ["cpu-cooler.png"],
+    name: "RGB liquid CPU Cooler",
+    price: 170,
+    rating: [1, 1, 1, 1, 0.5],
+    ratingAmount: 35,
+    discount: 5,
+  },
+  {
+    images: ["book-self.png"],
+    name: "Small BookSelf",
+    price: 360,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 15,
+  },
+  {
+    images: ["coat.png"],
+    name: "the north coat",
+    price: 360,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 65,
+    discount: 27,
+  },
+  {
+    images: ["bag.png"],
+    name: "gucci duffle bag",
+    price: 1160,
+    rating: [1, 1, 1, 1, 0.5],
+    ratingAmount: 21,
+    discount: 17,
+  },
+  {
+    images: ["book-self.png"],
+    name: "Small BookSelf",
+    price: 360,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 15,
+  },
+];

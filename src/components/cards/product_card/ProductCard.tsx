@@ -37,7 +37,7 @@ export default function ProductCard({
 
   return (
     <div className="flex flex-col items-start gap-3 group">
-      <div className="bg-color-secondary p-10 px-14 flex items-center justify-center relative">
+      <div className="bg-color-secondary p-16 px-20 flex items-center justify-center relative">
         <Image
           alt={name}
           src={`/images/products/${images[0]}`}

@@ -98,6 +98,7 @@ export interface IAboutEmployeeCard {
 export interface IArrowButton extends IClassName {
   direction: "left" | "right" | "up";
   isScrolling?: boolean;
+  reference?: any;
 }
 
 // ! banners content
@@ -128,6 +129,7 @@ export interface INameAndHref {
 export interface IProductSwiper {
   swiperProps: SwiperProps;
   data: IProductCard[];
+  itemsCentered?: boolean;
 }
 
 // ! time type
