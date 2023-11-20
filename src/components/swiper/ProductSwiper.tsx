@@ -21,17 +21,7 @@ export default function ProductSwiper({
               itemsCentered && "justify-center"
             )}
           >
-            <ProductCard
-              images={item.images}
-              name={item.name}
-              price={item.price}
-              rating={item.rating}
-              ratingAmount={item.ratingAmount}
-              colors={item.colors}
-              discount={item.discount}
-              isFavorite={item.isFavorite}
-              isNew={item.isNew}
-            />
+            <ProductCard {...item} />
           </div>
         </SwiperSlide>
       ))}
