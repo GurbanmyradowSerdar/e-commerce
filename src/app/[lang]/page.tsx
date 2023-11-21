@@ -3,7 +3,10 @@ import AloneBannerSection from "@/components/pages/home/AloneBannerSection";
 import BannerSideBarSection from "@/components/pages/home/banner_sidebar_section";
 import BestSellingSection from "@/components/pages/home/BestSellingSection";
 import CategoriesSection from "@/components/pages/home/CategoriesSection";
+import NewArrivalSection from "@/components/pages/home/NewArrivalSection";
+import ProductsSection from "@/components/pages/home/products_section";
 import SalesSection from "@/components/pages/home/SalesSection";
+import ServicesSection from "@/components/pages/home/ServicesSection";
 import { bottomMarginSaving, horizontalMarginLimit } from "@/shared/constants";
 import { twMerge as tw } from "tailwind-merge";
 
@@ -26,6 +29,9 @@ export default function Home() {
       <CategoriesSection />
       <BestSellingSection />
       <AloneBannerSection salesUntil={new Date("12-01-2023")} />
+      <ProductsSection />
+      <NewArrivalSection />
+      <ServicesSection />
     </div>
   );
 }

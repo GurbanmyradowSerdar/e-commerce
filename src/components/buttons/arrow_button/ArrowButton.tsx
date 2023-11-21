@@ -8,7 +8,6 @@ export default function ArrowButton({
   direction,
   className,
   isScrolling,
-  reference,
 }: IArrowButton) {
   function applyDirectionToArrow(): string {
     switch (direction) {
@@ -40,7 +39,6 @@ export default function ArrowButton({
         "bg-color-secondary rounded-full duration-300 ease-in-out transition-colors hover:bg-color-secondary-hover",
         className
       )}
-      ref={reference}
     >
       <ArrowIcon className={tw("m-3 w-5 h-5", applyDirectionToArrow())} />
     </button>

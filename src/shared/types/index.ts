@@ -98,7 +98,6 @@ export interface IAboutEmployeeCard {
 export interface IArrowButton extends IClassName {
   direction: "left" | "right" | "up";
   isScrolling?: boolean;
-  reference?: any;
 }
 
 // ! banners content

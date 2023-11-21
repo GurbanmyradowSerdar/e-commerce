@@ -1,10 +1,10 @@
 "use client";
 
 import { SwiperSlide, Swiper } from "swiper/react";
-import "swiper/css";
 import { IProductSwiper } from "types";
 import ProductCard from "../cards/product_card/ProductCard";
 import { twMerge as tw } from "tailwind-merge";
+import "swiper/css";
 
 export default function ProductSwiper({
   data,
@@ -17,7 +17,7 @@ export default function ProductSwiper({
         <SwiperSlide key={i}>
           <div
             className={tw(
-              "flex items-center",
+              "flex items-center p-1",
               itemsCentered && "justify-center"
             )}
           >

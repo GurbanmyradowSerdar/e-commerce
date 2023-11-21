@@ -37,13 +37,13 @@ export default function ProductCard({
 
   return (
     <div className="flex flex-col items-start gap-3 group">
-      <div className="bg-color-secondary p-16 px-20 flex items-center justify-center relative">
+      <div className="bg-color-secondary p-12 px-16 flex items-center justify-center relative">
         <Image
           alt={name}
           src={`/images/products/${images[0]}`}
           width={200}
           height={200}
-          className="w-40 h-40 object-contain"
+          className="w-32 h-32 object-contain"
         />
         <PrimaryButton
           className="absolute bottom-0 w-full py-1 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex

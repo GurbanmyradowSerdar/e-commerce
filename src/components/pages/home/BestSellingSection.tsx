@@ -18,7 +18,7 @@ export default function BestSellingSection() {
         <ProductSwiper
           swiperProps={{
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 120,
             style: {
               marginRight: "-70px",
             },

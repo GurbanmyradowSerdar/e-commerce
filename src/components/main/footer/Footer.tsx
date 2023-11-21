@@ -1,13 +1,13 @@
 import { horizontalMarginLimit } from "@/shared/constants";
-import Image from "next/image";
-import Link from "next/link";
-import { twMerge as tw } from "tailwind-merge";
 import { interBoldFont, poppinsMediumFont } from "fonts";
 import FooterInput from "./FooterInput";
 import { footerNav, footerNav1, footerNav2 } from "@/data";
 import FooterLink from "./FooterLink";
 import { IClassName } from "types";
 import { AiOutlineCopyright as CopyRightIcon } from "react-icons/ai";
+import Image from "next/image";
+import Link from "next/link";
+import { twMerge as tw } from "tailwind-merge";
 import { AiFillApple as AppleIcon } from "react-icons/ai";
 import { BiLogoFacebook as FacebookIcon } from "react-icons/bi";
 import { FiTwitter as TwitterIcon } from "react-icons/fi";
@@ -23,7 +23,7 @@ export default function Footer() {
           horizontalMarginLimit
         )}
       >
-        <div className="flex flex-col items-start gap-3 flex-[0_0_16%]">
+        <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
           <Link
             href={"/"}
             className={tw("text-3xl mb-3", interBoldFont.className)}
@@ -36,7 +36,7 @@ export default function Footer() {
             <FooterInput />
           </div>
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_16%]">
+        <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
           <FooterTitle text="support" />
           {footerNav.map((item, i) => (
             <FooterLink
@@ -47,7 +47,7 @@ export default function Footer() {
             />
           ))}
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_12%]">
+        <div className="flex flex-col items-start gap-3 flex-[0_0_10%]">
           <FooterTitle text="account" />
           {footerNav1.map((item, i) => (
             <FooterLink
@@ -58,7 +58,7 @@ export default function Footer() {
             />
           ))}
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_12%]">
+        <div className="flex flex-col items-start gap-3 flex-[0_0_10%]">
           <FooterTitle text="quick link" />
           {footerNav2.map((item, i) => (
             <FooterLink
@@ -69,7 +69,7 @@ export default function Footer() {
             />
           ))}
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_16%]">
+        <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
           <FooterTitle text="download app" />
           <div className="space-y-2">
             <p className={tw("text-color-text-2", poppinsMediumFont.className)}>
