@@ -1,11 +1,8 @@
 import { atom } from "recoil";
+import { IProductCard } from "../types";
 
-type TFavoriteProduct = {
-  name: string;
-};
-
-export const favoriteProductsState = atom<TFavoriteProduct[]>({
-  key: "favoriteProducts",
+export const favoriteProductsState = atom<IProductCard[]>({
+  key: "FavoriteProducts",
   default: [],
   effects: [
     ({ onSet, setSelf }) => {
@@ -13,10 +10,16 @@ export const favoriteProductsState = atom<TFavoriteProduct[]>({
         localStorage.setItem("favorite-products", JSON.stringify(param));
       });
       setSelf(() => {
-        let returnValue: TFavoriteProduct[] =
-          localStorage.getItem("favorite-products") !== null
-            ? JSON.parse(localStorage.getItem("favorite-products") as string)
-            : 0;
+        let returnValue: IProductCard[];
+
+        if (typeof window !== "undefined" && localStorage) {
+          returnValue =
+            localStorage.getItem("favorite-products") !== null
+              ? JSON.parse(localStorage.getItem("favorite-products") as string)
+              : [];
+        } else {
+          returnValue = [];
+        }
         return returnValue;
       });
     },

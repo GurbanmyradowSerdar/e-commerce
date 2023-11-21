@@ -18,14 +18,14 @@ export default function SectionTitle({
       {text}
     </h2>
   ) : (
-    <div className={tw("flex items-center gap-3", className)}>
+    <div
+      className={tw(
+        "flex items-center gap-3 text-color-secondary-2",
+        className
+      )}
+    >
       <div className="h-10 w-5 bg-color-secondary-2 rounded-sm" />
-      <h2
-        className={tw(
-          "text-lg text-color-secondary-2 capitalize",
-          poppinsSemiBoldFont.className
-        )}
-      >
+      <h2 className={tw("text-lg capitalize", poppinsSemiBoldFont.className)}>
         {text}
       </h2>
     </div>

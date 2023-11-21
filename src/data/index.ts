@@ -597,3 +597,46 @@ export const homeProductsSwiper: IProductCard[] = [
     isNew: true,
   },
 ];
+
+// ! related products in wishlist && product[id] page
+export const relatedProducts: IProductCard[] = [
+  {
+    images: ["gamepad-red.png"],
+    name: "HAVIT HV-G92 Gamepad",
+    price: 160,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 88,
+    discount: 40,
+  },
+  {
+    images: ["camera.png"],
+    name: "CANON EOS DSLR Camera",
+    price: 360,
+    rating: [1, 1, 1, 1, 0],
+    ratingAmount: 95,
+  },
+  {
+    images: ["jacket.png"],
+    name: "Quilted Satin Jacket",
+    price: 160,
+    rating: [1, 1, 1, 1, 0.5],
+    ratingAmount: 55,
+    colors: ["darkblue", "red"],
+  },
+  {
+    images: ["cream.png"],
+    name: "Curology Product Set ",
+    price: 500,
+    rating: [1, 1, 1, 1, 0],
+    ratingAmount: 145,
+  },
+  {
+    images: ["kids-car.png"],
+    name: "kids eletric car",
+    price: 960,
+    rating: [1, 1, 1, 1, 1],
+    ratingAmount: 65,
+    colors: ["red", "pink"],
+    isNew: true,
+  },
+];

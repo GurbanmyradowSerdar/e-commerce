@@ -27,29 +27,40 @@ export default function ProductCard({
   isNew,
 }: IProductCard) {
   const [color, setColor] = useState(colors ? colors[0] : "");
-  const [favoritesProducts, setFavoritesProducts] = useRecoilState(
+  const [favoriteProducts, setFavoriteProducts] = useRecoilState(
     favoriteProductsState
   );
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsFavorite(favoritesProducts.some((item) => item.name === name));
-  }, []);
+    favoriteProducts.length > 0 &&
+      setIsFavorite(favoriteProducts.some((item) => item.name === name));
+  }, [favoriteProducts]);
 
   function handleFavoriteClick() {
-    let index = favoritesProducts.findIndex((item) => item.name === name);
+    let index =
+      favoriteProducts.length > 0
+        ? favoriteProducts.findIndex((item) => item.name === name)
+        : -1;
 
     if (index !== -1) {
-      setFavoritesProducts((prev) => {
+      setFavoriteProducts((prev) => {
         return [...prev.slice(0, index), ...prev.slice(index + 1)];
       });
       setIsFavorite(false);
     } else {
-      setFavoritesProducts((prev) => {
+      setFavoriteProducts((prev) => {
         return [
           ...prev,
           {
             name,
+            images,
+            price,
+            rating,
+            ratingAmount,
+            colors,
+            discount,
+            isFavorite,
           },
         ];
       });
