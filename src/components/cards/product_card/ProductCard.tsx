@@ -1,4 +1,5 @@
 "use client";
+
 import { IProductCard } from "types";
 import Image from "next/image";
 import {
@@ -9,9 +10,11 @@ import { poppinsMediumFont, poppinsSemiBoldFont } from "fonts";
 import RatingStar from "./RatingStar";
 import EmptyStar from "./EmptyStar";
 import SemiStar from "./SemiStar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { twMerge as tw } from "tailwind-merge";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import { useRecoilState } from "recoil";
+import { favoriteProductsState } from "@/shared/recoil_states/atoms";
 
 export default function ProductCard({
   images,
@@ -21,10 +24,39 @@ export default function ProductCard({
   ratingAmount,
   colors,
   discount,
-  isFavorite,
   isNew,
 }: IProductCard) {
   const [color, setColor] = useState(colors ? colors[0] : "");
+  const [favoritesProducts, setFavoritesProducts] = useRecoilState(
+    favoriteProductsState
+  );
+  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsFavorite(favoritesProducts.some((item) => item.name === name));
+  }, []);
+
+  function handleFavoriteClick() {
+    let index = favoritesProducts.findIndex((item) => item.name === name);
+
+    if (index !== -1) {
+      setFavoritesProducts((prev) => {
+        return [...prev.slice(0, index), ...prev.slice(index + 1)];
+      });
+      setIsFavorite(false);
+    } else {
+      setFavoritesProducts((prev) => {
+        return [
+          ...prev,
+          {
+            name,
+          },
+        ];
+      });
+      setIsFavorite(true);
+    }
+  }
+
   function getStar(item: number, i: number) {
     if (item === 1) {
       return <RatingStar key={i} />;
@@ -51,12 +83,17 @@ export default function ProductCard({
         >
           add to cart
         </PrimaryButton>
-        {isFavorite ? (
-          <FilledHeartIcon className="w-10 h-10 absolute top-2 right-3 text-color-secondary-2 cursor-pointer bg-color-bg rounded-full p-2" />
-        ) : (
-          <HeartIcon className="w-10 h-10 absolute top-2 right-3 text-color-bg-1 cursor-pointer bg-color-bg rounded-full p-2" />
-        )}
 
+        <div
+          onClick={handleFavoriteClick}
+          className="w-10 h-10 absolute top-2 right-3 cursor-pointer bg-color-bg rounded-full flex items-center justify-center"
+        >
+          {isFavorite ? (
+            <FilledHeartIcon className="text-color-secondary-2 w-5 h-5" />
+          ) : (
+            <HeartIcon className="text-color-bg-1 w-5 h-5" />
+          )}
+        </div>
         <div className="absolute top-2 left-2 flex text-center gap-2">
           {isNew ? (
             <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button text-sm">
