@@ -1,6 +1,6 @@
 "use client";
 
-import { ICategorySwiper } from "@/shared/types";
+import { ICategorySwiper } from "types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CategoryCard from "../cards/category_card";
 import "swiper/css";

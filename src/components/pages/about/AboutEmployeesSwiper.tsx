@@ -20,13 +20,8 @@ export default function AboutEmployeesSwiper() {
     >
       {aboutEmployeeSwiper.map((item, i) => {
         return (
-          <SwiperSlide key={i} className="">
-            <AboutEmployeeCard
-              href={item.href}
-              image={item.image}
-              name={item.name}
-              status={item.status}
-            />
+          <SwiperSlide key={i}>
+            <AboutEmployeeCard {...item} />
           </SwiperSlide>
         );
       })}

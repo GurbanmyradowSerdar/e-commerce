@@ -7,7 +7,7 @@ export default function SideBar() {
     <aside className="text-color-text-3 text-lg z-10 flex flex-col items-start gap-4 mt-10 pr-4">
       {/* links with menu */}
       {homeSideBarItems[1].map((item, i) => (
-        <MenuLink key={i} menuItems={item.menuItems} menuName={item.menuName} />
+        <MenuLink key={i} {...item} />
       ))}
 
       {/* usual links */}

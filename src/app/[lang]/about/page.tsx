@@ -55,12 +55,7 @@ export default function page() {
       {/* about cards */}
       <section className="flex justify-between">
         {aboutCards.map((item, i) => (
-          <AboutCard
-            key={i}
-            Icon={item.Icon}
-            subtitle={item.subtitle}
-            title={item.title}
-          />
+          <AboutCard key={i} {...item} />
         ))}
       </section>
       {/* swiper employees */}
@@ -70,12 +65,7 @@ export default function page() {
       {/* service cards */}
       <section className="flex items-center justify-evenly">
         {aboutServicesCards.map((item, i) => (
-          <ServiceCard
-            key={i}
-            image={item.image}
-            subtitle={item.subtitle}
-            title={item.title}
-          />
+          <ServiceCard key={i} {...item} />
         ))}
       </section>
     </div>
