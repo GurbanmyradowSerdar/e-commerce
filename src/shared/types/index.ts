@@ -145,3 +145,9 @@ export interface ICategorySwiper {
   swiperProps: SwiperProps;
   data: ICategoryCard[];
 }
+
+// ! home page section title with Quadrant
+export interface ISectionTitleWithQuadrant extends IClassName {
+  text: string;
+  withoutQuadrant?: boolean;
+}

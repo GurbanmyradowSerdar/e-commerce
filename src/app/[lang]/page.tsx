@@ -1,4 +1,5 @@
 import ArrowButton from "@/components/buttons/arrow_button/ArrowButton";
+import AloneBannerSection from "@/components/pages/home/AloneBannerSection";
 import BannerSideBarSection from "@/components/pages/home/banner_sidebar_section";
 import BestSellingSection from "@/components/pages/home/BestSellingSection";
 import CategoriesSection from "@/components/pages/home/CategoriesSection";
@@ -24,6 +25,7 @@ export default function Home() {
       <SalesSection salesUntil={new Date("12-30-2023")} />
       <CategoriesSection />
       <BestSellingSection />
+      <AloneBannerSection salesUntil={new Date("12-01-2023")} />
     </div>
   );
 }
