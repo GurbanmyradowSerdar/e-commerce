@@ -12,7 +12,7 @@ export default function ProductSwiper({
   itemsCentered,
 }: IProductSwiper) {
   return (
-    <Swiper {...swiperProps}>
+    <Swiper {...swiperProps} className="cursor-grab">
       {data.map((item, i) => (
         <SwiperSlide key={i}>
           <div

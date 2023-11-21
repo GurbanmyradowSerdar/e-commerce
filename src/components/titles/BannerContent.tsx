@@ -3,9 +3,13 @@ import BannerButton from "../buttons/BannerButton";
 import { twMerge as tw } from "tailwind-merge";
 import { poppinsSemiBoldFont } from "fonts";
 
-export default function BannerContent({ description, title }: IBannerContent) {
+export default function BannerContent({
+  description,
+  title,
+  className,
+}: IBannerContent) {
   return (
-    <div className="space-y-4">
+    <div className={tw("space-y-4", className)}>
       <div className="text-color-text-1 space-y-1">
         <p
           className={tw(

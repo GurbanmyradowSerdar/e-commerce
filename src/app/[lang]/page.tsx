@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <div
       className={tw(
-        `flex flex-col gap-52`,
+        `flex flex-col gap-40`,
         bottomMarginSaving,
         horizontalMarginLimit
       )}
     >
       <ArrowButton
         direction="up"
-        className="fixed bottom-12 right-20"
+        className="fixed bottom-12 right-20 z-10"
         isScrolling
       />
       <BannerSideBarSection />

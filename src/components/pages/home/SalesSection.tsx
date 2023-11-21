@@ -25,7 +25,7 @@ export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
         <ProductSwiper
           data={homeSalesSwiper}
           swiperProps={{
-            slidesPerView: 4.5,
+            slidesPerView: 5.5,
             spaceBetween: 50,
             style: {
               marginRight: "-135px",

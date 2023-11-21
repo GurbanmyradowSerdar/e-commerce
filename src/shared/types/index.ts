@@ -101,7 +101,7 @@ export interface IArrowButton extends IClassName {
 }
 
 // ! banners content
-export interface IBannerContent {
+export interface IBannerContent extends IClassName {
   title: string;
   description: string;
 }

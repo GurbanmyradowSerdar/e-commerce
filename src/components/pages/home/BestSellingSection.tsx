@@ -17,11 +17,8 @@ export default function BestSellingSection() {
       <div>
         <ProductSwiper
           swiperProps={{
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 120,
-            style: {
-              marginRight: "-70px",
-            },
           }}
           data={homeBestSellingSwiper}
         />

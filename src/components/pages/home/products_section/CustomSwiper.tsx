@@ -9,7 +9,7 @@ export default function CustomSwiper() {
   return (
     <ProductSwiper
       swiperProps={{
-        slidesPerView: 4,
+        slidesPerView: 5,
         spaceBetween: 20,
         modules: [Grid],
         grid: { rows: 2, fill: "row" },
