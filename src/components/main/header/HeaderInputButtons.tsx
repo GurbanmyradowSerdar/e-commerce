@@ -22,7 +22,9 @@ export default function HeaderInputButtons() {
   }, [amountOfFavorites]);
 
   useEffect(() => {
-    setAmountCart(amountOfCart.length);
+    setAmountCart(
+      amountOfCart.reduce((prev, current) => prev + current.amount, 0)
+    );
   }, [amountOfCart]);
 
   return (
