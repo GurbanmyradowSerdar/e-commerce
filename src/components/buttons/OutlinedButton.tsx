@@ -5,6 +5,7 @@ import { twMerge as tw } from "tailwind-merge";
 export default function OutlinedButton({
   children,
   className,
+  buttonProps,
 }: IPrimaryButton) {
   return (
     <SecondaryButton
@@ -13,6 +14,7 @@ export default function OutlinedButton({
       hover:text-color-text-2 hover:border-color-text-2 hover:bg-color-bg`,
         className
       )}
+      {...buttonProps}
     >
       {children}
     </SecondaryButton>

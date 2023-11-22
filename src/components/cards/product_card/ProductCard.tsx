@@ -18,6 +18,13 @@ import {
   cartProductsState,
   favoriteProductsState,
 } from "@/shared/recoil_states/atoms";
+import {
+  addNewItemToCart,
+  decreaseAmount,
+  editExistItemInCart,
+  increaseAmount,
+  removeItemFromCartViaIndex,
+} from "@/shared/utils";
 
 export default function ProductCard(props: IProductCard) {
   const { images, name, price, rating, ratingAmount, colors, discount, isNew } =
@@ -37,7 +44,6 @@ export default function ProductCard(props: IProductCard) {
 
   useEffect(() => {
     let tempArr = cartProducts.filter((item) => item.name === name);
-
     if (tempArr.length > 0) {
       setAmount(tempArr[0].amount);
     }
@@ -48,20 +54,25 @@ export default function ProductCard(props: IProductCard) {
 
     if (itemIndex !== -1) {
       if (amount > 0) {
-        setCartProducts([
-          ...cartProducts.slice(0, itemIndex),
-          { ...props, amount, isFavorite },
-          ...cartProducts.slice(itemIndex + 1),
-        ]);
+        setCartProducts(
+          editExistItemInCart({
+            amount,
+            cartProducts,
+            isFavorite,
+            itemIndex,
+            props,
+          })
+        );
       } else {
-        setCartProducts([
-          ...cartProducts.slice(0, itemIndex),
-          ...cartProducts.slice(itemIndex + 1),
-        ]);
+        setCartProducts(
+          removeItemFromCartViaIndex({ cartProducts, itemIndex })
+        );
       }
     } else {
       if (amount > 0) {
-        setCartProducts([...cartProducts, { ...props, amount, isFavorite }]);
+        setCartProducts(
+          addNewItemToCart({ amount, cartProducts, isFavorite, props })
+        );
       }
     }
   }, [amount]);
@@ -95,14 +106,6 @@ export default function ProductCard(props: IProductCard) {
     }
   }
 
-  // ! amount handlers
-  function increaseAmount() {
-    setAmount(() => (amount >= 20 ? amount : amount + 1));
-  }
-  function decreaseAmount() {
-    setAmount((prev) => prev - 1);
-  }
-
   return (
     <div className="flex flex-col items-start gap-3 group">
       <div className="bg-color-secondary p-12 px-10 flex items-center justify-center relative">
@@ -117,19 +120,19 @@ export default function ProductCard(props: IProductCard) {
           {amount !== 0 ? (
             <div
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 
-            transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 rounded-tr-none 
+            transition-all duration-300 ease-in-out rounded-tr-none 
             rounded-tl-none flex items-center justify-between rounded-sm text-color-text-1 px-4 text-xl
           "
             >
               <button
-                onClick={decreaseAmount}
+                onClick={() => setAmount(decreaseAmount(amount))}
                 className="px-2 duration-300 transition-colors hover:bg-color-primary-1 text-center rounded-sm"
               >
                 -
               </button>
               <p>{amount}</p>
               <button
-                onClick={increaseAmount}
+                onClick={() => setAmount(increaseAmount(amount))}
                 className="px-2 duration-300 transition-colors hover:bg-color-primary-1 text-center rounded-sm"
               >
                 +
@@ -138,7 +141,7 @@ export default function ProductCard(props: IProductCard) {
           ) : (
             <PrimaryButton
               buttonProps={{
-                onClick: increaseAmount,
+                onClick: () => setAmount(increaseAmount(amount)),
               }}
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
             transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 rounded-tr-none rounded-tl-none"

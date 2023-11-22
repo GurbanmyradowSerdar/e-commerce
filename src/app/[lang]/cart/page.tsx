@@ -1,3 +1,26 @@
+import NavigationTrain from "@/components/navigation_train";
+import CartProductsSection from "@/components/pages/cart/CartProductsSection";
+import CartTotalSection from "@/components/pages/cart/CartTotalSection";
+import {
+  bottomMarginSaving,
+  horizontalMarginLimit,
+  topMarginSaving,
+} from "@/shared/constants";
+import { twMerge as tw } from "tailwind-merge";
+
 export default function page() {
-  return <div>cart</div>;
+  return (
+    <div
+      className={tw(
+        "space-y-24",
+        topMarginSaving,
+        bottomMarginSaving,
+        horizontalMarginLimit
+      )}
+    >
+      <NavigationTrain />
+      <CartProductsSection />
+      <CartTotalSection />
+    </div>
+  );
 }

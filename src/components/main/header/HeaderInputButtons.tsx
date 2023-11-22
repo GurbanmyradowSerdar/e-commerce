@@ -56,7 +56,7 @@ export default function HeaderInputButtons() {
 function AmountOfItems({ text }: { text: string }) {
   return (
     <p
-      className="text-sm text-color-text-1 bg-color-secondary-2 rounded-full absolute -top-1 -right-2 w-6 h-6
+      className="text-sm text-color-text-1 bg-color-secondary-2 rounded-full absolute -top-3 -right-3 w-6 h-6
     flex items-center justify-center"
     >
       {text}

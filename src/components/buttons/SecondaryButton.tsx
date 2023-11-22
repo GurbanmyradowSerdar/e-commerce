@@ -5,6 +5,7 @@ import { twMerge as tw } from "tailwind-merge";
 export default function SecondaryButton({
   children,
   className,
+  buttonProps,
 }: IPrimaryButton) {
   return (
     <PrimaryButton
@@ -15,6 +16,7 @@ export default function SecondaryButton({
       hover:border-color-button-1`,
         className
       )}
+      {...buttonProps}
     >
       {children}
     </PrimaryButton>

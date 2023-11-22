@@ -1,3 +1,7 @@
+import { Dispatch, SetStateAction } from "react";
+import { SetterOrUpdater } from "recoil";
+import { ICartProductCard, IProductCard } from "../types";
+
 interface TimeLeft {
   days: string;
   hours: string;
@@ -32,4 +36,57 @@ export function calculateTimeLeft(targetDate: Date): TimeLeft {
     minutes: validatingZero(minutesLeft),
     seconds: validatingZero(secondsLeft),
   };
+}
+
+// ! amount handlers
+export function increaseAmount(amount: number): number {
+  return amount >= 20 ? amount : amount + 1;
+}
+export function decreaseAmount(amount: number): number {
+  return amount - 1;
+}
+
+// ! remove item from cart
+type TRemoveItemFromCart = {
+  cartProducts: ICartProductCard[];
+  itemIndex: number;
+};
+
+export function removeItemFromCartViaIndex({
+  cartProducts,
+  itemIndex,
+}: TRemoveItemFromCart): ICartProductCard[] {
+  return [
+    ...cartProducts.slice(0, itemIndex),
+    ...cartProducts.slice(itemIndex + 1),
+  ];
+}
+
+// ! add new item to cart
+type TAddNewItemToCart = {
+  cartProducts: ICartProductCard[];
+  props: IProductCard;
+  amount: number;
+  isFavorite?: boolean;
+};
+
+export function addNewItemToCart(args: TAddNewItemToCart): ICartProductCard[] {
+  const { amount, cartProducts, isFavorite, props } = args;
+  return [...cartProducts, { ...props, amount, isFavorite }];
+}
+
+// ! edit exist item in cart
+interface IEditExistItemInCart extends TAddNewItemToCart {
+  itemIndex: number;
+}
+
+export function editExistItemInCart(
+  args: IEditExistItemInCart
+): ICartProductCard[] {
+  const { amount, cartProducts, isFavorite, itemIndex, props } = args;
+  return [
+    ...cartProducts.slice(0, itemIndex),
+    { ...props, amount, isFavorite },
+    ...cartProducts.slice(itemIndex + 1),
+  ];
 }
