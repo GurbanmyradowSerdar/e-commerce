@@ -2,7 +2,11 @@ import { IPrimaryButton } from "types";
 import { poppinsMediumFont } from "fonts";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function PrimaryButton({ children, className }: IPrimaryButton) {
+export default function PrimaryButton({
+  children,
+  className,
+  buttonProps,
+}: IPrimaryButton) {
   return (
     <button
       className={tw(
@@ -12,6 +16,7 @@ export default function PrimaryButton({ children, className }: IPrimaryButton) {
         poppinsMediumFont.className,
         className
       )}
+      {...buttonProps}
     >
       {children}
     </button>

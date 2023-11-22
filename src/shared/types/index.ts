@@ -47,7 +47,12 @@ export interface ICategoryCard {
 }
 
 // ! primary button
-export interface IPrimaryButton extends IChildren, IClassName {}
+export interface IPrimaryButton extends IChildren, IClassName {
+  buttonProps?: React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >;
+}
 
 // ! banner button
 export interface IBannerButton {
@@ -149,4 +154,14 @@ export interface ICategorySwiper {
 export interface ISectionTitleWithQuadrant extends IClassName {
   text: string;
   withoutQuadrant?: boolean;
+}
+
+// ! just text interface with className?
+export interface ITextWithClassName extends IClassName {
+  text: string;
+}
+
+// ! cartProducts atom interface recoil
+export interface ICartProductCard extends IProductCard {
+  amount: number;
 }

@@ -28,7 +28,8 @@ export default function Banner() {
               src={`/images/home/${item}`}
               width={1300}
               height={1300}
-              className="w-full object-contain "
+              className="w-full object-contain"
+              priority
             />
           </SwiperSlide>
         );

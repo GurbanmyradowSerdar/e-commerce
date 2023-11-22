@@ -18,7 +18,7 @@ export default function RootLayout({ children }: IChildren) {
       <body
         className={`${poppinsRegularFont.className} flex flex-col min-h-screen`}
       >
-        {/* chackra ui providers and recoil */}]
+        {/* chackra ui providers and recoil */}
         <Providers>
           <header>
             <TopHeader />

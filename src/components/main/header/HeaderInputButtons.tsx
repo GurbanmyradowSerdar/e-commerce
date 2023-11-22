@@ -4,17 +4,26 @@ import { PiHeart as HeartIcon } from "react-icons/pi";
 import { GrCart as CartIcon } from "react-icons/gr";
 import { FiSearch as SearchIcon } from "react-icons/fi";
 import { useRecoilValue } from "recoil";
-import { favoriteProductsState } from "@/shared/recoil_states/atoms";
+import {
+  cartProductsState,
+  favoriteProductsState,
+} from "@/shared/recoil_states/atoms";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function HeaderInputButtons() {
   const amountOfFavorites = useRecoilValue(favoriteProductsState);
   const [amount, setAmount] = useState(0);
+  const amountOfCart = useRecoilValue(cartProductsState);
+  const [amountCart, setAmountCart] = useState(0);
 
   useEffect(() => {
     setAmount(amountOfFavorites.length);
   }, [amountOfFavorites]);
+
+  useEffect(() => {
+    setAmountCart(amountOfCart.length);
+  }, [amountOfCart]);
 
   return (
     <>
@@ -30,7 +39,14 @@ export default function HeaderInputButtons() {
         {amount > 0 && <AmountOfItems text={amount.toString()} />}
         <HeartIcon className="w-8 h-8" />
       </Link>
-      <CartIcon className="w-7 h-7 cursor-pointer" />
+      <Link href={"/en/cart"} className="relative cursor-pointer">
+        {amountCart > 0 && (
+          <AmountOfItems
+            text={amountCart > 99 ? `${amountCart}+` : amountCart.toString()}
+          />
+        )}
+        <CartIcon className="w-7 h-7" />
+      </Link>
     </>
   );
 }
