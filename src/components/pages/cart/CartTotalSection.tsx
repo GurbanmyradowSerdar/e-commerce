@@ -67,7 +67,7 @@ export default function CartTotalSection() {
             <DefaultText text={`$${price.total}`} />
           </div>
         </div>
-        <Link href={"/en"} className="self-center">
+        <Link href={"/en/cart/check-out"} className="self-center">
           <PrimaryButton>procees to checkout</PrimaryButton>
         </Link>
       </div>

@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 import { ICartProductCard, IProductCard } from "../types";
+import { calculateDeliveryPrice, calculateSubtotal } from "../utils";
 
 // ! favorites
 export const favoriteProductsState = atom<IProductCard[]>({
@@ -68,17 +69,7 @@ export const subTotalPriceState = atom<number>({
             JSON.parse(localStorage.getItem("cart-products") as string);
         }
 
-        if (cartArray.length > 0) {
-          return cartArray.reduce((prev, item) => {
-            if (item.discount) {
-              return prev + item.amount * (item.price * (item.discount / 100));
-            } else {
-              return prev + item.amount * item.price;
-            }
-          }, 0);
-        } else {
-          return state;
-        }
+        return calculateSubtotal(cartArray, state as number);
       });
     },
   ],
@@ -99,20 +90,7 @@ export const deliveryPriceState = atom<number>({
             JSON.parse(localStorage.getItem("cart-products") as string);
         }
 
-        if (cartArray.length > 0) {
-          let sum = 0;
-          sum = cartArray.reduce((prev, item) => {
-            if (item.discount) {
-              return prev + item.amount * (item.price * (item.discount / 100));
-            } else {
-              return prev + item.amount * item.price;
-            }
-          }, 0);
-
-          return sum >= 500 ? 0 : state;
-        } else {
-          return state;
-        }
+        return calculateDeliveryPrice(cartArray, state as number);
       });
     },
   ],

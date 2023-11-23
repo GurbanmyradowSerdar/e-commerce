@@ -90,3 +90,42 @@ export function editExistItemInCart(
     ...cartProducts.slice(itemIndex + 1),
   ];
 }
+
+// ! calculating carts delivery price
+export function calculateDeliveryPrice(
+  cartArray: ICartProductCard[],
+  state: number
+): number {
+  if (cartArray.length > 0) {
+    let sum = 0;
+    sum = cartArray.reduce((prev, item) => {
+      if (item.discount) {
+        return prev + item.amount * (item.price * (item.discount / 100));
+      } else {
+        return prev + item.amount * item.price;
+      }
+    }, 0);
+
+    return sum >= 500 ? 0 : 100;
+  } else {
+    return state;
+  }
+}
+
+// ! calculating carts subtotal
+export function calculateSubtotal(
+  cartArray: ICartProductCard[],
+  state: number
+) {
+  if (cartArray.length > 0) {
+    return cartArray.reduce((prev, item) => {
+      if (item.discount) {
+        return prev + item.amount * (item.price * (item.discount / 100));
+      } else {
+        return prev + item.amount * item.price;
+      }
+    }, 0);
+  } else {
+    return state;
+  }
+}

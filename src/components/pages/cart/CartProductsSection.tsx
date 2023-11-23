@@ -3,16 +3,26 @@
 import OutlinedButton from "@/components/buttons/OutlinedButton";
 import CartCard from "@/components/cards/cart_card";
 import DefaultText from "@/components/titles/DefaultText";
-import { cartProductsState } from "@/shared/recoil_states/atoms";
+import {
+  cartProductsState,
+  deliveryPriceState,
+  subTotalPriceState,
+} from "@/shared/recoil_states/atoms";
 import { ICartProductCard } from "@/shared/types";
+import { calculateDeliveryPrice, calculateSubtotal } from "@/shared/utils";
 import { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 
 export default function CartProductsSection() {
-  const [cartProducts, setCartProducts] = useRecoilState(cartProductsState);
+  const cartProducts = useRecoilValue(cartProductsState);
   const [array, setArray] = useState<ICartProductCard[]>([]);
+  const setSubTotal = useSetRecoilState(subTotalPriceState);
+  const setDeliveryPrice = useSetRecoilState(deliveryPriceState);
 
   useEffect(() => {
+    // ! update cost while changing the amount of items
+    setSubTotal((prev) => calculateSubtotal(cartProducts, prev));
+    setDeliveryPrice((prev) => calculateDeliveryPrice(cartProducts, prev));
     setArray(cartProducts);
   }, [cartProducts]);
   return (

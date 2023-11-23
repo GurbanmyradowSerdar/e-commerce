@@ -165,3 +165,13 @@ export interface ITextWithClassName extends IClassName {
 export interface ICartProductCard extends IProductCard {
   amount: number;
 }
+
+// ! checkout > inputs, input with label component
+export interface IInputWithLabel {
+  label: string;
+  labelSpan?: string;
+  inputProps: React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >;
+}
