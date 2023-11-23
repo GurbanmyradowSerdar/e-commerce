@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { twMerge as tw } from "tailwind-merge";
 
-type TPrice = {
+export type TPrice = {
   subTotal: number;
   deliveryPrice: number;
   total: number;

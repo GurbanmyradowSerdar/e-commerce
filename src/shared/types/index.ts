@@ -167,11 +167,18 @@ export interface ICartProductCard extends IProductCard {
 }
 
 // ! checkout > inputs, input with label component
-export interface IInputWithLabel {
+export interface IInputWithLabel extends IClassName {
   label: string;
   labelSpan?: string;
   inputProps: React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   >;
+}
+
+// ! checkout > checkout card component
+export interface ICheckoutCard {
+  image: string;
+  name: string;
+  price: number;
 }
