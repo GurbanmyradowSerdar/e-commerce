@@ -3,24 +3,23 @@
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import DefaultText from "@/components/titles/DefaultText";
 import {
+  cartProductsState,
+  checkoutProductsState,
   deliveryPriceState,
   subTotalPriceState,
 } from "@/shared/recoil_states/atoms";
+import { TPrice } from "@/shared/types";
 import { poppinsMediumFont } from "fonts";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { twMerge as tw } from "tailwind-merge";
-
-export type TPrice = {
-  subTotal: number;
-  deliveryPrice: number;
-  total: number;
-};
 
 export default function CartTotalSection() {
   const subTotal = useRecoilValue(subTotalPriceState);
   const deliveryPrice = useRecoilValue(deliveryPriceState);
+  const cartProducts = useRecoilValue(cartProductsState);
+  const setCheckoutProducts = useSetRecoilState(checkoutProductsState);
   const [price, setPrice] = useState<TPrice>({
     deliveryPrice: 0,
     subTotal: 0,
@@ -34,6 +33,21 @@ export default function CartTotalSection() {
       total: subTotal + deliveryPrice,
     });
   }, [subTotal, deliveryPrice]);
+
+  function handleClick() {
+    setCheckoutProducts(
+      cartProducts.map((item) => {
+        const { images, name, price, discount, amount } = item;
+        let calculatedPrice = 0;
+        if (discount) {
+          calculatedPrice = amount * (price * (discount / 100));
+        } else {
+          calculatedPrice = amount * price;
+        }
+        return { image: images[0], name, price: calculatedPrice };
+      })
+    );
+  }
 
   return (
     <section className="flex justify-between items-start">
@@ -67,7 +81,11 @@ export default function CartTotalSection() {
             <DefaultText text={`$${price.total}`} />
           </div>
         </div>
-        <Link href={"/en/cart/check-out"} className="self-center">
+        <Link
+          href={"/en/cart/check-out"}
+          className="self-center"
+          onClick={handleClick}
+        >
           <PrimaryButton>procees to checkout</PrimaryButton>
         </Link>
       </div>

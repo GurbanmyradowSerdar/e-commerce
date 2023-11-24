@@ -6,6 +6,7 @@ export default function InputWithLabel({
   label,
   labelSpan,
   className,
+  error,
 }: IInputWithLabel) {
   return (
     <div className="flex flex-col items-start gap-2 text-lg text-color-text-2">

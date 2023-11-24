@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
-import { SetterOrUpdater } from "recoil";
 import { ICartProductCard, IProductCard } from "../types";
 
 interface TimeLeft {

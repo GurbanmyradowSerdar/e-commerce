@@ -1,5 +1,10 @@
 import { atom } from "recoil";
-import { ICartProductCard, IProductCard } from "../types";
+import {
+  ICartProductCard,
+  ICheckoutCard,
+  ICheckoutForm,
+  IProductCard,
+} from "../types";
 import { calculateDeliveryPrice, calculateSubtotal } from "../utils";
 
 // ! favorites
@@ -91,6 +96,52 @@ export const deliveryPriceState = atom<number>({
         }
 
         return calculateDeliveryPrice(cartArray, state as number);
+      });
+    },
+  ],
+});
+
+// ! checkout products to sell
+export const checkoutProductsState = atom<ICheckoutCard[]>({
+  key: "CheckoutPrice",
+  default: [],
+  effects: [
+    ({ setSelf }) => {
+      setSelf(() => []);
+    },
+  ],
+});
+
+// ! credentials of user
+const defaultValue: ICheckoutForm = {
+  phoneNumber: "",
+  email: "",
+  firstName: "",
+  companyName: "",
+  apartment: "",
+  city: "",
+  streetAddress: "",
+};
+export const credentialsState = atom<ICheckoutForm>({
+  key: "Credentials",
+  default: { ...defaultValue },
+  effects: [
+    ({ onSet, setSelf }) => {
+      onSet((param) => {
+        localStorage.setItem("credentials", JSON.stringify(param));
+      });
+      setSelf(() => {
+        let returnValue: ICheckoutForm;
+
+        if (typeof window !== "undefined" && localStorage) {
+          returnValue =
+            localStorage.getItem("credentials") !== null
+              ? JSON.parse(localStorage.getItem("credentials") as string)
+              : defaultValue;
+        } else {
+          returnValue = defaultValue;
+        }
+        return returnValue;
       });
     },
   ],

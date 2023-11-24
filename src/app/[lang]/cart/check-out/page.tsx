@@ -8,12 +8,17 @@ import {
   topMarginSaving,
 } from "@/shared/constants";
 import { twMerge as tw } from "tailwind-merge";
-import { useState } from "react";
-import { TPrice } from "@/components/pages/cart/CartTotalSection";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import { interMediumFont } from "fonts";
+import { useRecoilState } from "recoil";
+import { checkoutProductsState } from "@/shared/recoil_states/atoms";
+import { useEffect } from "react";
 
 export default function page() {
+  const [checkoutProducts, setCheckoutProducts] = useRecoilState(
+    checkoutProductsState
+  );
+
   // const [price, setPrice] = useState<TPrice>({
   //   deliveryPrice: 0,
   //   subTotal: 0,
@@ -55,9 +60,6 @@ export default function page() {
           <DefaultText text={`$${price.total}`} />
         </div>
       </div> */}
-      {/* <h1 className={`${interMediumFont.className} text-[40px]`}>
-        Billing Details
-      </h1> */}
     </div>
   );
 }

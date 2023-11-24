@@ -144,7 +144,7 @@ export default function ProductCard(props: IProductCard) {
                 onClick: () => setAmount(increaseAmount(amount)),
               }}
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
-            transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 rounded-tr-none rounded-tl-none"
+              transition-all duration-300 ease-in-out rounded-tr-none rounded-tl-none"
             >
               add to cart
             </PrimaryButton>

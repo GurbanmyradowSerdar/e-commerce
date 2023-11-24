@@ -174,6 +174,7 @@ export interface IInputWithLabel extends IClassName {
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   >;
+  error?: string;
 }
 
 // ! checkout > checkout card component
@@ -181,4 +182,22 @@ export interface ICheckoutCard {
   image: string;
   name: string;
   price: number;
+}
+
+// ! cart > total card section
+export type TPrice = {
+  subTotal: number;
+  deliveryPrice: number;
+  total: number;
+};
+
+// ! checkout form inputs
+export interface ICheckoutForm {
+  firstName: string;
+  companyName: string;
+  streetAddress: string;
+  apartment: string;
+  city: string;
+  phoneNumber: string;
+  email: string;
 }

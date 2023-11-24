@@ -11,7 +11,7 @@ export default function CategorySwiper({ data, swiperProps }: ICategorySwiper) {
       {data.map((item, i) => {
         return (
           <SwiperSlide key={i}>
-            <CategoryCard title={item.title} Icon={item.Icon} />
+            <CategoryCard {...item} />
           </SwiperSlide>
         );
       })}
