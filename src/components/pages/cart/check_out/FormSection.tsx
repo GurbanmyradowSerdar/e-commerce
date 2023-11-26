@@ -2,7 +2,7 @@
 
 import InputWithLabel from "@/components/inputs/InputWithLabel";
 import { credentialsState } from "@/shared/recoil_states/atoms";
-import { ICheckoutForm } from "@/shared/types";
+import { ICredentials } from "@/shared/types";
 import { interMediumFont } from "fonts";
 import { useFormik } from "formik";
 import { useRecoilState } from "recoil";
@@ -21,19 +21,11 @@ export default function FormSection() {
     phoneNumber,
     streetAddress,
   } = credentials;
-  const formik = useFormik<ICheckoutForm>({
+  const formik = useFormik<ICredentials>({
     initialValues: {
-      apartment,
-      city,
-      companyName,
-      email,
-      firstName,
-      phoneNumber,
-      streetAddress,
+      ...credentials,
     },
-    onSubmit: (values) => {
-      console.log(JSON.stringify(values));
-    },
+    onSubmit: (values) => {},
     validate,
   });
 

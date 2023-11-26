@@ -55,9 +55,7 @@ export default function CartProductsSection() {
           <div className="flex items-center justify-between">
             <OutlinedButton
               buttonProps={{
-                onClick: function () {
-                  console.log("hello");
-                },
+                onClick: () => console.log("hello"),
               }}
             >
               return to shop

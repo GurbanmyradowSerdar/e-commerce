@@ -91,6 +91,7 @@ export default function TotalSection() {
                   src={`/images/check_out/credit-card-${i}.png`}
                   width={100}
                   height={100}
+                  key={i}
                   className="w-8 object-contain"
                 />
               ))}

@@ -6,13 +6,13 @@ import InputWithLine from "@/components/inputs/InputWithLine";
 import Image from "next/image";
 import Link from "next/link";
 import { useFormik } from "formik";
-import { ICheckoutForm } from "@/shared/types";
+import { ICredentials } from "@/shared/types";
 import { useRecoilState } from "recoil";
 import { credentialsState } from "@/shared/recoil_states/atoms";
 
 export default function SignUpForm() {
   const [credentials, setCredentials] = useRecoilState(credentialsState);
-  const formik = useFormik<ICheckoutForm>({
+  const formik = useFormik<ICredentials>({
     initialValues: {
       ...credentials,
     },

@@ -192,7 +192,7 @@ export type TPrice = {
 };
 
 // ! checkout form inputs
-export interface ICheckoutForm {
+export interface ICredentials {
   firstName: string;
   companyName: string;
   streetAddress: string;

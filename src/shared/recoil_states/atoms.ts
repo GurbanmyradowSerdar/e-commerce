@@ -2,7 +2,7 @@ import { atom } from "recoil";
 import {
   ICartProductCard,
   ICheckoutCard,
-  ICheckoutForm,
+  ICredentials,
   IProductCard,
 } from "../types";
 import { calculateDeliveryPrice, calculateSubtotal } from "../utils";
@@ -113,7 +113,7 @@ export const checkoutProductsState = atom<ICheckoutCard[]>({
 });
 
 // ! credentials of user
-const defaultCredentials: ICheckoutForm = {
+const defaultCredentials: ICredentials = {
   phoneNumber: "",
   email: "",
   firstName: "",
@@ -123,7 +123,7 @@ const defaultCredentials: ICheckoutForm = {
   streetAddress: "",
   password: "",
 };
-export const credentialsState = atom<ICheckoutForm>({
+export const credentialsState = atom<ICredentials>({
   key: "Credentials",
   default: { ...defaultCredentials },
   effects: [
@@ -132,7 +132,7 @@ export const credentialsState = atom<ICheckoutForm>({
         localStorage.setItem("credentials", JSON.stringify(param));
       });
       setSelf(() => {
-        let returnValue: ICheckoutForm;
+        let returnValue: ICredentials;
 
         if (typeof window !== "undefined" && localStorage) {
           returnValue =

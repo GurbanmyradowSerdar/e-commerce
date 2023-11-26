@@ -1,7 +1,7 @@
-import { ICheckoutForm } from "@/shared/types";
+import { ICredentials } from "@/shared/types";
 
-export const validate = (values: ICheckoutForm) => {
-  const errors: Partial<ICheckoutForm> = {};
+export const validate = (values: ICredentials) => {
+  const errors: Partial<ICredentials> = {};
   if (values.firstName.length <= 0) {
     errors.firstName = "Required";
   }
