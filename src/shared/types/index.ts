@@ -200,4 +200,5 @@ export interface ICheckoutForm {
   city: string;
   phoneNumber: string;
   email: string;
+  password: string;
 }

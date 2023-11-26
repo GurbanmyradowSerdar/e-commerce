@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { twMerge as tw } from "tailwind-merge";
 import { interMediumFont, poppinsMediumFont } from "fonts";
+import SignUpForm from "@/components/pages/sign_up/SignUpForm";
 
 export default function page() {
   return (
@@ -37,49 +38,7 @@ export default function page() {
           </h1>
           <p className="text-lg">Enter your details below</p>
         </div>
-        <form className="flex flex-col gap-14">
-          <div className="flex flex-col gap-12">
-            <InputWithLine
-              props={{ type: "text", placeholder: "name", required: true }}
-            />
-            <InputWithLine
-              props={{
-                type: "text",
-                placeholder: "email or phone number",
-                required: true,
-              }}
-            />
-            <InputWithLine
-              props={{
-                type: "password",
-                placeholder: "password",
-                required: true,
-              }}
-            />
-          </div>
-          <div className="flex flex-col gap-5">
-            <PrimaryButton>create account</PrimaryButton>
-            <OutlinedButton className="flex items-center gap-5">
-              <Image
-                alt=""
-                src={"/icons/sign_up/google.svg"}
-                width={100}
-                height={100}
-                className="w-7 h-7"
-              />
-              <span>sign up with google</span>
-            </OutlinedButton>
-          </div>
-          <div className="flex items-center justify-center gap-4 text-color-text-2 text-lg">
-            <p>Already have account</p>
-            <Link
-              href={"/en/login"}
-              className={`${poppinsMediumFont.className} duration-300 ease-in-out transition-colors underline underline-offset-8 hover:text-color-text-2-hover`}
-            >
-              Log in
-            </Link>
-          </div>
-        </form>
+        <SignUpForm />
       </div>
     </section>
   );

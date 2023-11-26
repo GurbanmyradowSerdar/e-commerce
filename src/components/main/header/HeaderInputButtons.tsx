@@ -1,11 +1,13 @@
 "use client";
 
 import { PiHeart as HeartIcon } from "react-icons/pi";
+import { LuUser as UserIcon } from "react-icons/lu";
 import { GrCart as CartIcon } from "react-icons/gr";
 import { FiSearch as SearchIcon } from "react-icons/fi";
 import { useRecoilValue } from "recoil";
 import {
   cartProductsState,
+  credentialsState,
   favoriteProductsState,
 } from "@/shared/recoil_states/atoms";
 import Link from "next/link";
@@ -16,6 +18,8 @@ export default function HeaderInputButtons() {
   const [amount, setAmount] = useState(0);
   const amountOfCart = useRecoilValue(cartProductsState);
   const [amountCart, setAmountCart] = useState(0);
+  const credentials = useRecoilValue(credentialsState);
+  const [isLoged, setIsLoged] = useState(false);
 
   useEffect(() => {
     setAmount(amountOfFavorites.length);
@@ -26,6 +30,10 @@ export default function HeaderInputButtons() {
       amountOfCart.reduce((prev, current) => prev + current.amount, 0)
     );
   }, [amountOfCart]);
+
+  useEffect(() => {
+    setIsLoged(credentials.firstName.length === 0 ? false : true);
+  }, [credentials]);
 
   return (
     <>
@@ -48,6 +56,9 @@ export default function HeaderInputButtons() {
           />
         )}
         <CartIcon className="w-7 h-7" />
+      </Link>
+      <Link href={isLoged ? "/en/account" : "/en/sign-up"}>
+        <UserIcon className="w-7 h-7" />
       </Link>
     </>
   );

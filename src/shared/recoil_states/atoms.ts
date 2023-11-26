@@ -113,7 +113,7 @@ export const checkoutProductsState = atom<ICheckoutCard[]>({
 });
 
 // ! credentials of user
-const defaultValue: ICheckoutForm = {
+const defaultCredentials: ICheckoutForm = {
   phoneNumber: "",
   email: "",
   firstName: "",
@@ -121,10 +121,11 @@ const defaultValue: ICheckoutForm = {
   apartment: "",
   city: "",
   streetAddress: "",
+  password: "",
 };
 export const credentialsState = atom<ICheckoutForm>({
   key: "Credentials",
-  default: { ...defaultValue },
+  default: { ...defaultCredentials },
   effects: [
     ({ onSet, setSelf }) => {
       onSet((param) => {
@@ -137,9 +138,9 @@ export const credentialsState = atom<ICheckoutForm>({
           returnValue =
             localStorage.getItem("credentials") !== null
               ? JSON.parse(localStorage.getItem("credentials") as string)
-              : defaultValue;
+              : defaultCredentials;
         } else {
-          returnValue = defaultValue;
+          returnValue = defaultCredentials;
         }
         return returnValue;
       });
