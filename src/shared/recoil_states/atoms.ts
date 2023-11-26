@@ -103,7 +103,7 @@ export const deliveryPriceState = atom<number>({
 
 // ! checkout products to sell
 export const checkoutProductsState = atom<ICheckoutCard[]>({
-  key: "CheckoutPrice",
+  key: "CheckoutProducts",
   default: [],
   effects: [
     ({ setSelf }) => {

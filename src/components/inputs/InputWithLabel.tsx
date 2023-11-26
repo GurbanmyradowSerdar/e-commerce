@@ -17,7 +17,9 @@ export default function InputWithLabel({
       <input
         {...inputProps}
         className={tw(
-          "bg-color-secondary p-3 px-6 w-[400px] text-color-text-3 duration-300 transition-colors focus-within:outline-color-secondary-2",
+          `bg-color-secondary p-3 px-5 w-full text-color-text-3 duration-300 transition-all
+           ease-in-out outline-0 focus-within:outline-color-secondary-2 focus-within:outline-2
+           outline-transparent`,
           className
         )}
       />
