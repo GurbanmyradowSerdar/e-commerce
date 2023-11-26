@@ -21,7 +21,7 @@ export default function MainHeader() {
         <div className="flex items-center gap-52">
           <nav className="flex items-center gap-12">
             {headerNav.map((item, i) => (
-              <HeaderLink href={item.href} text={item.text} key={i} />
+              <HeaderLink {...item} key={i} />
             ))}
           </nav>
           <div className="flex items-center gap-6">

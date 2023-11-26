@@ -12,6 +12,8 @@ export default function HeaderLink({ href, text }: IHeaderLink) {
       className={`capitalize ${
         pathname.split("/")[2] === href.slice(1)
           ? "underline underline-offset-4"
+          : pathname.split("/").length === 2 && href.length === 1
+          ? "underline underline-offset-4"
           : ""
       } `}
     >

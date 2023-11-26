@@ -39,34 +39,19 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
           <FooterTitle text="support" />
           {footerNav.map((item, i) => (
-            <FooterLink
-              key={i}
-              href={item.href}
-              text={item.text}
-              isIndependent
-            />
+            <FooterLink key={i} {...item} isIndependent />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[0_0_10%]">
           <FooterTitle text="account" />
           {footerNav1.map((item, i) => (
-            <FooterLink
-              isIndependent={false}
-              key={i}
-              href={item.href}
-              text={item.text}
-            />
+            <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[0_0_10%]">
           <FooterTitle text="quick link" />
           {footerNav2.map((item, i) => (
-            <FooterLink
-              isIndependent={false}
-              key={i}
-              href={item.href}
-              text={item.text}
-            />
+            <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
