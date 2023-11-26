@@ -1,12 +1,16 @@
 import { horizontalMarginLimit } from "@/shared/constants";
 import { twMerge as tw } from "tailwind-merge";
 import { interBoldFont } from "fonts";
-import { headerNav } from "@/data";
 import HeaderLink from "./HeaderLink";
 import HeaderInputButtons from "./HeaderInputButtons";
 import Link from "next/link";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function MainHeader() {
+export default async function MainHeader() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <div className="bg-color-bg text-color-text-3 border-b border-color-divider">
       <div
@@ -20,12 +24,12 @@ export default function MainHeader() {
         </Link>
         <div className="flex items-center gap-52">
           <nav className="flex items-center gap-12">
-            {headerNav.map((item, i) => (
+            {dict.header.links.map((item, i) => (
               <HeaderLink {...item} key={i} />
             ))}
           </nav>
           <div className="flex items-center gap-6">
-            <HeaderInputButtons />
+            <HeaderInputButtons dict={dict} lang={locale} />
           </div>
         </div>
       </div>

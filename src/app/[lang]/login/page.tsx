@@ -28,6 +28,7 @@ export default function page() {
         width={800}
         height={800}
         className="w-[1000px] object-contain"
+        priority
       />
 
       <div className="text-color-text-3 flex flex-col gap-14 flex-[0_0_25%]">

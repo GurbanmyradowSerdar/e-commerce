@@ -1,18 +1,18 @@
-import OutlinedButton from "@/components/buttons/OutlinedButton";
-import PrimaryButton from "@/components/buttons/PrimaryButton";
-import InputWithLine from "@/components/inputs/InputWithLine";
 import {
   bottomMarginSaving,
   horizontalMarginLimit,
   topMarginSaving,
 } from "@/shared/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { twMerge as tw } from "tailwind-merge";
-import { interMediumFont, poppinsMediumFont } from "fonts";
+import { interMediumFont } from "fonts";
 import SignUpForm from "@/components/pages/sign_up/SignUpForm";
+import { ILangProps } from "@/shared/types";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function page() {
+export default async function page({ params }: ILangProps) {
+  const dict = await getDict(params.lang);
+
   return (
     <section
       className={tw(
@@ -29,6 +29,7 @@ export default function page() {
         width={800}
         height={800}
         className="w-[1000px] object-contain"
+        priority
       />
 
       <div className="text-color-text-3 flex flex-col gap-14 flex-[0_0_25%]">

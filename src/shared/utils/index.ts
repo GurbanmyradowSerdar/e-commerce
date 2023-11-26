@@ -1,4 +1,4 @@
-import { ICartProductCard, IProductCard } from "../types";
+import { ICartProductCard, IProductCard, TLanguages } from "../types";
 
 interface TimeLeft {
   days: string;
@@ -126,4 +126,9 @@ export function calculateSubtotal(
   } else {
     return state;
   }
+}
+
+// ! get locale lang in server components via headers.get()
+export function getLocaleInServer(headers: any) {
+  return headers().get("locale") as TLanguages;
 }

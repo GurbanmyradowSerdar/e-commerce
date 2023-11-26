@@ -202,3 +202,13 @@ export interface ICredentials {
   email: string;
   password: string;
 }
+
+// ! lang props in page
+export interface ILangProps {
+  params: { lang: TLanguages };
+}
+
+// ! lang props to components
+export interface ILangPropsToComponent {
+  lang: TLanguages;
+}

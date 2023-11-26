@@ -1,0 +1,44 @@
+{
+  "header": {
+    "topHeader": {
+      "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+      "href": "ShopNow"
+    },
+    "links": [
+      {
+        "href": "/",
+        "text": "home"
+      },
+      {
+        "href": "/contact",
+        "text": "contact"
+      },
+      {
+        "href": "/about",
+        "text": "about"
+      },
+      {
+        "href": "/sign-up",
+        "text": "sign up"
+      }
+    ],
+    "searchPlaceholder": "What are you looking for?"
+  },
+  "pages": {
+    "signUp": {
+      "title": "Create an account",
+      "subtitle": "Enter your details below",
+      "inputs": {
+        "name": "name",
+        "email": "email",
+        "phoneNumber": "phone number",
+        "password": "password"
+      },
+      "createAcc": "create account",
+      "signGoogle": "sign up with google",
+      "haveAccount": "already have an account?",
+      "login": "log in"
+    }
+  },
+  "footer": {}
+}

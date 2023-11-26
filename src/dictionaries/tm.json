@@ -1,0 +1,44 @@
+{
+  "header": {
+    "topHeader": {
+      "text": "Howuzda ýüzmek eşikleri we mugt ekspress eltip bermek üçin tomus satuwy - 50% arzanladyş!",
+      "href": "Satyn Almak"
+    },
+    "links": [
+      {
+        "href": "/",
+        "text": "Esasy"
+      },
+      {
+        "href": "/contact",
+        "text": "Kontaktlar"
+      },
+      {
+        "href": "/about",
+        "text": "biz hakda"
+      },
+      {
+        "href": "/sign-up",
+        "text": "ulgama ýazylmak"
+      }
+    ],
+    "searchPlaceholder": "Näme gözleýarsiňiz?"
+  },
+  "pages": {
+    "signUp": {
+      "title": "akkunt döretmek",
+      "subtitle": "Maglumatlaryňyzy aşakda giriziň",
+      "inputs": {
+        "name": "adyňyz",
+        "email": "e poçtaňyz",
+        "phoneNumber": "telefon nomeriňiz",
+        "password": "parolyňyz"
+      },
+      "createAcc": "akkunt döretmek",
+      "signGoogle": "google bilen ulgama girmek",
+      "haveAccount": "eýýäm akkaundyňyz barmy?",
+      "login": "girmek"
+    }
+  },
+  "footer": {}
+}

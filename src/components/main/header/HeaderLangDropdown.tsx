@@ -1,15 +1,21 @@
 "use client";
 import { Select } from "@chakra-ui/react";
 import { useState } from "react";
-import { TLanguages } from "types";
+import { ILangPropsToComponent, TLanguages } from "types";
+import { useRouter, usePathname } from "next/navigation";
 
-export default function HeaderLangDropdown() {
-  const [lang, setLang] = useState<TLanguages>("en");
-
+export default function HeaderLangDropdown({ lang }: ILangPropsToComponent) {
+  const [language, setLanguage] = useState<TLanguages>(lang);
+  const pathname = usePathname();
+  const { push } = useRouter();
   return (
     <Select
-      value={lang}
-      onChange={(e) => setLang(e.target.value as TLanguages)}
+      value={language}
+      onChange={(e) => {
+        setLanguage(e.target.value as TLanguages);
+
+        push(`/${e.target.value as TLanguages}/${pathname.split("/")[2]}`);
+      }}
       className="cursor-pointer"
       focusBorderColor="transparent"
       border={"none"}

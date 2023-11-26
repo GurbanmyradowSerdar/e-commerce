@@ -12,8 +12,12 @@ import {
 } from "@/shared/recoil_states/atoms";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { ILangPropsToComponent } from "@/shared/types";
 
-export default function HeaderInputButtons() {
+export default function HeaderInputButtons({
+  dict,
+  lang,
+}: { dict: any } & ILangPropsToComponent) {
   const amountOfFavorites = useRecoilValue(favoriteProductsState);
   const [amount, setAmount] = useState(0);
   const amountOfCart = useRecoilValue(cartProductsState);
@@ -40,16 +44,16 @@ export default function HeaderInputButtons() {
       <div className="flex items-center bg-color-secondary px-6 py-3 gap-4">
         <input
           type="text"
-          placeholder="What are you looking for? "
+          placeholder={dict.header.searchPlaceholder}
           className="text-sm placeholder:text-color-text-2 bg-transparent outline-none"
         />
         <SearchIcon className="w-7 h-7 cursor-pointer" />
       </div>
-      <Link href={"/en/wishlist"} className="relative cursor-pointer">
+      <Link href={`/${lang}/wishlist`} className="relative cursor-pointer">
         {amount > 0 && <AmountOfItems text={amount.toString()} />}
         <HeartIcon className="w-8 h-8" />
       </Link>
-      <Link href={"/en/cart"} className="relative cursor-pointer">
+      <Link href={`/${lang}/cart`} className="relative cursor-pointer">
         {amountCart > 0 && (
           <AmountOfItems
             text={amountCart > 99 ? `${amountCart}+` : amountCart.toString()}
@@ -57,7 +61,7 @@ export default function HeaderInputButtons() {
         )}
         <CartIcon className="w-7 h-7" />
       </Link>
-      <Link href={isLoged ? "/en/account" : "/en/sign-up"}>
+      <Link href={isLoged ? `/${lang}/account` : `/${lang}/sign-up`}>
         <UserIcon className="w-7 h-7" />
       </Link>
     </>
