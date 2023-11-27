@@ -1,4 +1,3 @@
-import OutlinedButton from "@/components/buttons/OutlinedButton";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import InputWithLine from "@/components/inputs/InputWithLine";
 import {
@@ -7,9 +6,8 @@ import {
   topMarginSaving,
 } from "@/shared/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { twMerge as tw } from "tailwind-merge";
-import { interMediumFont, poppinsMediumFont } from "fonts";
+import { interMediumFont } from "fonts";
 
 export default function page() {
   return (
@@ -17,9 +15,7 @@ export default function page() {
       className={tw(
         `flex items-center justify-between`,
         topMarginSaving,
-        bottomMarginSaving,
-        horizontalMarginLimit,
-        "ml-0 mt-20"
+        bottomMarginSaving
       )}
     >
       <Image
@@ -27,11 +23,17 @@ export default function page() {
         src={"/images/sign_up/phones.png"}
         width={800}
         height={800}
-        className="w-[1000px] object-contain"
+        className="w-[1000px] object-contain max-3xl:w-[750px]"
         priority
       />
 
-      <div className="text-color-text-3 flex flex-col gap-14 flex-[0_0_25%]">
+      <div
+        className={tw(
+          "text-color-text-3 flex flex-col gap-14 flex-[0_0_25%] max-3xl:flex-[0_0_30%]",
+          horizontalMarginLimit,
+          "ml-0 max-3xl:ml-0"
+        )}
+      >
         <div className="flex flex-col items-start gap-5">
           <h1 className={`${interMediumFont.className} text-[40px]`}>
             Log in to Exclusive

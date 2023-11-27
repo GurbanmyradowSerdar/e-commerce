@@ -14,15 +14,18 @@ export default function page() {
   return (
     <div
       className={tw(
-        `flex gap-16`,
+        `flex gap-16 max-3xl:gap-14`,
         topMarginSaving,
         horizontalMarginLimit,
         bottomMarginSaving
       )}
     >
       <NavigationTrain />
-      <div className="text-color-text-3 space-y-8 flex-[0_0_20%] shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] p-5">
-        <div className="flex flex-col items-start gap-4">
+      <div
+        className="text-color-text-3 space-y-8 flex-[0_0_20%] shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] p-5
+      max-3xl:flex-[0_0_25%]"
+      >
+        <div className="flex flex-col items-start gap-4 max-3xl:gap-3">
           <div className="flex items-center gap-4">
             <Image
               alt="phone"
@@ -41,7 +44,7 @@ export default function page() {
           <p>Phone: +8801611112222</p>
         </div>
         <div className="w-full h-[2px] bg-color-divider" />
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 max-3xl:gap-3">
           <div className="flex items-center gap-4">
             <Image
               alt="phone"
