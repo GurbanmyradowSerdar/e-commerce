@@ -388,7 +388,7 @@ export const homeCategoriesSwiper: ICategoryCard[] = [
     Icon: ComputerIcon(),
   },
   {
-    title: "smart watch",
+    title: "smartWatch",
     Icon: WatchIcon(),
   },
   {
@@ -396,7 +396,7 @@ export const homeCategoriesSwiper: ICategoryCard[] = [
     Icon: CameraIcon(),
   },
   {
-    title: "head phones",
+    title: "headPhones",
     Icon: HeadPhonesIcon(),
   },
   {
@@ -408,11 +408,11 @@ export const homeCategoriesSwiper: ICategoryCard[] = [
     Icon: ComputerIcon(),
   },
   {
-    title: "smart watch",
+    title: "smartWatch",
     Icon: WatchIcon(),
   },
   {
-    title: "head phones",
+    title: "headPhones",
     Icon: HeadPhonesIcon(),
   },
 ];

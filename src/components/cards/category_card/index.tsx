@@ -8,7 +8,7 @@ export default function CategoryCard({ Icon, title }: ICategoryCard) {
     active:bg-color-button-1-hover text-center"
     >
       {Icon}
-      <p className="text-lg capitalize group-hover:text-color-text-1 transition-colors duration-300 ease-in-out flex flex-1">
+      <p className="text-lg capitalize group-hover:text-color-text-1 transition-colors duration-300 ease-in-out">
         {title}
       </p>
     </div>

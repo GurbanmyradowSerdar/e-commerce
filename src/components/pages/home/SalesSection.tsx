@@ -27,13 +27,18 @@ export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
           swiperProps={{
             slidesPerView: 5.5,
             spaceBetween: 50,
-            style: {
-              marginRight: "-135px",
+            breakpoints: {
+              1536: {
+                slidesPerView: 4.5,
+              },
+              1620: {
+                slidesPerView: 5.5,
+              },
             },
           }}
         />
       </div>
-      <div className="flex items-center justify-center mt-20">
+      <div className="flex items-center justify-center mt-16">
         <Link href={"/en/products/sales"}>
           <PrimaryButton>view all products</PrimaryButton>
         </Link>

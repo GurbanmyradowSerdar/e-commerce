@@ -18,7 +18,15 @@ export default function BestSellingSection() {
         <ProductSwiper
           swiperProps={{
             slidesPerView: 5,
-            spaceBetween: 120,
+            spaceBetween: 50,
+            breakpoints: {
+              1536: {
+                slidesPerView: 4,
+              },
+              1620: {
+                slidesPerView: 5,
+              },
+            },
           }}
           data={homeBestSellingSwiper}
         />

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div
       className={tw(
-        `flex flex-col gap-40`,
+        `flex flex-col gap-40 max-3xl:gap-32`,
         bottomMarginSaving,
         horizontalMarginLimit
       )}
