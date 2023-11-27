@@ -25,6 +25,7 @@ export default function CartProductsSection() {
     setDeliveryPrice((prev) => calculateDeliveryPrice(cartProducts, prev));
     setArray(cartProducts);
   }, [cartProducts]);
+
   return (
     <section className="flex flex-col gap-8">
       {array.length > 0 ? (

@@ -5,22 +5,13 @@ import { credentialsState } from "@/shared/recoil_states/atoms";
 import { ICredentials } from "@/shared/types";
 import { interMediumFont } from "fonts";
 import { useFormik } from "formik";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { validate } from "./validation";
 import { Checkbox } from "@chakra-ui/react";
 import { twMerge as tw } from "tailwind-merge";
 
 export default function FormSection() {
-  const [credentials, setCredentials] = useRecoilState(credentialsState);
-  const {
-    apartment,
-    city,
-    companyName,
-    email,
-    firstName,
-    phoneNumber,
-    streetAddress,
-  } = credentials;
+  const credentials = useRecoilValue(credentialsState);
   const formik = useFormik<ICredentials>({
     initialValues: {
       ...credentials,
@@ -30,8 +21,13 @@ export default function FormSection() {
   });
 
   return (
-    <section className="gap-8 flex flex-col flex-[0_0_30%]">
-      <h1 className={tw("text-[40px]", interMediumFont.className)}>
+    <section className="gap-8 flex flex-col flex-[0_0_30%] max-3xl:flex-[0_0_35%]">
+      <h1
+        className={tw(
+          "text-[40px] max-3xl:text-4xl",
+          interMediumFont.className
+        )}
+      >
         Billing Details
       </h1>
       <div className="space-y-2">

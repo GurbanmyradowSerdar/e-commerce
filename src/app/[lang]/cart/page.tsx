@@ -12,7 +12,7 @@ export default function page() {
   return (
     <div
       className={tw(
-        "space-y-24",
+        "space-y-24 max-3xl:space-y-16",
         topMarginSaving,
         bottomMarginSaving,
         horizontalMarginLimit

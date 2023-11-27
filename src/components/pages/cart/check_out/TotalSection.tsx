@@ -50,9 +50,9 @@ export default function TotalSection() {
   }
 
   return (
-    <section className="flex flex-col flex-[0_0_35%]">
+    <section className="flex flex-col flex-[0_0_35%] max-3xl:flex-[0_0_40%]">
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 max-3xl:gap-7">
           {products.map((item, i) => (
             <CheckOutCard key={i} {...item} />
           ))}
@@ -105,7 +105,8 @@ export default function TotalSection() {
           <input
             type="text"
             placeholder="Coupon Code"
-            className="p-4 w-80 rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1"
+            className="p-4 w-80 rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1
+            max-3xl:p-3"
           />
           <PrimaryButton>apply coupon</PrimaryButton>
         </div>
