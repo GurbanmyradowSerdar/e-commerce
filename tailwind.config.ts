@@ -11,6 +11,9 @@ const config: Config = {
       borderRadius: {
         sm: "4px",
       },
+      screens: {
+        "3xl": "1620px",
+      },
       colors: {
         "color-primary": "#FFFFFF",
         "color-primary-1": "#363738",

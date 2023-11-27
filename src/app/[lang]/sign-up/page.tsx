@@ -7,12 +7,8 @@ import Image from "next/image";
 import { twMerge as tw } from "tailwind-merge";
 import { interMediumFont } from "fonts";
 import SignUpForm from "@/components/pages/sign_up/SignUpForm";
-import { ILangProps } from "@/shared/types";
-import { getDict } from "@/dictionaries/dictionaries";
 
-export default async function page({ params }: ILangProps) {
-  const dict = await getDict(params.lang);
-
+export default async function page() {
   return (
     <section
       className={tw(

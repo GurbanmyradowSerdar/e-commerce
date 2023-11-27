@@ -16,7 +16,7 @@ export default function page() {
   return (
     <div
       className={tw(
-        `flex flex-col text-color-text-3 gap-56`,
+        `flex flex-col text-color-text-3 gap-56 max-3xl:gap-48`,
         topMarginSaving,
         bottomMarginSaving,
         horizontalMarginLimit
@@ -24,8 +24,8 @@ export default function page() {
     >
       <NavigationTrain />
       {/* our story texts */}
-      <section className="flex items-center justify-between">
-        <div className="flex flex-col flex-[0_0_40%] gap-12">
+      <section className="flex items-center justify-between gap-5">
+        <div className="flex flex-col flex-[0_1_40%] gap-12 max-3xl:gap-8 max-3xl:flex-[0_1_45%]">
           <h1
             className={tw("text-6xl capitalize", interSemiboldFont.className)}
           >
@@ -49,7 +49,9 @@ export default function page() {
           src={"/images/about/girls.png"}
           width={700}
           height={700}
-          className="w-[900px] object-contain"
+          className="w-[900px] object-contain
+          max-3xl:w-[600px]"
+          priority
         />
       </section>
       {/* about cards */}

@@ -14,7 +14,7 @@ export default function ServiceCard({ image, subtitle, title }: IServiceCard) {
       />
       <div className="space-y-1">
         <h5
-          className={`${poppinsSemiBoldFont.className} uppercase text-[20px]`}
+          className={`${poppinsSemiBoldFont.className} uppercase text-[20px] max-3xl:text-lg`}
         >
           {title}
         </h5>

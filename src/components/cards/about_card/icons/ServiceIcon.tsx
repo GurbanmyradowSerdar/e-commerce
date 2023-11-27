@@ -1,11 +1,10 @@
 export default function ServiceIcon() {
   return (
     <svg
-      width="81"
-      height="80"
       viewBox="0 0 81 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-20 h-20 max-3xl:w-[74px] max-3xl:h-[74px]"
     >
       <path
         opacity="0.3"

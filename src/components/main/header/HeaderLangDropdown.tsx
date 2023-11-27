@@ -14,7 +14,9 @@ export default function HeaderLangDropdown({ lang }: ILangPropsToComponent) {
       onChange={(e) => {
         setLanguage(e.target.value as TLanguages);
 
-        push(`/${e.target.value as TLanguages}/${pathname.split("/")[2]}`);
+        push(
+          `/${e.target.value as TLanguages}/${pathname.split("/")[2] || ""}`
+        );
       }}
       className="cursor-pointer"
       focusBorderColor="transparent"

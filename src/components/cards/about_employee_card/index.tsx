@@ -20,23 +20,31 @@ export default function AboutEmployeeCard({
             src={`/images/about/${image}`}
             width={200}
             height={200}
-            className="h-80 object-bottom object-contain mx-14 mt-5"
+            className="h-80 object-bottom object-contain mx-14 mt-5
+            max-3xl:h-64 max-3xl:mx-10"
           />
         </div>
-        <div className="flex flex-col items-start gap-4">
-          <div className="flex flex-col items-start gap-2 capitalize">
-            <p className={`${interMediumFont.className} text-4xl`}>{name}</p>
+        <div className="flex flex-col items-start gap-4 max-3xl:gap-2">
+          <div
+            className="flex flex-col items-start gap-2 capitalize
+          max-3xl:gap-1"
+          >
+            <p
+              className={`${interMediumFont.className} text-4xl max-3xl:text-3xl`}
+            >
+              {name}
+            </p>
             <p className="text-lg">{status}</p>
           </div>
           <div className="flex items-center gap-5">
             <a href={href.twitter}>
-              <TwitterIcon className="w-7 h-7 stroke-[1.5px]" />
+              <TwitterIcon className="w-7 h-7 stroke-[1.5px] max-3xl:w-6 max-3xl:h-6" />
             </a>
             <a href={href.instagram}>
-              <InstagramIcon className="w-7 h-7" />
+              <InstagramIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
             </a>
             <a href={href.linkedin}>
-              <LinkedinIcon className="w-7 h-7" />
+              <LinkedinIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
             </a>
           </div>
         </div>
