@@ -24,7 +24,7 @@ export default function AccountSection() {
         Your profile
       </h1>
 
-      <div className="grid grid-cols-6 gap-10">
+      <div className="grid grid-cols-6 gap-10 max-3xl:grid-cols-4 max-3xl:gap-14">
         <div className="space-y-1">
           <h3
             className={tw("text-2xl capitalize", poppinsMediumFont.className)}
