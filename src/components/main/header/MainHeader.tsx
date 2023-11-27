@@ -19,16 +19,22 @@ export default async function MainHeader() {
           horizontalMarginLimit
         )}
       >
-        <Link href={"/"} className={tw("text-3xl", interBoldFont.className)}>
+        <Link
+          href={`/${locale}`}
+          className={tw("text-3xl", interBoldFont.className)}
+        >
           Exlusive
         </Link>
-        <div className="flex items-center gap-52">
-          <nav className="flex items-center gap-12">
+        <div className="flex items-center gap-52 max-3xl:gap-40">
+          <nav className="flex items-center gap-12 max-3xl:gap-10">
             {dict.header.links.map((item, i) => (
               <HeaderLink {...item} key={i} />
             ))}
           </nav>
-          <div className="flex items-center gap-6">
+          <div
+            className="flex items-center gap-6
+          max-3xl:gap-5"
+          >
             <HeaderInputButtons dict={dict} lang={locale} />
           </div>
         </div>

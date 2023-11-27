@@ -19,11 +19,12 @@ export default function Footer() {
     <footer className="bg-color-bg-1 text-color-text-1">
       <div
         className={tw(
-          `mt-16 mb-14 flex flex-wrap justify-between`,
+          `mt-16 mb-14 flex flex-wrap gap-10
+          max-3xl:mt-14 max-3xl:mb-12`,
           horizontalMarginLimit
         )}
       >
-        <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
+        <div className="flex flex-col items-start gap-3 flex-[1_0_17%] max-3xl:flex-[1_0_20%]">
           <Link
             href={"/"}
             className={tw("text-3xl mb-3", interBoldFont.className)}
@@ -36,25 +37,25 @@ export default function Footer() {
             <FooterInput />
           </div>
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
+        <div className="flex flex-col items-start gap-3 flex-[1_0_17%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="support" />
           {footerNav.map((item, i) => (
             <FooterLink key={i} {...item} isIndependent />
           ))}
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_10%]">
+        <div className="flex flex-col items-start gap-3 flex-[1_0_10%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="account" />
           {footerNav1.map((item, i) => (
             <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_10%]">
+        <div className="flex flex-col items-start gap-3 flex-[1_0_10%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="quick link" />
           {footerNav2.map((item, i) => (
             <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
-        <div className="flex flex-col items-start gap-3 flex-[0_0_17%]">
+        <div className="flex flex-col items-start gap-3 flex-[1_0_19%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="download app" />
           <div className="space-y-2">
             <p className={tw("text-color-text-2", poppinsMediumFont.className)}>

@@ -41,17 +41,20 @@ export default function HeaderInputButtons({
 
   return (
     <>
-      <div className="flex items-center bg-color-secondary px-6 py-3 gap-4">
+      <div
+        className="flex items-center bg-color-secondary px-6 py-3 gap-4
+      max-3xl:px-5 max-3xl:py-2"
+      >
         <input
           type="text"
           placeholder={dict.header.searchPlaceholder}
           className="text-sm placeholder:text-color-text-2 bg-transparent outline-none"
         />
-        <SearchIcon className="w-7 h-7 cursor-pointer" />
+        <SearchIcon className="w-7 h-7 cursor-pointer max-3xl:w-6 max-3xl:h-6" />
       </div>
       <Link href={`/${lang}/wishlist`} className="relative cursor-pointer">
         {amount > 0 && <AmountOfItems text={amount.toString()} />}
-        <HeartIcon className="w-8 h-8" />
+        <HeartIcon className="w-8 h-8 max-3xl:w-7 max-3xl:h-7" />
       </Link>
       <Link href={`/${lang}/cart`} className="relative cursor-pointer">
         {amountCart > 0 && (
@@ -59,10 +62,10 @@ export default function HeaderInputButtons({
             text={amountCart > 99 ? `${amountCart}+` : amountCart.toString()}
           />
         )}
-        <CartIcon className="w-7 h-7" />
+        <CartIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
       </Link>
       <Link href={isLoged ? `/${lang}/account` : `/${lang}/sign-up`}>
-        <UserIcon className="w-7 h-7" />
+        <UserIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
       </Link>
     </>
   );
@@ -72,7 +75,8 @@ function AmountOfItems({ text }: { text: string }) {
   return (
     <p
       className="text-sm text-color-text-1 bg-color-secondary-2 rounded-full absolute -top-3 -right-3 w-6 h-6
-    flex items-center justify-center"
+    flex items-center justify-center
+    max-3xl:w-5 max-3xl:h-5 max-3xl:-top-2 max-3xl:-right-2"
     >
       {text}
     </p>
