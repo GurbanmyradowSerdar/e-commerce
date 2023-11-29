@@ -6,7 +6,7 @@ import CustomSwiper from "./CustomSwiper";
 
 export default function ProductsSection() {
   return (
-    <section className="flex flex-col gap-20">
+    <section className="flex flex-col gap-20 max-2xl:gap-10">
       <div className="flex flex-col gap-7">
         <SectionTitle text="our products" />
         <div className="flex items-center justify-between">

@@ -11,7 +11,7 @@ export default function SectionDescription({
   return (
     <h2
       className={tw(
-        "text-[40px] text-color-text-3 capitalize",
+        "text-[40px] text-color-text-3 capitalize max-2xl:text-3xl",
         interSemiboldFont.className,
         className
       )}

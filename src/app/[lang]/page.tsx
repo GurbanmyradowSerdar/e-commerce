@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div
       className={tw(
-        `flex flex-col gap-40 max-3xl:gap-32`,
+        `flex flex-col gap-40 max-3xl:gap-32 max-2xl:gap-28`,
         bottomMarginSaving,
         horizontalMarginLimit
       )}
@@ -28,7 +28,7 @@ export default function Home() {
       <SalesSection salesUntil={new Date("12-30-2023")} />
       <CategoriesSection />
       <BestSellingSection />
-      <AloneBannerSection salesUntil={new Date("12-01-2023")} />
+      <AloneBannerSection salesUntil={new Date("12-10-2023")} />
       <ProductsSection />
       <NewArrivalSection />
       <ServicesSection />

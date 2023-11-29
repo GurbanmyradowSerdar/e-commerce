@@ -25,7 +25,9 @@ export default function NotFound() {
         >
           <NavigationTrain isNotFound />
           <div className="flex flex-col text-center gap-10">
-            <h1 className={`${interMediumFont.className} text-9xl capitalize`}>
+            <h1
+              className={`${interMediumFont.className} text-9xl capitalize max-2xl:text-7xl`}
+            >
               404 not found
             </h1>
             <h5 className="text-lg">

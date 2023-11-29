@@ -21,6 +21,14 @@ export default function CategoriesSection() {
           swiperProps={{
             slidesPerView: 6,
             spaceBetween: 60,
+            breakpoints: {
+              1280: {
+                slidesPerView: 5,
+              },
+              1536: {
+                slidesPerView: 6,
+              },
+            },
           }}
         />
       </div>

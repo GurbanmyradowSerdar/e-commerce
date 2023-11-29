@@ -13,8 +13,13 @@ export default function CustomSwiper() {
         spaceBetween: 20,
         modules: [Grid],
         grid: { rows: 2, fill: "row" },
-        style: {
-          marginRight: "-70px",
+        breakpoints: {
+          1280: {
+            slidesPerView: 4,
+          },
+          1536: {
+            slidesPerView: 5,
+          },
         },
       }}
       data={homeProductsSwiper}

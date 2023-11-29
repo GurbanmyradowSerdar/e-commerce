@@ -6,7 +6,7 @@ import { homeBestSellingSwiper } from "@/data";
 
 export default function BestSellingSection() {
   return (
-    <section className="flex flex-col gap-20">
+    <section className="flex flex-col gap-20 max-2xl:gap-10">
       <div className="flex flex-col gap-7">
         <SectionTitle text="this month" />
         <div className="flex items-center justify-between">
@@ -20,6 +20,9 @@ export default function BestSellingSection() {
             slidesPerView: 5,
             spaceBetween: 50,
             breakpoints: {
+              1280: {
+                slidesPerView: 4,
+              },
               1536: {
                 slidesPerView: 4,
               },

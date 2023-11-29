@@ -40,7 +40,12 @@ export default function ArrowButton({
         className
       )}
     >
-      <ArrowIcon className={tw("m-3 w-5 h-5", applyDirectionToArrow())} />
+      <ArrowIcon
+        className={tw(
+          "m-3 w-5 h-5 max-2xl:w-4 max-2xl:h-4",
+          applyDirectionToArrow()
+        )}
+      />
     </button>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function NewArrivalSection() {
   return (
-    <section className="grid grid-cols-4 grid-rows-2 h-[700px] gap-10">
+    <section className="grid grid-cols-4 grid-rows-2 h-[700px] gap-10 max-2xl:h-[600px]">
       <div
         className="col-span-2 row-span-2 bg-[url(/images/home/ps5.png)] bg-color-bg-1 bg-no-repeat bg-contain bg-bottom
       flex items-end p-10 rounded-sm"

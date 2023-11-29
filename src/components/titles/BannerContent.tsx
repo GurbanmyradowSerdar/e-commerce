@@ -13,13 +13,13 @@ export default function BannerContent({
       <div className="text-color-text-1 space-y-1">
         <p
           className={tw(
-            "text-[26px] capitalize",
+            "text-[26px] capitalize max-2xl:text-2xl",
             poppinsSemiBoldFont.className
           )}
         >
           {title}
         </p>
-        <p>{description}</p>
+        <p className="text-base max-2xl:text-sm">{description}</p>
       </div>
       <BannerButton text="shop now" />
     </div>

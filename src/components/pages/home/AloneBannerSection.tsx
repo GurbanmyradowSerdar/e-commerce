@@ -19,7 +19,7 @@ export default function AloneBannerSection({
         />
         <SectionDescription
           text="Enhance Your Music Experience"
-          className="text-color-text-1 text-6xl leading-[70px] max-w-xl max-3xl:text-5xl max-3xl:leading-[60px]"
+          className="text-color-text-1 text-6xl leading-[70px] max-w-xl max-3xl:text-5xl max-3xl:leading-[60px] max-2xl:max-w-md"
         />
         <SecondaryTimeCalc date={salesUntil} />
         <PrimaryButton className="bg-color-button hover:bg-color-button-hover">
@@ -32,7 +32,8 @@ export default function AloneBannerSection({
         width={700}
         height={700}
         className="object-contain drop-shadow-[0_0_100px_rgba(255,255,255,0.5)] w-auto h-auto
-        max-3xl:w-[500px] max-3xl:drop-shadow-[0_0_60px_rgba(255,255,255,0.5)]"
+        max-3xl:w-[500px] max-3xl:drop-shadow-[0_0_60px_rgba(255,255,255,0.5)]
+        max-2xl:w-[450px] max-2xl:drop-shadow-[0_0_50px_rgba(255,255,255,0.5)]"
       />
     </section>
   );

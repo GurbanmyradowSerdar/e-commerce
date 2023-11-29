@@ -21,26 +21,58 @@ export default function SecondaryTimeCalc({ date }: { date: Date }) {
 
   return time ? (
     <div className="flex items-center gap-5">
-      <div className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2">
-        <p className={tw("text-lg", poppinsSemiBoldFont.className)}>
+      <div
+        className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
+      max-2xl:w-[75px] max-2xl:h-[75px]"
+      >
+        <p
+          className={tw(
+            "text-lg max-2xl:text-base",
+            poppinsSemiBoldFont.className
+          )}
+        >
           {time.days}
         </p>
         <p className="capitalize">days</p>
       </div>
-      <div className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2">
-        <p className={tw("text-lg", poppinsSemiBoldFont.className)}>
+      <div
+        className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
+      max-2xl:w-[75px] max-2xl:h-[75px]"
+      >
+        <p
+          className={tw(
+            "text-lg max-2xl:text-base",
+            poppinsSemiBoldFont.className
+          )}
+        >
           {time.hours}
         </p>
         <p className="capitalize">hours</p>
       </div>
-      <div className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2">
-        <p className={tw("text-lg", poppinsSemiBoldFont.className)}>
+      <div
+        className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
+      max-2xl:w-[75px] max-2xl:h-[75px]"
+      >
+        <p
+          className={tw(
+            "text-lg max-2xl:text-base",
+            poppinsSemiBoldFont.className
+          )}
+        >
           {time.minutes}
         </p>
         <p className="capitalize">minutes</p>
       </div>
-      <div className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2">
-        <p className={tw("text-lg", poppinsSemiBoldFont.className)}>
+      <div
+        className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
+      max-2xl:w-[75px] max-2xl:h-[75px]"
+      >
+        <p
+          className={tw(
+            "text-lg max-2xl:text-base",
+            poppinsSemiBoldFont.className
+          )}
+        >
           {time.seconds}
         </p>
         <p className="capitalize">seconds</p>
