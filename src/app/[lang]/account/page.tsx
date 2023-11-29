@@ -10,12 +10,7 @@ import { twMerge as tw } from "tailwind-merge";
 export default function page() {
   return (
     <div
-      className={tw(
-        "",
-        topMarginSaving,
-        bottomMarginSaving,
-        horizontalMarginLimit
-      )}
+      className={tw(topMarginSaving, bottomMarginSaving, horizontalMarginLimit)}
     >
       <NavigationTrain />
       <AccountSection />

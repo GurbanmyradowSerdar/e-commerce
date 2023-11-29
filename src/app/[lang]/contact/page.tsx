@@ -23,7 +23,7 @@ export default function page() {
       <NavigationTrain />
       <div
         className="text-color-text-3 space-y-8 flex-[0_0_20%] shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] p-5
-      max-3xl:flex-[0_0_25%]"
+      max-3xl:flex-[0_0_25%] max-2xl:justify-evenly max-2xl:flex max-2xl:flex-col"
       >
         <div className="flex flex-col items-start gap-4 max-3xl:gap-3">
           <div className="flex items-center gap-4">
@@ -35,13 +35,18 @@ export default function page() {
               className="w-auto h-auto"
             />
             <p
-              className={tw("text-lg capitalize", poppinsMediumFont.className)}
+              className={tw(
+                "text-lg capitalize max-2xl:text-base",
+                poppinsMediumFont.className
+              )}
             >
               call to us
             </p>
           </div>
-          <p>We are available 24/7, 7 days a week.</p>
-          <p>Phone: +8801611112222</p>
+          <p className="text-base max-2xl:text-sm">
+            We are available 24/7, 7 days a week.
+          </p>
+          <p className="text-base max-2xl:text-sm">Phone: +8801611112222</p>
         </div>
         <div className="w-full h-[2px] bg-color-divider" />
         <div className="flex flex-col items-start gap-4 max-3xl:gap-3">
@@ -54,14 +59,23 @@ export default function page() {
               className="w-auto h-auto"
             />
             <p
-              className={tw("text-lg capitalize", poppinsMediumFont.className)}
+              className={tw(
+                "text-lg capitalize max-2xl:text-base",
+                poppinsMediumFont.className
+              )}
             >
               write to us
             </p>
           </div>
-          <p>Fill out our form and we will contact you within 24 hours.</p>
-          <p>Emails: customer@exclusive.com</p>
-          <p>Emails: support@exclusive.com</p>
+          <p className="text-base max-2xl:text-sm">
+            Fill out our form and we will contact you within 24 hours.
+          </p>
+          <p className="text-base max-2xl:text-sm">
+            Emails: customer@exclusive.com
+          </p>
+          <p className="text-base max-2xl:text-sm">
+            Emails: support@exclusive.com
+          </p>
         </div>
       </div>
       <form className="flex-1 flex flex-col shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] p-5 justify-between gap-10">
@@ -94,7 +108,8 @@ export default function page() {
           placeholder="Enter your message..."
           className="placeholder:text-color-text-2 px-4 py-3 bg-color-secondary rounded-sm
           outline-color-secondary duration-300 ease-in-out transition-all resize-none
-          focus-within:outline-2 focus-within:outline-color-primary-1"
+          focus-within:outline-2 focus-within:outline-color-primary-1 text-base
+          max-2xl:text-sm"
           required
         ></textarea>
         <PrimaryButton className="self-end">send message</PrimaryButton>
