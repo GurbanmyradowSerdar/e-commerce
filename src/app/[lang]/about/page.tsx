@@ -16,7 +16,7 @@ export default function page() {
   return (
     <div
       className={tw(
-        `flex flex-col text-color-text-3 gap-56 max-3xl:gap-48`,
+        `flex flex-col text-color-text-3 gap-56 max-3xl:gap-48 max-2xl:gap-32`,
         topMarginSaving,
         bottomMarginSaving,
         horizontalMarginLimit
@@ -27,18 +27,21 @@ export default function page() {
       <section className="flex items-center justify-between gap-5">
         <div className="flex flex-col flex-[0_1_40%] gap-12 max-3xl:gap-8 max-3xl:flex-[0_1_45%]">
           <h1
-            className={tw("text-6xl capitalize", interSemiboldFont.className)}
+            className={tw(
+              "text-6xl capitalize max-2xl:text-4xl",
+              interSemiboldFont.className
+            )}
           >
             our story
           </h1>
-          <p className="text-lg">
+          <p className="text-lg max-2xl:text-base">
             Launced in 2015, Exclusive is South Asia’s premier online shopping
             makterplace with an active presense in Bangladesh. Supported by wide
             range of tailored marketing, data and service solutions, Exclusive
             has 10,500 sallers and 300 brands and serves 3 millioons customers
             across the region.
           </p>
-          <p className="text-lg">
+          <p className="text-lg max-2xl:text-base">
             Exclusive has more than 1 Million products to offer, growing at a
             very fast. Exclusive offers a diverse assotment in categories
             ranging from consumer.
@@ -50,7 +53,7 @@ export default function page() {
           width={700}
           height={700}
           className="w-[900px] object-contain
-          max-3xl:w-[600px]"
+          max-3xl:w-[600px] max-2xl:w-[500px]"
           priority
         />
       </section>

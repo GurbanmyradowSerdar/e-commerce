@@ -6,19 +6,19 @@
     },
     "links": [
       {
-        "href": "/",
+        "href": "",
         "text": "Esasy"
       },
       {
-        "href": "/contact",
+        "href": "contact",
         "text": "Kontaktlar"
       },
       {
-        "href": "/about",
+        "href": "about",
         "text": "biz hakda"
       },
       {
-        "href": "/sign-up",
+        "href": "sign-up",
         "text": "ulgama ýazylmak"
       }
     ],

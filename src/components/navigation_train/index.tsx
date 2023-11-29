@@ -16,7 +16,10 @@ export default function NavigationTrain({ isNotFound }: INavigationTrain) {
 
   return (
     <div className={tw("absolute top-14 left-0", horizontalMarginLimit)}>
-      <div className="flex items-center gap-3 text-color-text-2">
+      <div
+        className="flex items-center gap-3 text-color-text-2 text-base
+              max-2xl:text-sm"
+      >
         {isNotFound ? (
           <>
             <Link

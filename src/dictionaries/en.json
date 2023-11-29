@@ -6,19 +6,19 @@
     },
     "links": [
       {
-        "href": "/",
+        "href": "",
         "text": "home"
       },
       {
-        "href": "/contact",
+        "href": "contact",
         "text": "contact"
       },
       {
-        "href": "/about",
+        "href": "about",
         "text": "about"
       },
       {
-        "href": "/sign-up",
+        "href": "sign-up",
         "text": "sign up"
       }
     ],

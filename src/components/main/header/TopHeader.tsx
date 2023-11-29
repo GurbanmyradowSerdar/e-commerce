@@ -19,17 +19,19 @@ export default async function TopHeader() {
           horizontalMarginLimit
         )}
       >
-        <div className="flex items-center gap-3">
-          <p>{dict.header.topHeader.text}</p>
-          <Link
-            className={tw(
-              "underline cursor-pointer",
-              poppinsSemiBoldFont.className
-            )}
-            href={`/${locale}`}
-          >
-            {dict.header.topHeader.href}
-          </Link>
+        <div className="flex items-center gap-3 max-2xl:max-w-2xl text-center">
+          <p className="text-base max-2xl:text-sm">
+            {dict.header.topHeader.text}{" "}
+            <Link
+              className={tw(
+                "underline cursor-pointer",
+                poppinsSemiBoldFont.className
+              )}
+              href={`/${locale}`}
+            >
+              {dict.header.topHeader.href}
+            </Link>
+          </p>
         </div>
         <div className="absolute right-0 top-2/4 -translate-y-2/4">
           <HeaderLangDropdown lang={locale} />

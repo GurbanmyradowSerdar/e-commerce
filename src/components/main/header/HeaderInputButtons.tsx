@@ -48,13 +48,14 @@ export default function HeaderInputButtons({
         <input
           type="text"
           placeholder={dict.header.searchPlaceholder}
-          className="text-sm placeholder:text-color-text-2 bg-transparent outline-none"
+          className="text-sm placeholder:text-color-text-2 bg-transparent outline-none
+          max-2xl:text-xs"
         />
-        <SearchIcon className="w-7 h-7 cursor-pointer max-3xl:w-6 max-3xl:h-6" />
+        <SearchIcon className="w-7 h-7 cursor-pointer max-3xl:w-6 max-3xl:h-6 max-2xl:w-5 max-2xl:h-5" />
       </div>
       <Link href={`/${lang}/wishlist`} className="relative cursor-pointer">
         {amount > 0 && <AmountOfItems text={amount.toString()} />}
-        <HeartIcon className="w-8 h-8 max-3xl:w-7 max-3xl:h-7" />
+        <HeartIcon className="w-8 h-8 max-3xl:w-7 max-3xl:h-7 max-2xl:w-6 max-2xl:h-6" />
       </Link>
       <Link href={`/${lang}/cart`} className="relative cursor-pointer">
         {amountCart > 0 && (
@@ -62,10 +63,10 @@ export default function HeaderInputButtons({
             text={amountCart > 99 ? `${amountCart}+` : amountCart.toString()}
           />
         )}
-        <CartIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
+        <CartIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6 max-2xl:w-5 max-2xl:h-5" />
       </Link>
       <Link href={isLoged ? `/${lang}/account` : `/${lang}/sign-up`}>
-        <UserIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
+        <UserIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6 max-2xl:w-5 max-2xl:h-5" />
       </Link>
     </>
   );
@@ -76,7 +77,8 @@ function AmountOfItems({ text }: { text: string }) {
     <p
       className="text-sm text-color-text-1 bg-color-secondary-2 rounded-full absolute -top-3 -right-3 w-6 h-6
     flex items-center justify-center
-    max-3xl:w-5 max-3xl:h-5 max-3xl:-top-2 max-3xl:-right-2"
+    max-3xl:w-5 max-3xl:h-5 max-3xl:-top-2 max-3xl:-right-2
+    max-2xl:text-[10px] max-2xl:h-4 max-2xl:w-4 max-2xl:-right-[6px]"
     >
       {text}
     </p>

@@ -6,19 +6,19 @@
     },
     "links": [
       {
-        "href": "/",
+        "href": "",
         "text": "Главная"
       },
       {
-        "href": "/contact",
+        "href": "contact",
         "text": "Конакты"
       },
       {
-        "href": "/about",
+        "href": "about",
         "text": "О нас"
       },
       {
-        "href": "/sign-up",
+        "href": "sign-up",
         "text": "Зарегестрироваться"
       }
     ],

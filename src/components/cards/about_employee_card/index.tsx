@@ -21,7 +21,8 @@ export default function AboutEmployeeCard({
             width={200}
             height={200}
             className="h-80 object-bottom object-contain mx-14 mt-5
-            max-3xl:h-64 max-3xl:mx-10"
+            max-3xl:h-64 max-3xl:mx-10
+            max-2xl:h-48 max-2xl:mx-8"
           />
         </div>
         <div className="flex flex-col items-start gap-4 max-3xl:gap-2">
@@ -30,21 +31,21 @@ export default function AboutEmployeeCard({
           max-3xl:gap-1"
           >
             <p
-              className={`${interMediumFont.className} text-4xl max-3xl:text-3xl`}
+              className={`${interMediumFont.className} text-4xl max-3xl:text-3xl max-2xl:text-2xl`}
             >
               {name}
             </p>
-            <p className="text-lg">{status}</p>
+            <p className="text-lg max-2xl:text-base">{status}</p>
           </div>
           <div className="flex items-center gap-5">
             <a href={href.twitter}>
-              <TwitterIcon className="w-7 h-7 stroke-[1.5px] max-3xl:w-6 max-3xl:h-6" />
+              <TwitterIcon className="w-7 h-7 stroke-[1.5px] max-3xl:w-6 max-3xl:h-6 max-2xl:w-5 max-2xl:h-5" />
             </a>
             <a href={href.instagram}>
-              <InstagramIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
+              <InstagramIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6 max-2xl:w-5 max-2xl:h-5" />
             </a>
             <a href={href.linkedin}>
-              <LinkedinIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6" />
+              <LinkedinIcon className="w-7 h-7 max-3xl:w-6 max-3xl:h-6 max-2xl:w-5 max-2xl:h-5" />
             </a>
           </div>
         </div>

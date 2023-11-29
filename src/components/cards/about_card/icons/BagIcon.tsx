@@ -1,7 +1,7 @@
 export default function BagIcon() {
   return (
     <svg
-      className="w-20 h-20 max-3xl:w-[74px] max-3xl:h-[74px]"
+      className="w-20 h-20 max-3xl:w-[74px] max-3xl:h-[74px] max-2xl:w-14 max-2xl:h-14"
       viewBox="0 0 80 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
