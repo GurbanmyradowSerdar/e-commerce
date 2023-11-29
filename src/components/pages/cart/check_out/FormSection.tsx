@@ -21,10 +21,10 @@ export default function FormSection() {
   });
 
   return (
-    <section className="gap-8 flex flex-col flex-[0_0_30%] max-3xl:flex-[0_0_35%]">
+    <section className="gap-8 flex flex-col flex-[0_0_30%] max-3xl:flex-[0_0_35%] max-2xl:flex-[0_0_30%]">
       <h1
         className={tw(
-          "text-[40px] max-3xl:text-4xl",
+          "text-[40px] max-3xl:text-4xl max-2xl:text-2xl",
           interMediumFont.className
         )}
       >

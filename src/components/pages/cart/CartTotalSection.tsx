@@ -55,16 +55,21 @@ export default function CartTotalSection() {
         <input
           type="text"
           placeholder="Coupon Code"
-          className="p-4 w-80 rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1
-          max-3xl:p-3"
+          className="p-4 w-80 rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1 text-base
+          max-3xl:p-3 max-2xl:text-sm"
         />
         <PrimaryButton>apply coupon</PrimaryButton>
       </div>
       <div
         className="flex flex-col px-10 py-12 rounded-sm border-2 border-color-bg-1 w-[550px] gap-7
-      max-3xl:py-10"
+      max-3xl:py-10 max-2xl:w-[440px] max-2xl:gap-5 max-2xl:border"
       >
-        <h3 className={tw("text-2xl", poppinsMediumFont.className)}>
+        <h3
+          className={tw(
+            "text-2xl max-2xl:text-xl",
+            poppinsMediumFont.className
+          )}
+        >
           Cart Total
         </h3>
         <div className="space-y-5">

@@ -114,14 +114,16 @@ export default function ProductCard(props: IProductCard) {
           src={`/images/products/${images[0]}`}
           width={200}
           height={200}
-          className="w-36 h-36 object-contain"
+          className="w-36 h-36 object-contain max-2xl:w-28 max-2xl:h-28"
         />
+
         <>
           {amount !== 0 ? (
             <div
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 
             transition-all duration-300 ease-in-out rounded-tr-none 
             rounded-tl-none flex items-center justify-between rounded-sm text-color-text-1 px-4 text-xl
+            max-2xl:text-base max-2xl:py-1 max-2xl:px-2
           "
             >
               <button
@@ -144,44 +146,49 @@ export default function ProductCard(props: IProductCard) {
                 onClick: () => setAmount(increaseAmount(amount)),
               }}
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
-              transition-all duration-300 ease-in-out rounded-tr-none rounded-tl-none"
+              transition-all duration-300 ease-in-out rounded-tr-none rounded-tl-none
+              max-2xl:text-base max-2xl:py-1 max-2xl:px-2"
             >
               add to cart
             </PrimaryButton>
           )}
         </>
 
-        <div
-          onClick={handleFavoriteClick}
-          className="w-10 h-10 absolute top-2 right-3 cursor-pointer bg-color-bg rounded-full flex items-center justify-center"
-        >
-          <>
-            {isFavorite ? (
-              <FilledHeartIcon className="text-color-secondary-2 w-5 h-5" />
-            ) : (
-              <HeartIcon className="text-color-bg-1 w-5 h-5" />
-            )}
-          </>
-        </div>
-        <div className="absolute top-2 left-2 flex text-center gap-2">
-          <>
-            {isNew ? (
-              <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button text-sm">
-                new
-              </p>
-            ) : null}
-            {discount ? (
-              <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button-1 text-sm">
-                -{discount}%
-              </p>
-            ) : null}
-          </>
-        </div>
+        <>
+          <div
+            onClick={handleFavoriteClick}
+            className="w-10 h-10 absolute top-2 right-3 cursor-pointer bg-color-bg rounded-full flex items-center justify-center"
+          >
+            <>
+              {isFavorite ? (
+                <FilledHeartIcon className="text-color-secondary-2 w-5 h-5" />
+              ) : (
+                <HeartIcon className="text-color-bg-1 w-5 h-5" />
+              )}
+            </>
+          </div>
+          <div className="absolute top-2 left-2 flex text-center gap-2">
+            <>
+              {isNew ? (
+                <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button text-sm">
+                  new
+                </p>
+              ) : null}
+              {discount ? (
+                <p className="uppercase text-color-text-1 rounded-md px-2 py-1 bg-color-button-1 text-sm">
+                  -{discount}%
+                </p>
+              ) : null}
+            </>
+          </div>
+        </>
       </div>
       <div
         className={`${poppinsMediumFont.className} flex flex-col items-start gap-1`}
       >
-        <p className="text-lg text-color-text-3 capitalize">{name}</p>
+        <p className="text-lg text-color-text-3 capitalize max-2xl:text-base">
+          {name}
+        </p>
         <div
           className={tw(
             "flex items-center gap-3",
@@ -189,17 +196,19 @@ export default function ProductCard(props: IProductCard) {
           )}
         >
           <div className="flex items-center gap-2">
-            <p className="text-color-secondary-2 text-lg">
+            <p className="text-color-secondary-2 text-lg max-2xl:text-base">
               ${discount ? `${price - (price / 100) * discount}` : price}
             </p>
             {discount ? (
-              <p className="text-color-text-2 line-through text-lg">${price}</p>
+              <p className="text-color-text-2 line-through text-lg max-2xl:text-base">
+                ${price}
+              </p>
             ) : null}
           </div>
           <div className="flex items-center gap-1">
             <div className="flex items-center gap-1">{rating.map(getStar)}</div>
             <p
-              className={`${poppinsSemiBoldFont.className} text-color-text-2`}
+              className={`${poppinsSemiBoldFont.className} text-color-text-2 text-base max-2xl:text-sm`}
             >{`(${ratingAmount})`}</p>
           </div>
         </div>

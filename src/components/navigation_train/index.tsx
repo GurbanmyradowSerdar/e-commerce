@@ -15,7 +15,12 @@ export default function NavigationTrain({ isNotFound }: INavigationTrain) {
     .filter((item) => item !== "en" && item !== "tm" && item !== "ru");
 
   return (
-    <div className={tw("absolute top-14 left-0", horizontalMarginLimit)}>
+    <div
+      className={tw(
+        "absolute top-14 left-0 max-2xl:top-12",
+        horizontalMarginLimit
+      )}
+    >
       <div
         className="flex items-center gap-3 text-color-text-2 text-base
               max-2xl:text-sm"

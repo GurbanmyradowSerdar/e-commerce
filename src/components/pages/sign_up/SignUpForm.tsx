@@ -9,6 +9,7 @@ import { useFormik } from "formik";
 import { ICredentials } from "@/shared/types";
 import { useRecoilState } from "recoil";
 import { credentialsState } from "@/shared/recoil_states/atoms";
+import { usePathname } from "next/navigation";
 
 export default function SignUpForm() {
   const [credentials, setCredentials] = useRecoilState(credentialsState);
@@ -26,9 +27,15 @@ export default function SignUpForm() {
       });
     },
   });
+
+  const locale = usePathname().split("/")[1];
+
   return (
-    <form className="flex flex-col gap-14" onSubmit={formik.handleSubmit}>
-      <div className="flex flex-col gap-12">
+    <form
+      className="flex flex-col gap-14 max-2xl:gap-8"
+      onSubmit={formik.handleSubmit}
+    >
+      <div className="flex flex-col gap-12 max-2xl:gap-8">
         <InputWithLine
           props={{
             type: "text",
@@ -84,16 +91,17 @@ export default function SignUpForm() {
             src={"/icons/sign_up/google.svg"}
             width={100}
             height={100}
-            className="w-7 h-7"
+            className="w-7 h-7 max-2xl:w-6 max-2xl:h-6"
           />
-          <span>sign up with google</span>
+          <span className="text-base">sign up with google</span>
         </OutlinedButton>
       </div>
       <div className="flex items-center justify-center gap-4 text-color-text-2 text-lg">
-        <p>Already have account</p>
+        <p className="text-base max-2xl:text-sm">Already have account</p>
         <Link
-          href={"/en/login"}
-          className={`${poppinsMediumFont.className} duration-300 ease-in-out transition-colors underline underline-offset-8 hover:text-color-text-2-hover`}
+          href={`/${locale}/login`}
+          className={`${poppinsMediumFont.className} duration-300 ease-in-out transition-colors underline underline-offset-8 hover:text-color-text-2-hover text-base
+          max-2xl:text-sm`}
         >
           Log in
         </Link>

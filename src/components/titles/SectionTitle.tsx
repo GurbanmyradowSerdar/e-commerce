@@ -10,7 +10,7 @@ export default function SectionTitle({
   return withoutQuadrant ? (
     <h2
       className={tw(
-        "text-lg text-color-secondary-2 capitalize",
+        "text-lg text-color-secondary-2 capitalize max-2xl:text-base",
         poppinsSemiBoldFont.className,
         className
       )}
@@ -24,8 +24,13 @@ export default function SectionTitle({
         className
       )}
     >
-      <div className="h-10 w-5 bg-color-secondary-2 rounded-sm" />
-      <h2 className={tw("text-lg capitalize", poppinsSemiBoldFont.className)}>
+      <div className="h-10 w-5 bg-color-secondary-2 rounded-sm max-2xl:h-8 max-2xl:w-4" />
+      <h2
+        className={tw(
+          "text-lg capitalize max-2xl:text-base",
+          poppinsSemiBoldFont.className
+        )}
+      >
         {text}
       </h2>
     </div>

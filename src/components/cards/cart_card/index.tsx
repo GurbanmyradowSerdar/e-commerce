@@ -68,7 +68,10 @@ export default function CartCard(props: ICartProductCard) {
   }
 
   return (
-    <div className="grid grid-cols-4 shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] px-6 py-7 content-center place-content-center gap-3">
+    <div
+      className="grid grid-cols-4 shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] px-6 py-7 content-center place-content-center gap-3
+    max-2xl:py-5 max-2xl:px-4"
+    >
       <div className="flex items-center gap-5 pl-10">
         <div className="relative">
           <Image
@@ -76,11 +79,12 @@ export default function CartCard(props: ICartProductCard) {
             src={`/images/products/${images[0]}`}
             width={100}
             height={100}
-            className="w-16 object-contain"
+            className="w-16 object-contain max-2xl:w-14"
           />
           <div
             className="absolute -top-2 -left-2 z-10 bg-color-button-1 rounded-full w-6 h-6 flex items-center justify-center cursor-pointer
-            hover:bg-color-button-1-hover duration-300 transition-colors ease-in-out"
+            hover:bg-color-button-1-hover duration-300 transition-colors ease-in-out
+            max-2xl:w-5 max-2xl:h-5"
             onClick={() => setAmount(0)}
           >
             <CrossIcon className="text-color-text-1 w-5 h-5" />
@@ -108,15 +112,15 @@ export default function CartCard(props: ICartProductCard) {
         )}
       </>
       <div className="text-center flex items-center justify-center gap-2">
-        <p>{amount}</p>
+        <p className="text-base max-2xl:text-sm">{amount}</p>
         <div className="flex flex-col">
           <UpArrowIcon
             onClick={() => setAmount(increaseAmount(amount))}
-            className="cursor-pointer hover:bg-gray-200 rounded-sm w-5 h-5"
+            className="cursor-pointer hover:bg-gray-200 rounded-sm w-5 h-5 max-2xl:w-4 max-2xl:h-4"
           />
           <DownArrowIcon
             onClick={() => setAmount(decreaseAmount(amount))}
-            className="cursor-pointer hover:bg-gray-200 rounded-sm w-5 h-5"
+            className="cursor-pointer hover:bg-gray-200 rounded-sm w-5 h-5 max-2xl:w-4 max-2xl:h-4"
           />
         </div>
       </div>

@@ -37,7 +37,7 @@ export default function TotalSection() {
 
   if (products.length === 0) {
     return (
-      <p className="text-4xl self-center">
+      <p className="text-4xl self-center max-2xl:text-2xl">
         Nothing to show{" "}
         <span
           className="cursor-pointer text-color-secondary-2"
@@ -50,7 +50,7 @@ export default function TotalSection() {
   }
 
   return (
-    <section className="flex flex-col flex-[0_0_35%] max-3xl:flex-[0_0_40%]">
+    <section className="flex flex-col flex-[0_0_35%] max-3xl:flex-[0_0_40%] max-2xl:flex-[0_0_45%]">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-5 max-3xl:gap-7">
           {products.map((item, i) => (
@@ -105,8 +105,8 @@ export default function TotalSection() {
           <input
             type="text"
             placeholder="Coupon Code"
-            className="p-4 w-80 rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1
-            max-3xl:p-3"
+            className="p-4 w-80 text-base rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1
+            max-3xl:p-3 max-2xl:text-sm"
           />
           <PrimaryButton>apply coupon</PrimaryButton>
         </div>

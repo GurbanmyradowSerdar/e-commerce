@@ -30,7 +30,10 @@ export default function CartProductsSection() {
     <section className="flex flex-col gap-8">
       {array.length > 0 ? (
         <>
-          <div className="grid grid-cols-4 shadow-[0px_0px_10px_1px_rgba(25,25,25,0.1)] px-6 py-7 gap-3">
+          <div
+            className="grid grid-cols-4 shadow-[0px_0px_10px_1px_rgba(25,25,25,0.1)] px-6 py-7 gap-3
+          max-2xl:py-5 max-2xl:px-4"
+          >
             <DefaultText
               text="Product"
               className="self-center place-self-center"
