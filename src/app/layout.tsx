@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { poppinsRegularFont } from "fonts";
 import Providers from "@/shared/Providers";
 import { IChildren } from "types";
+import MobileVersion from "@/components/mobile";
 
 export const metadata: Metadata = {
   title: "E-Commerce",
@@ -12,11 +13,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: IChildren) {
   return (
     <html lang="en">
-      <body
-        className={`${poppinsRegularFont.className} flex flex-col min-h-screen`}
-      >
+      <body className={`${poppinsRegularFont.className} `}>
         {/* chackra ui providers and recoil */}
-        <Providers>{children}</Providers>
+        <div className="hidden flex-col min-h-screen xl:flex">
+          <Providers>{children}</Providers>
+        </div>
+        <MobileVersion />
       </body>
     </html>
   );
