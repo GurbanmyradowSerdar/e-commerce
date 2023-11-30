@@ -123,7 +123,7 @@ export default function ProductCard(props: IProductCard) {
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 
             transition-all duration-300 ease-in-out rounded-tr-none 
             rounded-tl-none flex items-center justify-between rounded-sm text-color-text-1 px-4 text-xl
-            max-2xl:text-base max-2xl:py-1 max-2xl:px-2
+            max-2xl:text-base max-2xl:py-1 max-2xl:px-2 max-3xl:h-9
           "
             >
               <button
@@ -147,7 +147,7 @@ export default function ProductCard(props: IProductCard) {
               }}
               className="absolute bottom-0 w-full py-2 bg-color-bg-1 hover:bg-color-bg-1 group-hover:flex
               transition-all duration-300 ease-in-out rounded-tr-none rounded-tl-none
-              max-2xl:text-base max-2xl:py-1 max-2xl:px-2"
+              max-2xl:text-base max-2xl:py-1 max-2xl:px-2 max-3xl:h-9"
             >
               add to cart
             </PrimaryButton>
