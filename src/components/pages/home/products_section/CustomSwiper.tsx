@@ -14,6 +14,9 @@ export default function CustomSwiper() {
         modules: [Grid],
         grid: { rows: 2, fill: "row" },
         breakpoints: {
+          1: {
+            slidesPerView: 4,
+          },
           1280: {
             slidesPerView: 4,
           },

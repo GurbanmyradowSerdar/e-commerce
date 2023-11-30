@@ -31,6 +31,9 @@ export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
             slidesPerView: 5.5,
             spaceBetween: 50,
             breakpoints: {
+              1: {
+                slidesPerView: 3.5,
+              },
               1280: {
                 slidesPerView: 3.5,
               },

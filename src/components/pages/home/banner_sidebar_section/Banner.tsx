@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { homeBanners } from "@/data";
 import Image from "next/image";
 import "swiper/css";
@@ -18,7 +18,9 @@ export default function Banner() {
         marginTop: "40px",
         marginLeft: "60px",
       }}
-      modules={[Pagination]}
+      modules={[Pagination, Autoplay]}
+      loop
+      autoplay={{ delay: 2000 }}
     >
       {homeBanners.map((item, i) => {
         return (

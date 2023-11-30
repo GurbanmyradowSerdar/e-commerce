@@ -22,6 +22,9 @@ export default function CategoriesSection() {
             slidesPerView: 6,
             spaceBetween: 60,
             breakpoints: {
+              1: {
+                slidesPerView: 5,
+              },
               1280: {
                 slidesPerView: 5,
               },

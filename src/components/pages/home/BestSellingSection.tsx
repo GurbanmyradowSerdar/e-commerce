@@ -20,6 +20,9 @@ export default function BestSellingSection() {
             slidesPerView: 5,
             spaceBetween: 50,
             breakpoints: {
+              1: {
+                slidesPerView: 4,
+              },
               1280: {
                 slidesPerView: 4,
               },

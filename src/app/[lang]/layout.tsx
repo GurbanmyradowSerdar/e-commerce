@@ -17,7 +17,3 @@ export default function layout({ children }: IChildren) {
     </>
   );
 }
-
-// ! 1620 and 1536 ✅✅✅
-// ! 1536 and 1280 ✅✅✅
-// ! 1280 and 1024
