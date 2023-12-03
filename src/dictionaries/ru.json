@@ -1,67 +1,53 @@
 {
   "header": {
     "topHeader": {
-      "text": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+      "text": "Летняя распродажа всех купальных костюмов и бесплатная экспресс-доставка - СКИДКА 50%!",
       "href": "ShopNow"
     },
     "links": [
       {
         "href": "",
-        "text": "home"
+        "text": "главная"
       },
       {
         "href": "contact",
-        "text": "contact"
+        "text": "контакты"
       },
       {
         "href": "about",
-        "text": "about"
+        "text": "о нас"
       },
       {
         "href": "sign-up",
-        "text": "sign up"
+        "text": "регистрация"
       }
     ],
-    "searchPlaceholder": "What are you looking for?"
+    "searchPlaceholder": "Что вы ищете?"
   },
   "pages": {
-    "signUp": {
-      "title": "Create an account",
-      "subtitle": "Enter your details below",
-      "inputs": {
-        "name": "name",
-        "email": "email",
-        "phoneNumber": "phone number",
-        "password": "password"
-      },
-      "createAcc": "create account",
-      "signGoogle": "sign up with google",
-      "haveAccount": "already have an account?",
-      "login": "log in"
-    },
     "aboutUs": {
       "section1": {
-        "title": "our story",
-        "text1": "Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.",
-        "text2": "Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging from consumer."
+        "title": "наша история",
+        "text1": "Запущенный в 2015 году, Exclusive - ведущий онлайн-рынок южной Азии с активным присутствием в Бангладеш. Поддерживаемый широким спектром индивидуальных маркетинговых, данных и сервисных решений, Exclusive имеет 10 500 продавцов и 300 брендов, обслуживая 3 миллиона клиентов по всему региону.",
+        "text2": "У Exclusive более 1 миллиона продуктов в ассортименте, который быстро растет. Компания предлагает разнообразие категорий товаров для потребителей."
       },
       "section2": {
         "aboutCards": [
           {
-            "title": "10.5k",
-            "subtitle": "Sallers active our site"
+            "title": "10,5 тыс.",
+            "subtitle": "Активные продавцы на нашем сайте"
           },
           {
-            "title": "33k",
-            "subtitle": "Mopnthly Produduct Sale"
+            "title": "33 тыс.",
+            "subtitle": "Ежемесячные продажи продукции"
           },
           {
-            "title": "45.5k",
-            "subtitle": "Customer active in our site"
+            "title": "45,5 тыс.",
+            "subtitle": "Активные клиенты на нашем сайте"
           },
           {
-            "title": "25k",
-            "subtitle": "Anual gross sale in our site"
+            "title": "25 тыс.",
+            "subtitle": "Годовой валовой оборот на нашем сайте"
           }
         ]
       },
@@ -74,8 +60,8 @@
               "twitter": "#"
             },
             "image": "employee-1.png",
-            "name": "tom crouise",
-            "status": "founder & chairman"
+            "name": "том круз",
+            "status": "основатель и председатель"
           },
           {
             "href": {
@@ -84,8 +70,8 @@
               "twitter": "#"
             },
             "image": "employee-2.png",
-            "name": "emma watson",
-            "status": "managing director"
+            "name": "эмма уотсон",
+            "status": "исполнительный директор"
           },
           {
             "href": {
@@ -94,8 +80,8 @@
               "twitter": "#"
             },
             "image": "employee-3.png",
-            "name": "will smith",
-            "status": "product designer"
+            "name": "уилл смит",
+            "status": "дизайнер продукта"
           },
           {
             "href": {
@@ -104,8 +90,8 @@
               "twitter": "#"
             },
             "image": "employee-1.png",
-            "name": "tom crouise",
-            "status": "founder & chairman"
+            "name": "том круз",
+            "status": "основатель и председатель"
           },
           {
             "href": {
@@ -114,8 +100,8 @@
               "twitter": "#"
             },
             "image": "employee-2.png",
-            "name": "emma watson",
-            "status": "managing director"
+            "name": "эмма уотсон",
+            "status": "исполнительный директор"
           },
           {
             "href": {
@@ -124,8 +110,8 @@
               "twitter": "#"
             },
             "image": "employee-3.png",
-            "name": "will smith",
-            "status": "product designer"
+            "name": "уилл смит",
+            "status": "дизайнер продукта"
           },
           {
             "href": {
@@ -134,8 +120,8 @@
               "twitter": "#"
             },
             "image": "employee-1.png",
-            "name": "tom crouise",
-            "status": "founder & chairman"
+            "name": "том круз",
+            "status": "основатель и председатель"
           },
           {
             "href": {
@@ -144,8 +130,8 @@
               "twitter": "#"
             },
             "image": "employee-2.png",
-            "name": "emma watson",
-            "status": "managing director"
+            "name": "эмма уотсон",
+            "status": "исполнительный директор"
           },
           {
             "href": {
@@ -154,30 +140,458 @@
               "twitter": "#"
             },
             "image": "employee-3.png",
-            "name": "will smith",
-            "status": "product designer"
+            "name": "уилл смит",
+            "status": "дизайнер продукта"
           }
         ]
       },
       "section4": {
         "services": [
           {
-            "title": "FREE AND FAST DELIVERY",
-            "subtitle": "Free delivery for all orders over $140",
+            "title": "БЕСПЛАТНАЯ И БЫСТРАЯ ДОСТАВКА",
+            "subtitle": "Бесплатная доставка для всех заказов свыше $140",
             "image": "delivery.svg"
           },
           {
-            "title": "24/7 CUSTOMER SERVICE",
-            "subtitle": "Friendly 24/7 customer support",
+            "title": "24/7 СЛУЖБА ПОДДЕРЖКИ КЛИЕНТОВ",
+            "subtitle": "Дружественная поддержка клиентов 24/7",
             "image": "support.svg"
           },
           {
-            "title": "MONEY BACK GUARANTEE",
-            "subtitle": "We reurn money within 30 days",
+            "title": "ГАРАНТИЯ ВОЗВРАТА ДЕНЕГ",
+            "subtitle": "Мы возвращаем деньги в течение 30 дней",
             "image": "safety.svg"
           }
         ]
       }
+    },
+    "account": {
+      "yourProfile": "Ваш профиль",
+      "name": "имя",
+      "password": "пароль",
+      "city": "город",
+      "streetAddress": "улица",
+      "apartment": "квартира",
+      "companyName": "название компании",
+      "email": "электронная почта",
+      "phoneNumber": "номер телефона"
+    },
+    "cart": {
+      "checkOut": {
+        "form": {
+          "title": "Детали оплаты",
+          "firstName": "имя",
+          "companyName": "название компании",
+          "streetAddress": "улица",
+          "apartment": "Квартира, этаж и т. д.",
+          "phoneNumber": "номер телефона",
+          "city": "город",
+          "email": "адрес электронной почты",
+          "checkbox": "Сохранить эту информацию для быстрой оплаты в следующий раз"
+        },
+        "priceSection": {
+          "subtotal": "подытог",
+          "shipping": "доставка",
+          "total": "итого",
+          "payment": {
+            "bank": "банковский перевод",
+            "cash": "наличные при доставке"
+          },
+          "coupon": {
+            "placeholder": "промокод",
+            "apply": "применить купон"
+          },
+          "order": "оформить заказ"
+        }
+      },
+      "topLevelTexts": {
+        "product": "продукт",
+        "price": "цена",
+        "quantity": "количество",
+        "subtotal": "подытог"
+      },
+      "buttons": {
+        "return": "вернуться в магазин",
+        "update": "обновить корзину",
+        "apply": "применить купон",
+        "process": "процесс оформления заказа"
+      },
+      "cartTotal": {
+        "title": "общая сумма корзины",
+        "subtotal": "подытог",
+        "shipping": "доставка",
+        "total": "итого"
+      }
+    },
+    "contact": {
+      "infoSection": {
+        "callPart": {
+          "call": "позвонить нам",
+          "text": "мы доступны 24/7, 7 дней в неделю",
+          "phone": "Телефон: +8801611112222"
+        },
+        "writePart": {
+          "write": "Напишите нам",
+          "text": "Заполните нашу форму, и мы свяжемся с вами в течение 24 часов.",
+          "emails": [
+            "Emails: customer@exclusive.com",
+            "Emails: support@exclusive.com"
+          ]
+        }
+      },
+      "form": {
+        "name": "ваше имя*",
+        "email": "ваша электронная почта*",
+        "phone": "ваш телефон*",
+        "message": "введите ваше сообщение",
+        "send": "отправить сообщение"
+      }
+    },
+    "registration": {
+      "login": {
+        "title": "Войти в Exclusive",
+        "subtitle": "Введите свои данные ниже",
+        "emailOrPhone": "Электронная почта или номер телефона",
+        "password": "пароль",
+        "login": "войти",
+        "forgetPassword": "Забыли пароль"
+      },
+      "signUp": {
+        "title": "Создать аккаунт",
+        "subtitle": "Введите свои данные ниже",
+        "inputs": {
+          "name": "имя",
+          "email": "электронная почта",
+          "phoneNumber": "номер телефона",
+          "password": "пароль"
+        },
+        "createAcc": "создать аккаунт",
+        "signGoogle": "регистрация через Google",
+        "haveAccount": "уже есть аккаунт?",
+        "login": "войти"
+      }
+    },
+    "wishlist": {
+      "wishlist": "Список желаний",
+      "moveAllBag": "переместить все в сумку",
+      "forYou": "только для вас",
+      "seeAll": "посмотреть все"
+    },
+    "index": {
+      "sideMenu": [
+        [
+          {
+            "href": "electronics",
+            "name": "электроника"
+          },
+          {
+            "href": "home-lifestyle",
+            "name": "дом и образ жизни"
+          },
+          {
+            "href": "medicine",
+            "name": "медицина"
+          },
+          {
+            "href": "sport-outdoor",
+            "name": "спорт и активный отдых"
+          },
+          {
+            "href": "baby-toys",
+            "name": "для малышей и игрушки"
+          },
+          {
+            "href": "groceries-pets",
+            "name": "продукты и домашние животные"
+          },
+          {
+            "href": "health-beauty",
+            "name": "здоровье и красота"
+          }
+        ],
+        [
+          {
+            "menuItems": [
+              {
+                "href": "dress",
+                "name": "платье"
+              },
+              {
+                "href": "skirt",
+                "name": "юбка"
+              },
+              {
+                "href": "blouse",
+                "name": "блузка"
+              },
+              {
+                "href": "pants",
+                "name": "брюки"
+              },
+              {
+                "href": "jacket",
+                "name": "пиджак"
+              },
+              {
+                "href": "coat",
+                "name": "пальто"
+              },
+              {
+                "href": "sweater",
+                "name": "свитер"
+              },
+              {
+                "href": "top",
+                "name": "топ"
+              },
+              {
+                "href": "jeans",
+                "name": "джинсы"
+              },
+              {
+                "href": "shorts",
+                "name": "шорты"
+              },
+              {
+                "href": "scarf",
+                "name": "шарф"
+              },
+              {
+                "href": "sunglasses",
+                "name": "солнцезащитные очки"
+              },
+              {
+                "href": "hat",
+                "name": "шляпа"
+              },
+              {
+                "href": "heels",
+                "name": "туфли на каблуке"
+              },
+              {
+                "href": "flats",
+                "name": "женские туфли"
+              },
+              {
+                "href": "boots",
+                "name": "ботинки"
+              },
+              {
+                "href": "sandals",
+                "name": "сандалии"
+              },
+              {
+                "href": "handbag",
+                "name": "сумка"
+              },
+              {
+                "href": "clutch",
+                "name": "клатч"
+              },
+              {
+                "href": "necklace",
+                "name": "ожерелье"
+              }
+            ],
+            "menuName": "женская мода"
+          },
+          {
+            "menuItems": [
+              {
+                "href": "shirt",
+                "name": "рубашка"
+              },
+              {
+                "href": "t-shirt",
+                "name": "футболка"
+              },
+              {
+                "href": "polo",
+                "name": "поло"
+              },
+              {
+                "href": "sweater",
+                "name": "свитер"
+              },
+              {
+                "href": "hoodie",
+                "name": "худи"
+              },
+              {
+                "href": "jacket",
+                "name": "куртка"
+              },
+              {
+                "href": "coat",
+                "name": "пальто"
+              },
+              {
+                "href": "blazer",
+                "name": "пиджак"
+              },
+              {
+                "href": "pants",
+                "name": "брюки"
+              },
+              {
+                "href": "jeans",
+                "name": "джинсы"
+              },
+              {
+                "href": "shorts",
+                "name": "шорты"
+              },
+              {
+                "href": "sweatpants",
+                "name": "спортивные брюки"
+              },
+              {
+                "href": "suits",
+                "name": "костюмы"
+              },
+              {
+                "href": "tie",
+                "name": "галстук"
+              },
+              {
+                "href": "bowtie",
+                "name": "бабочка"
+              },
+              {
+                "href": "belt",
+                "name": "ремень"
+              },
+              {
+                "href": "socks",
+                "name": "носки"
+              },
+              {
+                "href": "shoes",
+                "name": "обувь"
+              },
+              {
+                "href": "sneakers",
+                "name": "кроссовки"
+              },
+              {
+                "href": "loafers",
+                "name": "мокасины"
+              },
+              {
+                "href": "boots",
+                "name": "ботинки"
+              }
+            ],
+            "menuName": "мужская мода"
+          }
+        ]
+      ],
+      "sales": {
+        "title": "сегодня",
+        "description": "вспышковые распродажи",
+        "days": "Дни",
+        "hours": "Часы",
+        "minutes": "Минуты",
+        "seconds": "Секунды",
+        "viewAll": "Посмотреть все товары"
+      },
+      "category": {
+        "title": "категории",
+        "description": "Просмотр по категориям",
+        "categories": [
+          {
+            "title": "телефоны",
+            "icon": "PhoneIcon"
+          },
+          {
+            "title": "компьютеры",
+            "icon": "ComputerIcon"
+          },
+          {
+            "title": "умные часы",
+            "icon": "WatchIcon"
+          },
+          {
+            "title": "камеры",
+            "icon": "CameraIcon"
+          },
+          {
+            "title": "наушники",
+            "icon": "HeadPhonesIcon"
+          },
+          {
+            "title": "игры",
+            "icon": "GamingIcon"
+          },
+          {
+            "title": "компьютеры",
+            "icon": "ComputerIcon"
+          },
+          {
+            "title": "умные часы",
+            "icon": "WatchIcon"
+          },
+          {
+            "title": "наушники",
+            "icon": "HeadPhonesIcon"
+          }
+        ]
+      },
+      "bestSelling": {
+        "title": "этот месяц",
+        "description": "лучшие продукты продаж"
+      },
+      "banner": {
+        "title": "категории",
+        "description": "усилите свой музыкальный опыт",
+        "days": "Дни",
+        "minutes": "Минуты",
+        "seconds": "Секунды",
+        "hours": "Часы",
+        "buy": "купить сейчас"
+      },
+      "products": {
+        "title": "наши продукты",
+        "description": "изучите наши продукты",
+        "viewAll": "Посмотреть все продукты"
+      },
+      "newArrival": {
+        "title": "новинки",
+        "description": "новые поступления",
+        "ps5": {
+          "title": "PlayStation 5",
+          "description": "Черно-белая версия PS5 поступает в продажу"
+        },
+        "women": {
+          "title": "Коллекции для женщин",
+          "description": "Представленные женские коллекции, которые придадут вам другую атмосферу."
+        },
+        "speakers": {
+          "title": "Колонки",
+          "description": "Беспроводные колонки Amazon"
+        },
+        "perfume": {
+          "title": "Парфюм",
+          "description": "GUCCI INTENSE OUD EDP"
+        }
+      },
+      "services": [
+        {
+          "title": "БЕСПЛАТНАЯ И БЫСТРАЯ ДОСТАВКА",
+          "subtitle": "Бесплатная доставка для всех заказов от $140",
+          "image": "delivery.svg"
+        },
+        {
+          "title": "24/7 КЛИЕНТСКАЯ ПОДДЕРЖКА",
+          "subtitle": "Дружественная клиентская поддержка 24/7",
+          "image": "support.svg"
+        },
+        {
+          "title": "ГАРАНТИЯ ВОЗВРАТА ДЕНЕГ",
+          "subtitle": "Мы возвращаем деньги в течение 30 дней",
+          "image": "safety.svg"
+        }
+      ]
     }
   },
   "footer": {
@@ -197,43 +611,51 @@
     ],
     "footerNav1": [
       {
-        "text": "My Account",
+        "text": "Мой аккаунт",
         "href": "account"
       },
       {
-        "text": "Login / Register",
+        "text": "Войти / Регистрация",
         "href": "account"
       },
       {
-        "text": "Cart",
+        "text": "Корзина",
         "href": "cart"
       },
       {
-        "text": "Wishlist",
+        "text": "Избранное",
         "href": "wishlist"
       },
       {
-        "text": "Shop",
+        "text": "Магазин",
         "href": "shop"
       }
     ],
     "footerNav2": [
       {
-        "text": "Privacy Policy",
+        "text": "Политика конфиденциальности",
         "href": "privacy-policy"
       },
       {
-        "text": "Terms of Use",
+        "text": "Условия использования",
         "href": "#"
       },
       {
-        "text": "FAQ",
+        "text": "Часто задаваемые вопросы",
         "href": "faq"
       },
       {
-        "text": "Contact",
+        "text": "Контакты",
         "href": "contact"
       }
-    ]
+    ],
+    "otherTexts": {
+      "subscribe": "подписаться",
+      "10%Off": "Получите 10% скидку на ваш первый заказ",
+      "emailPlaceholder": "введите ваш email",
+      "downloadApp": "скачать приложение",
+      "saveNewUser": "экономьте 3$ только для новых пользователей приложения",
+      "copyRight": "Rimel 2022. Все права защищены"
+    }
   }
 }

@@ -1,9 +1,3 @@
-import CameraIcon from "@/components/cards/category_card/icons/CameraIcon";
-import ComputerIcon from "@/components/cards/category_card/icons/ComputerIcon";
-import GamingIcon from "@/components/cards/category_card/icons/GamingIcon";
-import HeadPhonesIcon from "@/components/cards/category_card/icons/HeadPhonesIcon";
-import PhoneIcon from "@/components/cards/category_card/icons/PhoneIcon";
-import WatchIcon from "@/components/cards/category_card/icons/WatchIcon";
 import {
   ICategoryCard,
   IHomeSideBarMenuLink,
@@ -179,39 +173,39 @@ export const homeSalesSwiper: IProductCard[] = [
 export const homeCategoriesSwiper: ICategoryCard[] = [
   {
     title: "phones",
-    Icon: PhoneIcon(),
+    icon: "PhoneIcon",
   },
   {
     title: "computers",
-    Icon: ComputerIcon(),
+    icon: "ComputerIcon",
   },
   {
     title: "smartWatch",
-    Icon: WatchIcon(),
+    icon: "WatchIcon",
   },
   {
     title: "camera",
-    Icon: CameraIcon(),
+    icon: "CameraIcon",
   },
   {
     title: "headPhones",
-    Icon: HeadPhonesIcon(),
+    icon: "HeadPhonesIcon",
   },
   {
     title: "gaming",
-    Icon: GamingIcon(),
+    icon: "GamingIcon",
   },
   {
     title: "computers",
-    Icon: ComputerIcon(),
+    icon: "ComputerIcon",
   },
   {
     title: "smartWatch",
-    Icon: WatchIcon(),
+    icon: "WatchIcon",
   },
   {
     title: "headPhones",
-    Icon: HeadPhonesIcon(),
+    icon: "HeadPhonesIcon",
   },
 ];
 

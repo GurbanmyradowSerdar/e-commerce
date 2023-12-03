@@ -10,7 +10,7 @@ export default function ProductsSection() {
       <div className="flex flex-col gap-7">
         <SectionTitle text="our products" />
         <div className="flex items-center justify-between">
-          <SectionDescription text="expore our products" />
+          <SectionDescription text="explore our products" />
           <div className="flex items-center gap-2">
             <ArrowButton direction="left" />
             <ArrowButton direction="right" />

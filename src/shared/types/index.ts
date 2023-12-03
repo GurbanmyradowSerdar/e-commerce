@@ -41,9 +41,17 @@ export interface IProductCard {
 }
 
 // ! category card
+export type TIconName =
+  | "CameraIcon"
+  | "ComputerIcon"
+  | "GamingIcon"
+  | "HeadPhonesIcon"
+  | "PhoneIcon"
+  | "WatchIcon";
+
 export interface ICategoryCard {
   title: string;
-  Icon: React.ReactNode;
+  icon: TIconName;
 }
 
 // ! primary button

@@ -11,6 +11,7 @@ import { getDict } from "@/dictionaries/dictionaries";
 export default async function MainHeader() {
   const locale = getLocaleInServer(headers);
   const dict = await getDict(locale);
+
   return (
     <div className="bg-color-bg text-color-text-3 border-b border-color-divider">
       <div

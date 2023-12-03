@@ -20,7 +20,7 @@ export default function Banner() {
       }}
       modules={[Pagination, Autoplay]}
       loop
-      autoplay={{ delay: 2000 }}
+      autoplay={{ delay: 4000 }}
     >
       {homeBanners.map((item, i) => {
         return (

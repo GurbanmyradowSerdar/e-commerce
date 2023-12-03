@@ -25,20 +25,6 @@
     "searchPlaceholder": "What are you looking for?"
   },
   "pages": {
-    "signUp": {
-      "title": "Create an account",
-      "subtitle": "Enter your details below",
-      "inputs": {
-        "name": "name",
-        "email": "email",
-        "phoneNumber": "phone number",
-        "password": "password"
-      },
-      "createAcc": "create account",
-      "signGoogle": "sign up with google",
-      "haveAccount": "already have an account?",
-      "login": "log in"
-    },
     "aboutUs": {
       "section1": {
         "title": "our story",
@@ -236,6 +222,376 @@
         "shipping": "shipping",
         "total": "total"
       }
+    },
+    "contact": {
+      "infoSection": {
+        "callPart": {
+          "call": "call to us",
+          "text": "we are available 24/7, 7 days a week",
+          "phone": "Phone: +8801611112222"
+        },
+        "writePart": {
+          "write": "Write To Us",
+          "text": "Fill out our form and we will contact you within 24 hours.",
+          "emails": [
+            "Emails: customer@exclusive.com",
+            "Emails: support@exclusive.com"
+          ]
+        }
+      },
+      "form": {
+        "name": "your name*",
+        "email": "your email*",
+        "phone": "your phone*",
+        "message": "enter your message",
+        "send": "send message"
+      }
+    },
+    "registration": {
+      "login": {
+        "title": "Log in to Exclusive",
+        "subtitle": "Enter your details below",
+        "emailOrPhone": "Email Or Phone Number",
+        "password": "password",
+        "login": "log in",
+        "forgetPassword": "Forget Password"
+      },
+      "signUp": {
+        "title": "Create an account",
+        "subtitle": "Enter your details below",
+        "inputs": {
+          "name": "name",
+          "email": "email",
+          "phoneNumber": "phone number",
+          "password": "password"
+        },
+        "createAcc": "create account",
+        "signGoogle": "sign up with google",
+        "haveAccount": "already have an account?",
+        "login": "log in"
+      }
+    },
+    "wishlist": {
+      "wishlist": "Wishlist",
+      "moveAllBag": "move all to bag",
+      "forYou": "just for you",
+      "seeAll": "see All"
+    },
+    "index": {
+      "sideMenu": [
+        [
+          {
+            "href": "electronics",
+            "name": "electronics"
+          },
+          {
+            "href": "home-lifestyle",
+            "name": "home & lifestyle"
+          },
+          {
+            "href": "medicine",
+            "name": "medicine"
+          },
+          {
+            "href": "sport-outdoor",
+            "name": "sport & outdoor"
+          },
+          {
+            "href": "baby-toys",
+            "name": "baby's & toys"
+          },
+          {
+            "href": "groceries-pets",
+            "name": "groceries & pets"
+          },
+          {
+            "href": "health-beauty",
+            "name": "health & beauty"
+          }
+        ],
+        [
+          {
+            "menuItems": [
+              {
+                "href": "dress",
+                "name": "dress"
+              },
+              {
+                "href": "skirt",
+                "name": "skirt"
+              },
+              {
+                "href": "blouse",
+                "name": "blouse"
+              },
+              {
+                "href": "pants",
+                "name": "pants"
+              },
+              {
+                "href": "jacket",
+                "name": "jacket"
+              },
+              {
+                "href": "coat",
+                "name": "coat"
+              },
+              {
+                "href": "sweater",
+                "name": "sweater"
+              },
+              {
+                "href": "top",
+                "name": "top"
+              },
+              {
+                "href": "jeans",
+                "name": "jeans"
+              },
+              {
+                "href": "shorts",
+                "name": "shorts"
+              },
+              {
+                "href": "scarf",
+                "name": "scarf"
+              },
+              {
+                "href": "sunglasses",
+                "name": "sunglasses"
+              },
+              {
+                "href": "hat",
+                "name": "hat"
+              },
+              {
+                "href": "heels",
+                "name": "heels"
+              },
+              {
+                "href": "flats",
+                "name": "flats"
+              },
+              {
+                "href": "boots",
+                "name": "boots"
+              },
+              {
+                "href": "sandals",
+                "name": "sandals"
+              },
+              {
+                "href": "handbag",
+                "name": "handbag"
+              },
+              {
+                "href": "clutch",
+                "name": "clutch"
+              },
+              {
+                "href": "necklace",
+                "name": "necklace"
+              }
+            ],
+            "menuName": "woman's fashion"
+          },
+          {
+            "menuItems": [
+              {
+                "href": "shirt",
+                "name": "shirt"
+              },
+              {
+                "href": "t-shirt",
+                "name": "t-shirt"
+              },
+              {
+                "href": "polo",
+                "name": "polo"
+              },
+              {
+                "href": "sweater",
+                "name": "sweater"
+              },
+              {
+                "href": "hoodie",
+                "name": "hoodie"
+              },
+              {
+                "href": "jacket",
+                "name": "jacket"
+              },
+              {
+                "href": "coat",
+                "name": "coat"
+              },
+              {
+                "href": "blazer",
+                "name": "blazer"
+              },
+              {
+                "href": "pants",
+                "name": "pants"
+              },
+              {
+                "href": "jeans",
+                "name": "jeans"
+              },
+              {
+                "href": "shorts",
+                "name": "shorts"
+              },
+              {
+                "href": "sweatpants",
+                "name": "sweatpants"
+              },
+              {
+                "href": "suits",
+                "name": "suits"
+              },
+              {
+                "href": "tie",
+                "name": "tie"
+              },
+              {
+                "href": "bowtie",
+                "name": "bowtie"
+              },
+              {
+                "href": "belt",
+                "name": "belt"
+              },
+              {
+                "href": "socks",
+                "name": "socks"
+              },
+              {
+                "href": "shoes",
+                "name": "shoes"
+              },
+              {
+                "href": "sneakers",
+                "name": "sneakers"
+              },
+              {
+                "href": "loafers",
+                "name": "loafers"
+              },
+              {
+                "href": "boots",
+                "name": "boots"
+              }
+            ],
+            "menuName": "men's fashion"
+          }
+        ]
+      ],
+      "sales": {
+        "title": "today's",
+        "description": "flash sales",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "viewAll": "View all products"
+      },
+      "category": {
+        "title": "categories",
+        "description": "Browse by category",
+        "categories": [
+          {
+            "title": "phones",
+            "icon": "PhoneIcon"
+          },
+          {
+            "title": "computers",
+            "icon": "ComputerIcon"
+          },
+          {
+            "title": "smartWatch",
+            "icon": "WatchIcon"
+          },
+          {
+            "title": "camera",
+            "icon": "CameraIcon"
+          },
+          {
+            "title": "headPhones",
+            "icon": "HeadPhonesIcon"
+          },
+          {
+            "title": "gaming",
+            "icon": "GamingIcon"
+          },
+          {
+            "title": "computers",
+            "icon": "ComputerIcon"
+          },
+          {
+            "title": "smartWatch",
+            "icon": "WatchIcon"
+          },
+          {
+            "title": "headPhones",
+            "icon": "HeadPhonesIcon"
+          }
+        ]
+      },
+      "bestSelling": {
+        "title": "this month",
+        "description": "best selling products"
+      },
+      "banner": {
+        "title": "categories",
+        "description": "enchanse your music experience",
+        "days": "Days",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "hours": "Hours",
+        "buy": "buy now"
+      },
+      "products": {
+        "title": "our products",
+        "description": "explore our products",
+        "viewAll": "View all products"
+      },
+      "newArrival": {
+        "title": "featured",
+        "description": "new arrival",
+        "ps5": {
+          "title": "PlayStation 5",
+          "description": "Black and White version of PS5 coming out on sale"
+        },
+        "women": {
+          "title": "Women’s Collections",
+          "description": "Featured woman collections that give you another vibe."
+        },
+        "speakers": {
+          "title": "Speakers",
+          "description": "Amazon wireless speakers"
+        },
+        "perfume": {
+          "title": "Perfume",
+          "description": "GUCCI INTENSE OUD EDP"
+        }
+      },
+      "services": [
+        {
+          "title": "FREE AND FAST DELIVERY",
+          "subtitle": "Free delivery for all orders over $140",
+          "image": "delivery.svg"
+        },
+        {
+          "title": "24/7 CUSTOMER SERVICE",
+          "subtitle": "Friendly 24/7 customer support",
+          "image": "support.svg"
+        },
+        {
+          "title": "MONEY BACK GUARANTEE",
+          "subtitle": "We reurn money within 30 days",
+          "image": "safety.svg"
+        }
+      ]
     }
   },
   "footer": {

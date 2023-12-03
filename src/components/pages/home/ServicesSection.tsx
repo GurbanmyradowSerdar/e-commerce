@@ -1,10 +1,14 @@
 import ServiceCard from "@/components/cards/service_card";
-import { aboutServicesCards } from "@/data";
+import { getDict } from "@/dictionaries/dictionaries";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
 
-export default function ServicesSection() {
+export default async function ServicesSection() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <section className="flex items-center justify-evenly">
-      {aboutServicesCards.map((item, i) => (
+      {dict.pages.aboutUs.section4.services.map((item, i) => (
         <ServiceCard key={i} {...item} />
       ))}
     </section>
