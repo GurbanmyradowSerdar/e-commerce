@@ -8,7 +8,10 @@ import { horizontalMarginLimit } from "@/shared/constants";
 import PlainLink from "./PlainLink";
 import LastLink from "./LastLink";
 
-export default function NavigationTrain({ isNotFound }: INavigationTrain) {
+export default function NavigationTrain({
+  isNotFound,
+  isError,
+}: INavigationTrain) {
   const pathname = usePathname();
   let pathArray = pathname
     .split("/")
@@ -25,25 +28,39 @@ export default function NavigationTrain({ isNotFound }: INavigationTrain) {
         className="flex items-center gap-3 text-color-text-2 text-base
               max-2xl:text-sm"
       >
-        {isNotFound ? (
+        <>
+          {isNotFound ? (
+            <>
+              <Link
+                href={`/${pathname.split("/")[1]}`}
+                className="duration-300 ease-in-out transition-colors hover:text-color-text-2-hover"
+              >
+                Home
+              </Link>
+              <span className="italic">/</span>
+              <span className="text-color-text-3">404 Error</span>
+            </>
+          ) : (
+            pathArray.map((item, i) =>
+              pathArray.length - 1 !== i ? (
+                <PlainLink text={item} key={i} />
+              ) : (
+                <LastLink text={item} key={i} />
+              )
+            )
+          )}
+        </>
+        {isError && (
           <>
             <Link
-              href={"/en"}
+              href={`/${pathname.split("/")[1]}`}
               className="duration-300 ease-in-out transition-colors hover:text-color-text-2-hover"
             >
               Home
             </Link>
             <span className="italic">/</span>
-            <span className="text-color-text-3">404 Error</span>
+            <span className="text-color-text-3">500 Error</span>
           </>
-        ) : (
-          pathArray.map((item, i) =>
-            pathArray.length - 1 !== i ? (
-              <PlainLink text={item} key={i} />
-            ) : (
-              <LastLink text={item} key={i} />
-            )
-          )
         )}
       </div>
     </div>

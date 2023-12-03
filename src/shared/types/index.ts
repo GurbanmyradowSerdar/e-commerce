@@ -69,6 +69,7 @@ export interface IServiceCard {
 // ! navigation train
 export interface INavigationTrain {
   isNotFound?: boolean;
+  isError?: boolean;
 }
 
 // ! input without label

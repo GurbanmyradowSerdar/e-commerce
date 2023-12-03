@@ -1,4 +1,4 @@
-export default function loading() {
+export default function Loading() {
   return (
     <div className="flex items-center justify-center h-[70dvh] bg-black/5">
       <div
