@@ -1,7 +1,6 @@
 import { horizontalMarginLimit } from "@/shared/constants";
 import { interBoldFont, poppinsMediumFont } from "fonts";
 import FooterInput from "./FooterInput";
-import { footerNav, footerNav1, footerNav2 } from "@/data";
 import FooterLink from "./FooterLink";
 import { IClassName } from "types";
 import { AiOutlineCopyright as CopyRightIcon } from "react-icons/ai";
@@ -15,9 +14,11 @@ import { AiOutlineInstagram as InstagramIcon } from "react-icons/ai";
 import { FaLinkedinIn as LinkedinIcon } from "react-icons/fa";
 import { getLocaleInServer } from "@/shared/utils";
 import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function Footer() {
+export default async function Footer() {
   const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <footer className="bg-color-bg-1 text-color-text-1">
       <div
@@ -44,19 +45,19 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_17%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="support" />
-          {footerNav.map((item, i) => (
+          {dict.footer.footerNav.map((item, i) => (
             <FooterLink key={i} {...item} isIndependent />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_10%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="account" />
-          {footerNav1.map((item, i) => (
+          {dict.footer.footerNav1.map((item, i) => (
             <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_10%] max-3xl:flex-[1_0_20%]">
           <FooterTitle text="quick link" />
-          {footerNav2.map((item, i) => (
+          {dict.footer.footerNav2.map((item, i) => (
             <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>

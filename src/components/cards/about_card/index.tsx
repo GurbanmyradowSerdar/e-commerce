@@ -1,7 +1,30 @@
 import { IAboutCard } from "types";
 import { interBoldFont } from "fonts";
+import ServiceIcon from "./icons/ServiceIcon";
+import MoneyIcon from "./icons/MoneyIcon";
+import BagIcon from "./icons/BagIcon";
+import MoneyBagIcon from "./icons/MoneyBagIcon";
 
-export default function AboutCard({ Icon, subtitle, title }: IAboutCard) {
+export default function AboutCard({ subtitle, title, i }: IAboutCard) {
+  let Icon = null;
+
+  switch (i) {
+    case 0:
+      Icon = ServiceIcon();
+      break;
+    case 1:
+      Icon = MoneyIcon();
+      break;
+    case 2:
+      Icon = BagIcon();
+      break;
+    case 3:
+      Icon = MoneyBagIcon();
+      break;
+    default:
+      break;
+  }
+
   return (
     <div
       className="flex flex-col flex-[0_0_20%] items-center py-5 px-12 border-2 border-color-divider rounded-md gap-4

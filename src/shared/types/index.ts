@@ -81,8 +81,8 @@ export interface IInputWithoutLabel {
 
 // ! about card
 export interface IAboutCard {
-  Icon: React.ReactNode;
   title: string;
+  i: number;
   subtitle: string;
 }
 

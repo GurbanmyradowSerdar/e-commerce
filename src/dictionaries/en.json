@@ -38,7 +38,268 @@
       "signGoogle": "sign up with google",
       "haveAccount": "already have an account?",
       "login": "log in"
+    },
+    "aboutUs": {
+      "section1": {
+        "title": "our story",
+        "text1": "Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.",
+        "text2": "Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging from consumer."
+      },
+      "section2": {
+        "aboutCards": [
+          {
+            "title": "10.5k",
+            "subtitle": "Sallers active our site"
+          },
+          {
+            "title": "33k",
+            "subtitle": "Mopnthly Produduct Sale"
+          },
+          {
+            "title": "45.5k",
+            "subtitle": "Customer active in our site"
+          },
+          {
+            "title": "25k",
+            "subtitle": "Anual gross sale in our site"
+          }
+        ]
+      },
+      "section3": {
+        "employeeCards": [
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-1.png",
+            "name": "tom crouise",
+            "status": "founder & chairman"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-2.png",
+            "name": "emma watson",
+            "status": "managing director"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-3.png",
+            "name": "will smith",
+            "status": "product designer"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-1.png",
+            "name": "tom crouise",
+            "status": "founder & chairman"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-2.png",
+            "name": "emma watson",
+            "status": "managing director"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-3.png",
+            "name": "will smith",
+            "status": "product designer"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-1.png",
+            "name": "tom crouise",
+            "status": "founder & chairman"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-2.png",
+            "name": "emma watson",
+            "status": "managing director"
+          },
+          {
+            "href": {
+              "instagram": "#",
+              "linkedin": "#",
+              "twitter": "#"
+            },
+            "image": "employee-3.png",
+            "name": "will smith",
+            "status": "product designer"
+          }
+        ]
+      },
+      "section4": {
+        "services": [
+          {
+            "title": "FREE AND FAST DELIVERY",
+            "subtitle": "Free delivery for all orders over $140",
+            "image": "delivery.svg"
+          },
+          {
+            "title": "24/7 CUSTOMER SERVICE",
+            "subtitle": "Friendly 24/7 customer support",
+            "image": "support.svg"
+          },
+          {
+            "title": "MONEY BACK GUARANTEE",
+            "subtitle": "We reurn money within 30 days",
+            "image": "safety.svg"
+          }
+        ]
+      }
+    },
+    "account": {
+      "yourProfile": "Your profile",
+      "name": "name",
+      "password": "password",
+      "city": "city",
+      "streetAddress": "street address",
+      "apartment": "apartment",
+      "companyName": "company name",
+      "email": "email",
+      "phoneNumber": "phone number"
+    },
+    "cart": {
+      "checkOut": {
+        "form": {
+          "title": "billing details",
+          "firstName": "first name",
+          "companyName": "company name",
+          "streetAddress": "street address",
+          "apartment": "Apartment, floor, etc.",
+          "phoneNumber": "phone number",
+          "city": "city",
+          "email": "email address",
+          "checkbox": "save this information for faster check-out next time"
+        },
+        "priceSection": {
+          "subtotal": "subtotal",
+          "shipping": "shipping",
+          "total": "total",
+          "payment": {
+            "bank": "bank",
+            "cash": "cash on delivery"
+          },
+          "coupon": {
+            "placeholder": "coupon code",
+            "apply": "apply coupon"
+          },
+          "order": "place order"
+        }
+      },
+      "topLevelTexts": {
+        "product": "product",
+        "price": "price",
+        "quantity": "quantity",
+        "subtotal": "subtotal"
+      },
+      "buttons": {
+        "return": "return to shop",
+        "update": "update cart",
+        "apply": "apply coupon",
+        "process": "process to checkout"
+      },
+      "cartTotal": {
+        "title": "cart total",
+        "subtotal": "subtotal",
+        "shipping": "shipping",
+        "total": "total"
+      }
     }
   },
-  "footer": {}
+  "footer": {
+    "footerNav": [
+      {
+        "text": "111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.",
+        "href": "https://www.google.com/maps/search/111+Bijoy+sarani,+Dhaka,++DH+1515,+Bangladesh./@23.7643021,90.3864755,17z/data=!3m1!4b1?entry=ttu"
+      },
+      {
+        "text": "exclusive@gmail.com",
+        "href": "malito:exclusive@gmail.com"
+      },
+      {
+        "text": "+88015-88888-9999",
+        "href": "tel:+88015-88888-9999"
+      }
+    ],
+    "footerNav1": [
+      {
+        "text": "My Account",
+        "href": "account"
+      },
+      {
+        "text": "Login / Register",
+        "href": "account"
+      },
+      {
+        "text": "Cart",
+        "href": "cart"
+      },
+      {
+        "text": "Wishlist",
+        "href": "wishlist"
+      },
+      {
+        "text": "Shop",
+        "href": "shop"
+      }
+    ],
+    "footerNav2": [
+      {
+        "text": "Privacy Policy",
+        "href": "privacy-policy"
+      },
+      {
+        "text": "Terms of Use",
+        "href": "#"
+      },
+      {
+        "text": "FAQ",
+        "href": "faq"
+      },
+      {
+        "text": "Contact",
+        "href": "contact"
+      }
+    ],
+    "otherTexts": {
+      "subscribe": "subscribe",
+      "10%Off": "Get 10% off your first order",
+      "emailPlaceholder": "enter your email",
+      "downloadApp": "download App",
+      "saveNewUser": "save 3$ with App New User Only",
+      "copyRight": "Rimel 2022. All right reserved"
+    }
+  }
 }

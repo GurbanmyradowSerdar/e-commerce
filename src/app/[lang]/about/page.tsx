@@ -7,12 +7,16 @@ import {
 import { twMerge as tw } from "tailwind-merge";
 import { interSemiboldFont } from "fonts";
 import Image from "next/image";
-import { aboutCards, aboutServicesCards } from "@/data";
 import AboutCard from "@/components/cards/about_card";
 import AboutEmployeesSwiper from "@/components/pages/about/AboutEmployeesSwiper";
 import ServiceCard from "@/components/cards/service_card";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function page() {
+export default async function page() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <div
       className={tw(
@@ -32,19 +36,13 @@ export default function page() {
               interSemiboldFont.className
             )}
           >
-            our story
+            {dict.pages.aboutUs.section1.title}
           </h1>
           <p className="text-lg max-2xl:text-base">
-            Launced in 2015, Exclusive is South Asia’s premier online shopping
-            makterplace with an active presense in Bangladesh. Supported by wide
-            range of tailored marketing, data and service solutions, Exclusive
-            has 10,500 sallers and 300 brands and serves 3 millioons customers
-            across the region.
+            {dict.pages.aboutUs.section1.text1}
           </p>
           <p className="text-lg max-2xl:text-base">
-            Exclusive has more than 1 Million products to offer, growing at a
-            very fast. Exclusive offers a diverse assotment in categories
-            ranging from consumer.
+            {dict.pages.aboutUs.section1.text2}
           </p>
         </div>
         <Image
@@ -59,17 +57,17 @@ export default function page() {
       </section>
       {/* about cards */}
       <section className="flex justify-between">
-        {aboutCards.map((item, i) => (
-          <AboutCard key={i} {...item} />
+        {dict.pages.aboutUs.section2.aboutCards.map((item, i) => (
+          <AboutCard key={i} {...item} i={i} />
         ))}
       </section>
       {/* swiper employees */}
       <section>
-        <AboutEmployeesSwiper />
+        <AboutEmployeesSwiper dict={dict} />
       </section>
       {/* service cards */}
       <section className="flex items-center justify-evenly">
-        {aboutServicesCards.map((item, i) => (
+        {dict.pages.aboutUs.section4.services.map((item, i) => (
           <ServiceCard key={i} {...item} />
         ))}
       </section>
