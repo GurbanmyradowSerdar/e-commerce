@@ -27,27 +27,27 @@
   "pages": {
     "aboutUs": {
       "section1": {
-        "title": "bizin hikayemiz",
-        "text1": "2015-nji ýylda oktýabrda, Exclusive Güney Aziýanyň esasy onlaýn satyn alma mekdebi bolan Bangladesde faal bolan onlaýn satyn alma ýeridir. Özelleşdirilen marketologiya, datalaryň we hyzmatlar çözgütleri çäklerini bilen baha tarapyndan tassyklanan, Exclusive-da 10,500 satyjy we 300 marka bardyr we bu ýagdaýlarda bölgegi 3 million müşderini hyzmat etdirýär.",
-        "text2": "Exclusive 1 millioniň üstünde harytalar bilen, oňa çalt peseldýär. Exclusive tüketijiň kategoriyalarda garşy assortimente eýe boldy."
+        "title": "biziň taryhymyz",
+        "text1": "2015-nji ýylda satuwa çykarylan “Exclusive”, Bangladeşde güýçli gatnaşýan Günorta Aziýanyň öňdebaryjy onlaýn bazarydyr. Giňişleýin marketing, maglumatlar we hyzmat çözgütleri bilen goldanýan “Exclusive” -da 10,500 täjir we 300 marka bar, sebitde 3 million müşderä hyzmat edýär.",
+        "text2": "“Exclusive” portfelinde 1 milliondan gowrak önüm bar we çalt ösýär. Kompaniýa sarp edijiler üçin dürli önüm kategoriýalaryny hödürleýär."
       },
       "section2": {
         "aboutCards": [
           {
             "title": "10.5k",
-            "subtitle": "Satyjylar sahypamyzda"
+            "subtitle": "Sahypamyzdaky satyjylar"
           },
           {
             "title": "33k",
-            "subtitle": "Aýlyk haryt satyşy"
+            "subtitle": "Her aýlyk satylyş çalşygy"
           },
           {
             "title": "45.5k",
-            "subtitle": "Müşderiler sahypamyzda faal"
+            "subtitle": "Sahypamyzdaky müşderiler sany"
           },
           {
             "title": "25k",
-            "subtitle": "Sahypamyzdaky ýyllık gurama satyş"
+            "subtitle": "Sahypamyzdaky ýyllyk satylyşlar"
           }
         ]
       },
@@ -61,7 +61,7 @@
             },
             "image": "employee-1.png",
             "name": "tom crouise",
-            "status": "çärşäñ we tebigy baştutan"
+            "status": "Dörediji we başyny tutan"
           },
           {
             "href": {
@@ -71,7 +71,7 @@
             },
             "image": "employee-2.png",
             "name": "emma watson",
-            "status": "idare edijilik direktory"
+            "status": "direktor"
           },
           {
             "href": {
@@ -81,7 +81,7 @@
             },
             "image": "employee-3.png",
             "name": "will smith",
-            "status": "mehanika designer"
+            "status": "ýerine ýetiriji dizaýner"
           },
           {
             "href": {
@@ -91,7 +91,7 @@
             },
             "image": "employee-1.png",
             "name": "tom crouise",
-            "status": "çärşäñ we tebigy baştutan"
+            "status": "Dörediji we başyny tutan"
           },
           {
             "href": {
@@ -101,7 +101,7 @@
             },
             "image": "employee-2.png",
             "name": "emma watson",
-            "status": "idare edijilik direktory"
+            "status": "direktor"
           },
           {
             "href": {
@@ -111,7 +111,7 @@
             },
             "image": "employee-3.png",
             "name": "will smith",
-            "status": "mehanika designer"
+            "status": "ýerine ýetiriji dizaýner"
           },
           {
             "href": {
@@ -121,7 +121,7 @@
             },
             "image": "employee-1.png",
             "name": "tom crouise",
-            "status": "çärşäñ we tebigy baştutan"
+            "status": "Dörediji we başyny tutan"
           },
           {
             "href": {
@@ -131,7 +131,7 @@
             },
             "image": "employee-2.png",
             "name": "emma watson",
-            "status": "idare edijilik direktory"
+            "status": "direktor"
           },
           {
             "href": {
@@ -141,7 +141,7 @@
             },
             "image": "employee-3.png",
             "name": "will smith",
-            "status": "mehanika designer"
+            "status": "ýerine ýetiriji dizaýner"
           }
         ]
       },
@@ -166,61 +166,62 @@
       }
     },
     "account": {
-      "yourProfile": "Siziň profil",
+      "yourProfile": "Siziň profiliňiz",
       "name": "ady",
       "password": "parol",
       "city": "şäher",
       "streetAddress": "köçe salgy",
-      "apartment": "apartament",
-      "companyName": "kompýuteriň ady",
+      "apartment": "kwartira",
+      "companyName": "kompaniýaň ady",
       "email": "e-poçta",
       "phoneNumber": "telefon belgi"
     },
     "cart": {
       "checkOut": {
         "form": {
-          "title": "söwda ýörite",
-          "firstName": "ady",
-          "companyName": "kompýuteriň ady",
-          "streetAddress": "köçe salgy",
-          "apartment": "Apartament, ýer",
-          "phoneNumber": "telefon belgi",
-          "city": "şäher",
-          "email": "e-poçta salgy",
-          "checkbox": "bu maglumatlary ýatda saklaň, soňraky barşy söwda üçin"
+          "title": "Söwdaň detallary",
+          "firstName": "Ady",
+          "companyName": "Kompaniýaň ady",
+          "streetAddress": "Köçe salgysy",
+          "apartment": "Kwartira",
+          "phoneNumber": "Telefon belgi",
+          "city": "Şäher",
+          "email": "E-poçta salgysy",
+          "checkbox": "bu maglumatlary ýatda saklaň, soňraky söwda üçin"
         },
         "priceSection": {
-          "subtotal": "jemi göçertme",
-          "shipping": "ýüklemek",
-          "total": "jemi",
+          "subtotal": "Jemi (dastawkasyz)",
+          "shipping": "Dastawka",
+          "total": "Jemi",
           "payment": {
-            "bank": "bank",
-            "cash": "nagt tölegi"
+            "bank": "Bank",
+            "cash": "Nagt tölegi"
           },
           "coupon": {
-            "placeholder": "kupon kody",
-            "apply": "kupon ulan"
+            "placeholder": "Kupon kody",
+            "apply": "Kupon ulan"
           },
           "order": "sargyt bermek"
         }
       },
       "topLevelTexts": {
-        "product": "mehsul",
+        "product": "önüm",
         "price": "baha",
-        "quantity": "miktar",
-        "subtotal": "jemi göçertme"
+        "quantity": "sany",
+        "subtotal": "jemi"
       },
       "buttons": {
-        "return": "mağazaya gaýt",
+        "return": "yzyna gaýtarmak",
         "update": "söwda harytalaryny täzeläň",
         "apply": "kupon ulan",
-        "process": "sargyt bermek üçin"
+        "process": "sargyt bermek üçin",
+        "applyPlaceholder": "Kuponyň Kody"
       },
       "cartTotal": {
-        "title": "söwda jemi",
-        "subtotal": "jemi göçertme",
-        "shipping": "ýüklemek",
-        "total": "jemi"
+        "title": "Söwda jemi",
+        "subtotal": "Jemi (dastawkasyz)",
+        "shipping": "Dastawka",
+        "total": "Jemi"
       }
     },
     "contact": {

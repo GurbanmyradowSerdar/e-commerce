@@ -1,4 +1,4 @@
-import { ICategoryCard, TIconName } from "types";
+import { ICategoryCard } from "types";
 import CameraIcon from "@/components/cards/category_card/icons/CameraIcon";
 import ComputerIcon from "@/components/cards/category_card/icons/ComputerIcon";
 import GamingIcon from "@/components/cards/category_card/icons/GamingIcon";

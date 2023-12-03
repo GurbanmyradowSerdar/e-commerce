@@ -1,4 +1,4 @@
-import { ICategoryCard, IProductCard } from "types";
+import { IProductCard } from "types";
 
 // ! home page banners at start
 export const homeBanners = [

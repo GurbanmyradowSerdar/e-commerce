@@ -2,7 +2,7 @@
 
 import InputWithLabel from "@/components/inputs/InputWithLabel";
 import { credentialsState } from "@/shared/recoil_states/atoms";
-import { ICredentials } from "@/shared/types";
+import { ICredentials, IDict } from "@/shared/types";
 import { interMediumFont } from "fonts";
 import { useFormik } from "formik";
 import { useRecoilValue } from "recoil";
@@ -10,7 +10,7 @@ import { validate } from "./validation";
 import { Checkbox } from "@chakra-ui/react";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function FormSection() {
+export default function FormSection({ dict }: IDict) {
   const credentials = useRecoilValue(credentialsState);
   const formik = useFormik<ICredentials>({
     initialValues: {
@@ -28,12 +28,12 @@ export default function FormSection() {
           interMediumFont.className
         )}
       >
-        Billing Details
+        {dict.pages.cart.checkOut.form.title}
       </h1>
       <div className="space-y-2">
         <form className="space-y-3" onSubmit={formik.handleSubmit}>
           <InputWithLabel
-            label="First Name"
+            label={dict.pages.cart.checkOut.form.firstName}
             labelSpan="*"
             error={formik.errors.firstName}
             inputProps={{
@@ -45,7 +45,7 @@ export default function FormSection() {
             }}
           />
           <InputWithLabel
-            label="Company Name"
+            label={dict.pages.cart.checkOut.form.companyName}
             error={formik.errors.companyName}
             inputProps={{
               type: "text",
@@ -55,7 +55,7 @@ export default function FormSection() {
             }}
           />
           <InputWithLabel
-            label="Street Address"
+            label={dict.pages.cart.checkOut.form.streetAddress}
             labelSpan="*"
             error={formik.errors.streetAddress}
             inputProps={{
@@ -67,7 +67,7 @@ export default function FormSection() {
             }}
           />
           <InputWithLabel
-            label="Apartment, floor, etc."
+            label={dict.pages.cart.checkOut.form.apartment}
             error={formik.errors.apartment}
             inputProps={{
               type: "text",
@@ -77,7 +77,7 @@ export default function FormSection() {
             }}
           />
           <InputWithLabel
-            label="City"
+            label={dict.pages.cart.checkOut.form.city}
             labelSpan="*"
             error={formik.errors.city}
             inputProps={{
@@ -89,7 +89,7 @@ export default function FormSection() {
             }}
           />
           <InputWithLabel
-            label="Phone Number"
+            label={dict.pages.cart.checkOut.form.phoneNumber}
             labelSpan="*"
             error={formik.errors.phoneNumber}
             inputProps={{
@@ -101,7 +101,7 @@ export default function FormSection() {
             }}
           />
           <InputWithLabel
-            label="Email Address"
+            label={dict.pages.cart.checkOut.form.email}
             labelSpan="*"
             error={formik.errors.email}
             inputProps={{
@@ -114,7 +114,7 @@ export default function FormSection() {
           />
         </form>
         <Checkbox colorScheme="red">
-          Save this information for faster check-out next time
+          {dict.pages.cart.checkOut.form.checkbox}
         </Checkbox>
       </div>
     </section>

@@ -214,7 +214,8 @@
         "return": "return to shop",
         "update": "update cart",
         "apply": "apply coupon",
-        "process": "process to checkout"
+        "process": "process to checkout",
+        "applyPlaceholder": "Coupon Code"
       },
       "cartTotal": {
         "title": "cart total",

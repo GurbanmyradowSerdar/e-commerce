@@ -8,14 +8,17 @@ import {
   deliveryPriceState,
   subTotalPriceState,
 } from "@/shared/recoil_states/atoms";
-import { TPrice } from "@/shared/types";
+import { IDict, ILangPropsToComponent, TPrice } from "@/shared/types";
 import { poppinsMediumFont } from "fonts";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function CartTotalSection() {
+export default function CartTotalSection({
+  dict,
+  lang,
+}: IDict & ILangPropsToComponent) {
   const subTotal = useRecoilValue(subTotalPriceState);
   const deliveryPrice = useRecoilValue(deliveryPriceState);
   const cartProducts = useRecoilValue(cartProductsState);
@@ -54,11 +57,11 @@ export default function CartTotalSection() {
       <div className="flex items-center gap-6">
         <input
           type="text"
-          placeholder="Coupon Code"
+          placeholder={dict.pages.cart.buttons.applyPlaceholder}
           className="p-4 w-80 rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1 text-base
           max-3xl:p-3 max-2xl:text-sm"
         />
-        <PrimaryButton>apply coupon</PrimaryButton>
+        <PrimaryButton>{dict.pages.cart.buttons.apply}</PrimaryButton>
       </div>
       <div
         className="flex flex-col px-10 py-12 rounded-sm border-2 border-color-bg-1 w-[550px] gap-7
@@ -70,15 +73,15 @@ export default function CartTotalSection() {
             poppinsMediumFont.className
           )}
         >
-          Cart Total
+          {dict.pages.cart.cartTotal.title}
         </h3>
         <div className="space-y-5">
           <div className="flex items-center justify-between border-b border-color-divider pb-2">
-            <DefaultText text="Subtotal:" />
+            <DefaultText text={dict.pages.cart.cartTotal.subtotal} />
             <DefaultText text={`$${price.subTotal}`} />
           </div>
           <div className="flex items-center justify-between border-b border-color-divider pb-2">
-            <DefaultText text="Shipping:" />
+            <DefaultText text={dict.pages.cart.cartTotal.shipping} />
             <DefaultText
               text={`${
                 price.deliveryPrice === 0 ? "Free" : `$${price.deliveryPrice}`
@@ -86,16 +89,16 @@ export default function CartTotalSection() {
             />
           </div>
           <div className="flex items-center justify-between pb-2">
-            <DefaultText text="Total:" />
+            <DefaultText text={dict.pages.cart.cartTotal.total} />
             <DefaultText text={`$${price.total}`} />
           </div>
         </div>
         <Link
-          href={"/en/cart/check-out"}
+          href={`/${lang}/cart/check-out`}
           className="self-center"
           onClick={handleClick}
         >
-          <PrimaryButton>procees to checkout</PrimaryButton>
+          <PrimaryButton>{dict.pages.cart.buttons.process}</PrimaryButton>
         </Link>
       </div>
     </section>

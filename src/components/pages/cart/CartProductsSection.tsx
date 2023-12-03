@@ -8,12 +8,12 @@ import {
   deliveryPriceState,
   subTotalPriceState,
 } from "@/shared/recoil_states/atoms";
-import { ICartProductCard } from "@/shared/types";
+import { ICartProductCard, IDict } from "@/shared/types";
 import { calculateDeliveryPrice, calculateSubtotal } from "@/shared/utils";
 import { useEffect, useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 
-export default function CartProductsSection() {
+export default function CartProductsSection({ dict }: IDict) {
   const cartProducts = useRecoilValue(cartProductsState);
   const [array, setArray] = useState<ICartProductCard[]>([]);
   const setSubTotal = useSetRecoilState(subTotalPriceState);
@@ -35,19 +35,19 @@ export default function CartProductsSection() {
           max-2xl:py-5 max-2xl:px-4"
           >
             <DefaultText
-              text="Product"
+              text={dict.pages.cart.topLevelTexts.product}
               className="self-center place-self-center"
             />
             <DefaultText
-              text="Price"
+              text={dict.pages.cart.topLevelTexts.price}
               className="self-center place-self-center"
             />
             <DefaultText
-              text="Quantity"
+              text={dict.pages.cart.topLevelTexts.quantity}
               className="self-center place-self-center"
             />
             <DefaultText
-              text="Subtotal"
+              text={dict.pages.cart.topLevelTexts.subtotal}
               className="self-center place-self-center"
             />
           </div>
@@ -62,9 +62,9 @@ export default function CartProductsSection() {
                 onClick: () => console.log("hello"),
               }}
             >
-              return to shop
+              {dict.pages.cart.buttons.return}
             </OutlinedButton>
-            <OutlinedButton>update cart</OutlinedButton>
+            <OutlinedButton> {dict.pages.cart.buttons.update}</OutlinedButton>
           </div>
         </>
       ) : (

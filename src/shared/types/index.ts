@@ -212,3 +212,8 @@ export interface ILangProps {
 export interface ILangPropsToComponent {
   lang: TLanguages;
 }
+
+// ! pass dict as any to client
+export interface IDict {
+  dict: any;
+}

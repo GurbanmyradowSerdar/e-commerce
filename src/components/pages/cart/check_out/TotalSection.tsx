@@ -8,14 +8,14 @@ import {
   deliveryPriceState,
   subTotalPriceState,
 } from "@/shared/recoil_states/atoms";
-import { TPrice } from "@/shared/types";
+import { IDict, TPrice } from "@/shared/types";
 import { Radio, RadioGroup } from "@chakra-ui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 
-export default function TotalSection() {
+export default function TotalSection({ dict }: IDict) {
   const products = useRecoilValue(checkoutProductsState);
   const router = useRouter();
   const subTotal = useRecoilValue(subTotalPriceState);
@@ -59,11 +59,15 @@ export default function TotalSection() {
         </div>
         <div className="space-y-5">
           <div className="flex items-center justify-between border-b border-color-divider pb-2">
-            <DefaultText text="Subtotal:" />
+            <DefaultText
+              text={dict.pages.cart.checkOut.priceSection.subtotal}
+            />
             <DefaultText text={`$${price.subTotal}`} />
           </div>
           <div className="flex items-center justify-between border-b border-color-divider pb-2">
-            <DefaultText text="Shipping:" />
+            <DefaultText
+              text={dict.pages.cart.checkOut.priceSection.shipping}
+            />
             <DefaultText
               text={`${
                 price.deliveryPrice === 0 ? "Free" : `$${price.deliveryPrice}`
@@ -71,7 +75,7 @@ export default function TotalSection() {
             />
           </div>
           <div className="flex items-center justify-between pb-2">
-            <DefaultText text="Total:" />
+            <DefaultText text={dict.pages.cart.checkOut.priceSection.total} />
             <DefaultText text={`$${price.total}`} />
           </div>
         </div>
@@ -82,7 +86,7 @@ export default function TotalSection() {
         >
           <div className="flex items-center justify-between">
             <Radio colorScheme="red" className="text-lg" value="bank">
-              Bank
+              {dict.pages.cart.checkOut.priceSection.payment.bank}
             </Radio>
             <div className="flex items-center gap-2">
               {new Array(4).fill(0).map((_, i) => (
@@ -98,19 +102,25 @@ export default function TotalSection() {
             </div>
           </div>
           <Radio colorScheme="red" className="text-lg" value="onDelivery">
-            Cash on delivery
+            {dict.pages.cart.checkOut.priceSection.payment.cash}
           </Radio>
         </RadioGroup>
         <div className="flex gap-5">
           <input
             type="text"
-            placeholder="Coupon Code"
+            placeholder={
+              dict.pages.cart.checkOut.priceSection.coupon.placeholder
+            }
             className="p-4 w-80 text-base rounded-sm border-color-bg-1 border duration-300 transition-colors focus-within:outline-color-bg-1
             max-3xl:p-3 max-2xl:text-sm"
           />
-          <PrimaryButton>apply coupon</PrimaryButton>
+          <PrimaryButton>
+            {dict.pages.cart.checkOut.priceSection.coupon.apply}
+          </PrimaryButton>
         </div>
-        <PrimaryButton className="self-start">place order</PrimaryButton>
+        <PrimaryButton className="self-start">
+          {dict.pages.cart.checkOut.priceSection.order}
+        </PrimaryButton>
       </div>
     </section>
   );

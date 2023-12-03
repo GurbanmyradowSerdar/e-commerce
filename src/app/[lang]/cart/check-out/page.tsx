@@ -7,8 +7,13 @@ import {
 import { twMerge as tw } from "tailwind-merge";
 import FormSection from "@/components/pages/cart/check_out/FormSection";
 import TotalSection from "@/components/pages/cart/check_out/TotalSection";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function page() {
+export default async function page() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <div
       className={tw(
@@ -19,8 +24,8 @@ export default function page() {
       )}
     >
       <NavigationTrain />
-      <FormSection />
-      <TotalSection />
+      <FormSection dict={dict} />
+      <TotalSection dict={dict} />
     </div>
   );
 }

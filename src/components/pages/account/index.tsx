@@ -7,7 +7,7 @@ import { useRecoilValue } from "recoil";
 import { twMerge as tw } from "tailwind-merge";
 import { interSemiboldFont, poppinsMediumFont } from "fonts";
 
-export default function AccountSection() {
+export default function AccountSection({ dict }: { dict: any }) {
   const credentials = useRecoilValue(credentialsState);
   const [account, setAccount] = useState<ICredentials>();
 
@@ -21,7 +21,7 @@ export default function AccountSection() {
           interSemiboldFont.className
         )}
       >
-        Your profile
+        {dict.pages.account.yourProfile}
       </h1>
 
       <div className="grid grid-cols-6 gap-10 max-3xl:grid-cols-4 max-3xl:gap-14 max-2xl:grid-cols-3">
@@ -32,7 +32,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            Name
+            {dict.pages.account.name}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.firstName || "Unknown"}
@@ -45,7 +45,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            password
+            {dict.pages.account.password}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.password || "Unknown"}
@@ -58,7 +58,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            city
+            {dict.pages.account.city}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.city || "Unknown"}
@@ -71,7 +71,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            street address
+            {dict.pages.account.streetAddress}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.streetAddress || "Unknown"}
@@ -84,7 +84,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            apartment
+            {dict.pages.account.apartment}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.apartment || "Unknown"}
@@ -97,7 +97,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            company name
+            {dict.pages.account.companyName}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.companyName || "Unknown"}
@@ -110,7 +110,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            email
+            {dict.pages.account.email}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.email || "Unknown"}
@@ -123,7 +123,7 @@ export default function AccountSection() {
               poppinsMediumFont.className
             )}
           >
-            phone number
+            {dict.pages.account.phoneNumber}
           </h3>
           <p className="text-lg max-2xl:text-base">
             {account?.phoneNumber || "Unknown"}

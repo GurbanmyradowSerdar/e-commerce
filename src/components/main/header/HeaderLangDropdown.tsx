@@ -8,6 +8,7 @@ export default function HeaderLangDropdown({ lang }: ILangPropsToComponent) {
   const [language, setLanguage] = useState<TLanguages>(lang);
   const pathname = usePathname();
   const { push } = useRouter();
+
   return (
     <Select
       value={language}
@@ -15,7 +16,9 @@ export default function HeaderLangDropdown({ lang }: ILangPropsToComponent) {
         setLanguage(e.target.value as TLanguages);
 
         push(
-          `/${e.target.value as TLanguages}/${pathname.split("/")[2] || ""}`
+          `/${e.target.value as TLanguages}/${
+            pathname.split("/").slice(2).join("/") || ""
+          }`
         );
       }}
       className="cursor-pointer"
