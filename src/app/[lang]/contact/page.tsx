@@ -9,8 +9,13 @@ import { twMerge as tw } from "tailwind-merge";
 import { poppinsMediumFont } from "fonts";
 import InputWithoutLabel from "@/components/inputs/InputWithoutLabel";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function page() {
+export default async function page() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <div
       className={tw(
@@ -40,13 +45,15 @@ export default function page() {
                 poppinsMediumFont.className
               )}
             >
-              call to us
+              {dict.pages.contact.infoSection.callPart.call}
             </p>
           </div>
           <p className="text-base max-2xl:text-sm">
-            We are available 24/7, 7 days a week.
+            {dict.pages.contact.infoSection.callPart.text}
           </p>
-          <p className="text-base max-2xl:text-sm">Phone: +8801611112222</p>
+          <p className="text-base max-2xl:text-sm">
+            {dict.pages.contact.infoSection.callPart.phone}
+          </p>
         </div>
         <div className="w-full h-[2px] bg-color-divider" />
         <div className="flex flex-col items-start gap-4 max-3xl:gap-3">
@@ -64,11 +71,11 @@ export default function page() {
                 poppinsMediumFont.className
               )}
             >
-              write to us
+              {dict.pages.contact.infoSection.writePart.write}
             </p>
           </div>
           <p className="text-base max-2xl:text-sm">
-            Fill out our form and we will contact you within 24 hours.
+            {dict.pages.contact.infoSection.writePart.text}
           </p>
           <p className="text-base max-2xl:text-sm">
             Emails: customer@exclusive.com
@@ -83,21 +90,21 @@ export default function page() {
           <InputWithoutLabel
             props={{
               type: "text",
-              placeholder: "Your Name *",
+              placeholder: dict.pages.contact.form.name,
               required: true,
             }}
           />
           <InputWithoutLabel
             props={{
               type: "email",
-              placeholder: "Your Email *",
+              placeholder: dict.pages.contact.form.email,
               required: true,
             }}
           />
           <InputWithoutLabel
             props={{
               type: "tel",
-              placeholder: "Your Phone *",
+              placeholder: dict.pages.contact.form.phone,
               required: true,
             }}
           />
@@ -105,14 +112,16 @@ export default function page() {
         <textarea
           rows={10}
           cols={10}
-          placeholder="Enter your message..."
+          placeholder={dict.pages.contact.form.message}
           className="placeholder:text-color-text-2 px-4 py-3 bg-color-secondary rounded-sm
           outline-color-secondary duration-300 ease-in-out transition-all resize-none
           focus-within:outline-2 focus-within:outline-color-primary-1 text-base
           max-2xl:text-sm"
           required
         ></textarea>
-        <PrimaryButton className="self-end">send message</PrimaryButton>
+        <PrimaryButton className="self-end">
+          {dict.pages.contact.form.send}
+        </PrimaryButton>
       </form>
     </div>
   );

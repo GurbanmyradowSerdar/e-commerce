@@ -6,12 +6,12 @@ import InputWithLine from "@/components/inputs/InputWithLine";
 import Image from "next/image";
 import Link from "next/link";
 import { useFormik } from "formik";
-import { ICredentials } from "@/shared/types";
+import { ICredentials, IDict } from "@/shared/types";
 import { useRecoilState } from "recoil";
 import { credentialsState } from "@/shared/recoil_states/atoms";
 import { usePathname } from "next/navigation";
 
-export default function SignUpForm() {
+export default function SignUpForm({ dict }: IDict) {
   const [credentials, setCredentials] = useRecoilState(credentialsState);
   const formik = useFormik<ICredentials>({
     initialValues: {
@@ -39,7 +39,7 @@ export default function SignUpForm() {
         <InputWithLine
           props={{
             type: "text",
-            placeholder: "name",
+            placeholder: dict.pages.registration.signUp.inputs.name,
             required: true,
             value: formik.values.firstName,
             onChange: formik.handleChange,
@@ -49,7 +49,7 @@ export default function SignUpForm() {
         <InputWithLine
           props={{
             type: "email",
-            placeholder: "email",
+            placeholder: dict.pages.registration.signUp.inputs.email,
             required: true,
             value: formik.values.email,
             onChange: formik.handleChange,
@@ -59,7 +59,7 @@ export default function SignUpForm() {
         <InputWithLine
           props={{
             type: "text",
-            placeholder: "phone number",
+            placeholder: dict.pages.registration.signUp.inputs.phoneNumber,
             required: true,
             value: formik.values.phoneNumber,
             onChange: formik.handleChange,
@@ -69,7 +69,7 @@ export default function SignUpForm() {
         <InputWithLine
           props={{
             type: "password",
-            placeholder: "password",
+            placeholder: dict.pages.registration.signUp.inputs.password,
             required: true,
             value: formik.values.password,
             onChange: formik.handleChange,
@@ -83,7 +83,7 @@ export default function SignUpForm() {
             type: "submit",
           }}
         >
-          create account
+          {dict.pages.registration.signUp.createAcc}
         </PrimaryButton>
         <OutlinedButton className="flex items-center gap-5">
           <Image
@@ -93,17 +93,21 @@ export default function SignUpForm() {
             height={100}
             className="w-7 h-7 max-2xl:w-6 max-2xl:h-6"
           />
-          <span className="text-base">sign up with google</span>
+          <span className="text-base">
+            {dict.pages.registration.signUp.signGoogle}
+          </span>
         </OutlinedButton>
       </div>
       <div className="flex items-center justify-center gap-4 text-color-text-2 text-lg">
-        <p className="text-base max-2xl:text-sm">Already have account</p>
+        <p className="text-base max-2xl:text-sm">
+          {dict.pages.registration.signUp.haveAccount}
+        </p>
         <Link
           href={`/${locale}/login`}
           className={`${poppinsMediumFont.className} duration-300 ease-in-out transition-colors underline underline-offset-8 hover:text-color-text-2-hover text-base
           max-2xl:text-sm`}
         >
-          Log in
+          {dict.pages.registration.signUp.login}
         </Link>
       </div>
     </form>

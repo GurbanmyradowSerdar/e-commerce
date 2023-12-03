@@ -227,13 +227,13 @@
     "contact": {
       "infoSection": {
         "callPart": {
-          "call": "başyňyza",
-          "text": "biz 24/7, hepdeňiň 7 günleri elýeterlikli bolup durýarys",
+          "call": "Biz bilen jaňlaşyň",
+          "text": "Biz 24/7, hepdäniň 7 güni elýeterli bolup durýarys",
           "phone": "Telefon: +8801611112222"
         },
         "writePart": {
-          "write": "Biz bilen ýaz",
-          "text": "Haryt formasy doldurun we size 24 sagat içinde habarlaşarys.",
+          "write": "Bize ýaz",
+          "text": "Haryt formasyny dolduruň we siz bilen 24 sagat içinde habarlaşarys.",
           "emails": [
             "E-poçtlar: customer@exclusive.com",
             "E-poçtlar: support@exclusive.com"
@@ -241,42 +241,42 @@
         }
       },
       "form": {
-        "name": "sizň adyňyz*",
-        "email": "sizň e-poçtaňyz*",
-        "phone": "sizň telefonyňyz*",
-        "message": "mesajyňyzy ýazyň",
-        "send": "mesaj ugradyň"
+        "name": "Siziň adyňyz*",
+        "email": "Siziň e-poçtaňyz*",
+        "phone": "Siziň telefonyňyz*",
+        "message": "Habaryňyzy ýazyň",
+        "send": "Habary ugradyň"
       }
     },
     "registration": {
       "login": {
-        "title": "Exklüzwi Giriş",
+        "title": "Exlusive-e Giriş",
         "subtitle": "Aşakdaky maglumatlaryňyzy giriziň",
         "emailOrPhone": "E-poçta ýa-da Telefon belgi",
-        "password": "parol",
+        "password": "Parol",
         "login": "giriş",
         "forgetPassword": "Paroly Unutdum"
       },
       "signUp": {
-        "title": "Hasap aç",
+        "title": "Akkaunt döretmek",
         "subtitle": "Aşakdaky maglumatlaryňyzy giriziň",
         "inputs": {
-          "name": "ady",
-          "email": "e-poçta",
-          "phoneNumber": "telefon belgisi",
-          "password": "parol"
+          "name": "Ady",
+          "email": "E-poçta",
+          "phoneNumber": "Telefon belgi",
+          "password": "Parol"
         },
-        "createAcc": "hasap aç",
-        "signGoogle": "Google bilen hasap aç",
-        "haveAccount": "Ýöne hasap açdymy?",
-        "login": "giriş"
+        "createAcc": "Akkaunt döretmek",
+        "signGoogle": "Google bilen döretmek",
+        "haveAccount": "Eýýäm akkaundyňyz bamy?",
+        "login": "Girmek"
       }
     },
     "wishlist": {
-      "wishlist": "Arzuwlar ýygyndysy",
-      "moveAllBag": "Hemmezini çantaya goý",
+      "wishlist": "Halanlarym",
+      "moveAllBag": "Hemmezini karzina goý",
       "forYou": "Siziň üçin",
-      "seeAll": "Ählisini gör"
+      "seeAll": "Ählisini görmek"
     },
     "index": {
       "sideMenu": {

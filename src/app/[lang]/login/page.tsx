@@ -8,8 +8,14 @@ import {
 import Image from "next/image";
 import { twMerge as tw } from "tailwind-merge";
 import { interMediumFont } from "fonts";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function page() {
+export default async function page() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
+
   return (
     <section
       className={tw(
@@ -38,31 +44,33 @@ export default function page() {
           <h1
             className={`${interMediumFont.className} text-[40px] max-2xl:text-3xl`}
           >
-            Log in to Exclusive
+            {dict.pages.registration.login.title}
           </h1>
-          <p className="text-lg max-2xl:text-base">Enter your details below</p>
+          <p className="text-lg max-2xl:text-base">
+            {dict.pages.registration.login.subtitle}
+          </p>
         </div>
         <form className="flex flex-col gap-14">
           <div className="flex flex-col gap-12">
             <InputWithLine
               props={{
                 type: "text",
-                placeholder: "email or phone number",
+                placeholder: dict.pages.registration.login.emailOrPhone,
                 required: true,
               }}
             />
             <InputWithLine
               props={{
                 type: "password",
-                placeholder: "password",
+                placeholder: dict.pages.registration.login.password,
                 required: true,
               }}
             />
           </div>
           <div className="flex items-center justify-between">
-            <PrimaryButton>log in</PrimaryButton>
+            <PrimaryButton>{dict.pages.registration.login.login}</PrimaryButton>
             <button className="text-color-button-1 text-lg capitalize max-2xl:text-base">
-              forget password?
+              {dict.pages.registration.login.forgetPassword}
             </button>
           </div>
         </form>

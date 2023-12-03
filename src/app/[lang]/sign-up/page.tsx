@@ -7,8 +7,13 @@ import Image from "next/image";
 import { twMerge as tw } from "tailwind-merge";
 import { interMediumFont } from "fonts";
 import SignUpForm from "@/components/pages/sign_up/SignUpForm";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
 export default async function page() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <section
       className={tw(
@@ -37,11 +42,13 @@ export default async function page() {
           <h1
             className={`${interMediumFont.className} text-[40px] max-2xl:text-3xl`}
           >
-            Create an account
+            {dict.pages.registration.signUp.title}
           </h1>
-          <p className="text-lg max-2xl:text-base">Enter your details below</p>
+          <p className="text-lg max-2xl:text-base">
+            {dict.pages.registration.signUp.subtitle}
+          </p>
         </div>
-        <SignUpForm />
+        <SignUpForm dict={dict} />
       </div>
     </section>
   );
