@@ -6,7 +6,7 @@ import HeadPhonesIcon from "@/components/cards/category_card/icons/HeadPhonesIco
 import PhoneIcon from "@/components/cards/category_card/icons/PhoneIcon";
 import WatchIcon from "@/components/cards/category_card/icons/WatchIcon";
 
-const iconComponents: { [key in TIconName]: JSX.Element } = {
+const iconComponents: { [key in string]: JSX.Element } = {
   CameraIcon: <CameraIcon />,
   ComputerIcon: <ComputerIcon />,
   GamingIcon: <GamingIcon />,

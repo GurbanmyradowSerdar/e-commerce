@@ -6,7 +6,13 @@ import { useEffect, useState } from "react";
 import { poppinsSemiBoldFont } from "fonts";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function SecondaryTimeCalc({ date }: { date: Date }) {
+export default function SecondaryTimeCalc({
+  date,
+  dict,
+}: {
+  date: Date;
+  dict: any;
+}) {
   const [time, setTime] = useState<TTime>();
 
   useEffect(() => {
@@ -33,7 +39,7 @@ export default function SecondaryTimeCalc({ date }: { date: Date }) {
         >
           {time.days}
         </p>
-        <p className="capitalize">days</p>
+        <p className="capitalize">{dict.pages.index.banner.days}</p>
       </div>
       <div
         className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
@@ -47,7 +53,7 @@ export default function SecondaryTimeCalc({ date }: { date: Date }) {
         >
           {time.hours}
         </p>
-        <p className="capitalize">hours</p>
+        <p className="capitalize">{dict.pages.index.banner.hours}</p>
       </div>
       <div
         className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
@@ -61,7 +67,7 @@ export default function SecondaryTimeCalc({ date }: { date: Date }) {
         >
           {time.minutes}
         </p>
-        <p className="capitalize">minutes</p>
+        <p className="capitalize">{dict.pages.index.banner.minutes}</p>
       </div>
       <div
         className="flex flex-col bg-color-bg items-center justify-center w-[80px] h-[80px] rounded-full -space-y-2
@@ -75,7 +81,7 @@ export default function SecondaryTimeCalc({ date }: { date: Date }) {
         >
           {time.seconds}
         </p>
-        <p className="capitalize">seconds</p>
+        <p className="capitalize">{dict.pages.index.banner.seconds}</p>
       </div>
     </div>
   ) : null;

@@ -35,42 +35,45 @@ export default async function Footer() {
           >
             Exlusive
           </Link>
-          <FooterTitle text="subscribe" className="mb-0 max-2xl:mb-0" />
+          <FooterTitle
+            text={dict.footer.otherTexts.subscribe}
+            className="mb-0 max-2xl:mb-0"
+          />
           <div className="space-y-2">
             <p className="text-lg max-2xl:text-base">
-              Get 10% off your first order
+              {dict.footer.otherTexts["10%Off"]}
             </p>
             <FooterInput />
           </div>
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_17%] max-3xl:flex-[1_0_20%]">
-          <FooterTitle text="support" />
+          <FooterTitle text={dict.footer.otherTexts.support} />
           {dict.footer.footerNav.map((item, i) => (
             <FooterLink key={i} {...item} isIndependent />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_10%] max-3xl:flex-[1_0_20%]">
-          <FooterTitle text="account" />
+          <FooterTitle text={dict.footer.otherTexts.account} />
           {dict.footer.footerNav1.map((item, i) => (
             <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_10%] max-3xl:flex-[1_0_20%]">
-          <FooterTitle text="quick link" />
+          <FooterTitle text={dict.footer.otherTexts.quickLink} />
           {dict.footer.footerNav2.map((item, i) => (
             <FooterLink isIndependent={false} key={i} {...item} />
           ))}
         </div>
         <div className="flex flex-col items-start gap-3 flex-[1_0_19%] max-3xl:flex-[1_0_20%]">
-          <FooterTitle text="download app" />
+          <FooterTitle text={dict.footer.otherTexts.downloadApp} />
           <div className="space-y-2">
             <p
               className={tw(
-                "text-color-text-2 text-base max-2xl:text-sm",
+                "text-color-text-2 max-w-[280px] text-base max-2xl:text-sm",
                 poppinsMediumFont.className
               )}
             >
-              Save $3 with App New User Only
+              {dict.footer.otherTexts.saveNewUser}
             </p>
             <div className="flex gap-2 items-center">
               <Image
@@ -123,7 +126,7 @@ export default async function Footer() {
       <div className="flex items-center justify-center border-t-[1px] border-color-footer-copyright gap-2 text-color-footer-copyright py-3">
         <CopyRightIcon className="w-6 h-6 max-2xl:w-5 max-2xl:h-5" />
         <p className="text-lg max-2xl:text-base">
-          Copyright Rimel 2022. All right reserved
+          {dict.footer.otherTexts.copyRight}
         </p>
       </div>
     </footer>

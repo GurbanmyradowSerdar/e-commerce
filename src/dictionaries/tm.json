@@ -148,18 +148,18 @@
       "section4": {
         "services": [
           {
-            "title": "BEZIŇ ARALYKDA GYSSAGLY WE ÝÜNDEP DÜZÜM",
-            "subtitle": "Hemmesi $140-den geçen ähli söwda üçin garamasyz dostawy",
+            "title": "MUGT WE TIZ ELTIP BERMEK",
+            "subtitle": "140 dollardan geçen ähli sargytly ulanyşlar üçin dastawka mugt",
             "image": "delivery.svg"
           },
           {
-            "title": "24/7 MÜŞDERI HYZMATY",
-            "subtitle": "Dostugyňyzçy 24/7 müşderi howpsuzlygy",
+            "title": "24/7 MÜŞDERI KÖMEGI",
+            "subtitle": "Dostlaşyk 24/7 müşderi gatnaşyk",
             "image": "support.svg"
           },
           {
-            "title": "PULU ÝENI WAGT BÄRDI ETME GARANTIÝASY",
-            "subtitle": "30 gün içinde pulu ýenewäris",
+            "title": "PUL GARANTIÝASY",
+            "subtitle": "30 günlük dowamlykda pul yzyna gaýtarylyp bilner",
             "image": "safety.svg"
           }
         ]
@@ -278,38 +278,38 @@
       "seeAll": "Ählisini gör"
     },
     "index": {
-      "sideMenu": [
-        [
+      "sideMenu": {
+        "plainMenu": [
           {
             "href": "electronics",
             "name": "elektronika"
           },
           {
             "href": "home-lifestyle",
-            "name": "iň-deňiz gowygerek"
+            "name": "hojalyk harytlar"
           },
           {
             "href": "medicine",
-            "name": "däldenler"
+            "name": "dermanlar"
           },
           {
             "href": "sport-outdoor",
-            "name": "sport & açylýok"
+            "name": "sport"
           },
           {
             "href": "baby-toys",
-            "name": "bebeğin & oýunlar"
+            "name": "bäbegiň oýunjaklar"
           },
           {
             "href": "groceries-pets",
-            "name": "ähli alamatlar & uçlar"
+            "name": "öý haýwanlar akssesuarlar"
           },
           {
             "href": "health-beauty",
-            "name": "saglyk & güzellik"
+            "name": "saglyk & gözellik"
           }
         ],
-        [
+        "otherMenu": [
           {
             "menuItems": [
               {
@@ -485,14 +485,14 @@
             "menuName": "erkekler üçin fason"
           }
         ]
-      ],
+      },
       "sales": {
         "title": "şu günki",
-        "description": "hazar satyşlar",
-        "days": "Günler",
-        "hours": "Sagatlar",
-        "minutes": "Minutlar",
-        "seconds": "Saniýeler",
+        "description": "uly satyşlar",
+        "days": "Gün",
+        "hours": "Sagat",
+        "minutes": "Minut",
+        "seconds": "sekund",
         "viewAll": "Ählisini gör"
       },
       "category": {
@@ -508,7 +508,7 @@
             "icon": "ComputerIcon"
           },
           {
-            "title": "akylly saatlar",
+            "title": "akyllySagatlar",
             "icon": "WatchIcon"
           },
           {
@@ -528,7 +528,7 @@
             "icon": "ComputerIcon"
           },
           {
-            "title": "akylly saatlar",
+            "title": "akyllySagatlar",
             "icon": "WatchIcon"
           },
           {
@@ -538,37 +538,38 @@
         ]
       },
       "bestSelling": {
-        "title": "bu aý",
-        "description": "ençemek satylan harytlar"
+        "title": "bu aýdaky",
+        "description": "gowy satylýan harytlar",
+        "viewAll": "Ählisini Gör"
       },
       "banner": {
         "title": "kategoriýalar",
-        "description": "saz işleýänizi guşandyr",
-        "days": "Günler",
-        "minutes": "Minutlar",
-        "seconds": "Saniýeler",
-        "hours": "Sagatlar",
+        "description": "saz diňlemekden täze tejtibe al",
+        "days": "Gün",
+        "minutes": "Minut",
+        "seconds": "sekund",
+        "hours": "Sagat",
         "buy": "häzir satyn al"
       },
       "products": {
-        "title": "bizin harytlar",
-        "description": "bizin harytlarymyz üstünlikle inýär",
+        "title": "biziň harytlarymyz",
+        "description": "biziň harytlarymyza syn et",
         "viewAll": "Ählisini gör"
       },
       "newArrival": {
-        "title": "öňki",
+        "title": "Täze",
         "description": "täze gelen harytlar",
         "ps5": {
           "title": "PlayStation 5",
-          "description": "PS5-iň siýah we ak weýrana galyşan täze modeli"
+          "description": "PS5-iň gara we ak reňkli täze modeller"
         },
         "women": {
           "title": "Zenanyň kolleksiýalary",
-          "description": "Zenana aýratyn üslubda kolleksiýalar"
+          "description": "Zenanlar üçin aýratyn kolleksiýalar"
         },
         "speakers": {
           "title": "Kolonkalar",
-          "description": "Amazon kabelliksiz kolonkalar"
+          "description": "Amazon kabellsiz kolonkalar"
         },
         "perfume": {
           "title": "Parfüm",
@@ -577,18 +578,18 @@
       },
       "services": [
         {
-          "title": "ÝÜPLEŞIK WE TEZ ULANYS",
-          "subtitle": "140 dollar bellenen ähli sargytly ulanyşlar üçin ýüpleşik ulanys",
+          "title": "MUGT WE TIZ ELTIP BERMEK",
+          "subtitle": "140 dollardan geçen ähli sargytly ulanyşlar üçin dastawka mugt",
           "image": "delivery.svg"
         },
         {
-          "title": "24/7 MÜŞDERI GURNAŞYKÝETI",
-          "subtitle": "Dostça 24/7 müşderi gurnaşyk",
+          "title": "24/7 MÜŞDERI KÖMEGI",
+          "subtitle": "Dostlaşyk 24/7 müşderi gatnaşyk",
           "image": "support.svg"
         },
         {
-          "title": "PULY ETRÄN GARYŇ BÄRÜŞI",
-          "subtitle": "30 günlük dowamlykda pul bärýänlik",
+          "title": "PUL GARANTIÝASY",
+          "subtitle": "30 günlük dowamlykda pul yzyna gaýtarylyp bilner",
           "image": "safety.svg"
         }
       ]
@@ -655,7 +656,10 @@
       "emailPlaceholder": "E-mailiňizi ýazyň",
       "downloadApp": "programmany ýükla",
       "saveNewUser": "Täze ulanyjylar üçin 3$ jemle",
-      "copyRight": "Rimel 2022. Ähli hukuklar goralan"
+      "copyRight": "Rimel 2022. Ähli hukuklar goralan",
+      "support": "Kömek",
+      "account": "Akkaunt",
+      "quickLink": "Ssylka"
     }
   }
 }

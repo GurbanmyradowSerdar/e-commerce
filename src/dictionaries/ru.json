@@ -278,8 +278,8 @@
       "seeAll": "посмотреть все"
     },
     "index": {
-      "sideMenu": [
-        [
+      "sideMenu": {
+        "plainMenu": [
           {
             "href": "electronics",
             "name": "электроника"
@@ -309,7 +309,7 @@
             "name": "здоровье и красота"
           }
         ],
-        [
+        "otherMenu": [
           {
             "menuItems": [
               {
@@ -485,10 +485,10 @@
             "menuName": "мужская мода"
           }
         ]
-      ],
+      },
       "sales": {
         "title": "сегодня",
-        "description": "вспышковые распродажи",
+        "description": "большие распродажи",
         "days": "Дни",
         "hours": "Часы",
         "minutes": "Минуты",
@@ -508,7 +508,7 @@
             "icon": "ComputerIcon"
           },
           {
-            "title": "умные часы",
+            "title": "умныеЧасы",
             "icon": "WatchIcon"
           },
           {
@@ -528,7 +528,7 @@
             "icon": "ComputerIcon"
           },
           {
-            "title": "умные часы",
+            "title": "умныеЧасы",
             "icon": "WatchIcon"
           },
           {
@@ -538,12 +538,13 @@
         ]
       },
       "bestSelling": {
-        "title": "этот месяц",
-        "description": "лучшие продукты продаж"
+        "title": "в этот месяц",
+        "description": "лучшие продукты продаж",
+        "viewAll": "Посмотреть Все"
       },
       "banner": {
         "title": "категории",
-        "description": "усилите свой музыкальный опыт",
+        "description": "осознайте новый музыкальный опыт",
         "days": "Дни",
         "minutes": "Минуты",
         "seconds": "Секунды",
@@ -655,7 +656,10 @@
       "emailPlaceholder": "введите ваш email",
       "downloadApp": "скачать приложение",
       "saveNewUser": "экономьте 3$ только для новых пользователей приложения",
-      "copyRight": "Rimel 2022. Все права защищены"
+      "copyRight": "Rimel 2022. Все права защищены",
+      "support": "поддержка",
+      "account": "аккаунт",
+      "quickLink": "Ссылки"
     }
   }
 }

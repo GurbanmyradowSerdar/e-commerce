@@ -8,7 +8,7 @@ export default async function ServicesSection() {
   const dict = await getDict(locale);
   return (
     <section className="flex items-center justify-evenly">
-      {dict.pages.aboutUs.section4.services.map((item, i) => (
+      {dict.pages.index.services.map((item, i) => (
         <ServiceCard key={i} {...item} />
       ))}
     </section>

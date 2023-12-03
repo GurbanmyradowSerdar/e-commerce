@@ -3,15 +3,20 @@ import ProductSwiper from "@/components/swiper/ProductSwiper";
 import SectionDescription from "@/components/titles/SectionDescription";
 import SectionTitle from "@/components/titles/SectionTitle";
 import { homeBestSellingSwiper } from "@/data";
+import { getDict } from "@/dictionaries/dictionaries";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
 
-export default function BestSellingSection() {
+export default async function BestSellingSection() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <section className="flex flex-col gap-20 max-2xl:gap-10">
       <div className="flex flex-col gap-7">
-        <SectionTitle text="this month" />
+        <SectionTitle text={dict.pages.index.bestSelling.title} />
         <div className="flex items-center justify-between">
-          <SectionDescription text="best selling products" />
-          <PrimaryButton>view all</PrimaryButton>
+          <SectionDescription text={dict.pages.index.bestSelling.description} />
+          <PrimaryButton>{dict.pages.index.bestSelling.viewAll}</PrimaryButton>
         </div>
       </div>
       <div>

@@ -8,16 +8,22 @@ import { homeSalesSwiper } from "@/data";
 import ArrowButton from "@/components/buttons/arrow_button/ArrowButton";
 import { getLocaleInServer } from "@/shared/utils";
 import { headers } from "next/headers";
+import { getDict } from "@/dictionaries/dictionaries";
 
-export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
+export default async function SalesSection({
+  salesUntil,
+}: {
+  salesUntil: Date;
+}) {
   const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <section className="flex flex-col gap-7 border-b border-color-divider pb-14 max-2xl:pb-10">
-      <SectionTitle text="today's" />
+      <SectionTitle text={dict.pages.index.sales.title} />
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-20">
-          <SectionDescription text="flash sales" />
-          <PrimaryTimeCalc date={salesUntil} />
+          <SectionDescription text={dict.pages.index.sales.description} />
+          <PrimaryTimeCalc date={salesUntil} dict={dict} />
         </div>
         <div className="flex items-center gap-2">
           <ArrowButton direction="left" />
@@ -49,7 +55,7 @@ export default function SalesSection({ salesUntil }: { salesUntil: Date }) {
       </div>
       <div className="flex items-center justify-center mt-16 max-2xl:mt-8">
         <Link href={`/${locale}/products/sales`}>
-          <PrimaryButton>view all products</PrimaryButton>
+          <PrimaryButton>{dict.pages.index.sales.viewAll}</PrimaryButton>
         </Link>
       </div>
     </section>

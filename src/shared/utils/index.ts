@@ -104,7 +104,7 @@ export function calculateDeliveryPrice(
       }
     }, 0);
 
-    return sum >= 500 ? 0 : 100;
+    return sum >= 140 ? 0 : 100;
   } else {
     return state;
   }

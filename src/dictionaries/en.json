@@ -278,8 +278,8 @@
       "seeAll": "see All"
     },
     "index": {
-      "sideMenu": [
-        [
+      "sideMenu": {
+        "plainMenu": [
           {
             "href": "electronics",
             "name": "electronics"
@@ -309,7 +309,7 @@
             "name": "health & beauty"
           }
         ],
-        [
+        "otherMenu": [
           {
             "menuItems": [
               {
@@ -485,7 +485,7 @@
             "menuName": "men's fashion"
           }
         ]
-      ],
+      },
       "sales": {
         "title": "today's",
         "description": "flash sales",
@@ -539,7 +539,8 @@
       },
       "bestSelling": {
         "title": "this month",
-        "description": "best selling products"
+        "description": "best selling products",
+        "viewAll": "view all"
       },
       "banner": {
         "title": "categories",
@@ -655,7 +656,10 @@
       "emailPlaceholder": "enter your email",
       "downloadApp": "download App",
       "saveNewUser": "save 3$ with App New User Only",
-      "copyRight": "Rimel 2022. All right reserved"
+      "copyRight": "Rimel 2022. All right reserved",
+      "support": "supprot",
+      "account": "account",
+      "quickLink": "quick link"
     }
   }
 }

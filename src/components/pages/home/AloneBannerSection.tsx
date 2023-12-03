@@ -2,28 +2,34 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryTimeCalc from "@/components/time_calculating/SecondaryTimeCalc";
 import SectionDescription from "@/components/titles/SectionDescription";
 import SectionTitle from "@/components/titles/SectionTitle";
+import { getDict } from "@/dictionaries/dictionaries";
+import { getLocaleInServer } from "@/shared/utils";
+import { headers } from "next/headers";
 import Image from "next/image";
 
-export default function AloneBannerSection({
+export default async function AloneBannerSection({
   salesUntil,
 }: {
   salesUntil: Date;
 }) {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
+
   return (
     <section className="bg-color-bg-1 flex px-16 py-20">
       <div className="flex flex-col items-start justify-between gap-8 flex-1">
         <SectionTitle
           withoutQuadrant
-          text="categories"
+          text={dict.pages.index.banner.title}
           className="text-color-text-4"
         />
         <SectionDescription
-          text="Enhance Your Music Experience"
+          text={dict.pages.index.banner.description}
           className="text-color-text-1 text-6xl leading-[70px] max-w-xl max-3xl:text-5xl max-3xl:leading-[60px] max-2xl:max-w-md"
         />
-        <SecondaryTimeCalc date={salesUntil} />
+        <SecondaryTimeCalc date={salesUntil} dict={dict} />
         <PrimaryButton className="bg-color-button hover:bg-color-button-hover">
-          buy now!
+          {dict.pages.index.banner.buy}
         </PrimaryButton>
       </div>
       <Image

@@ -6,7 +6,13 @@ import { useEffect, useState } from "react";
 import { interBoldFont, poppinsMediumFont } from "fonts";
 import { twMerge as tw } from "tailwind-merge";
 
-export default function PrimaryTimeCalc({ date }: { date: Date }) {
+export default function PrimaryTimeCalc({
+  date,
+  dict,
+}: {
+  date: Date;
+  dict: any;
+}) {
   const [time, setTime] = useState<TTime>();
 
   useEffect(() => {
@@ -28,7 +34,7 @@ export default function PrimaryTimeCalc({ date }: { date: Date }) {
             poppinsMediumFont.className
           )}
         >
-          days
+          {dict.pages.index.sales.days}
         </p>
         <p className={tw("text-4xl max-2xl:text-2xl", interBoldFont.className)}>
           {time.days}
@@ -49,7 +55,7 @@ export default function PrimaryTimeCalc({ date }: { date: Date }) {
             poppinsMediumFont.className
           )}
         >
-          hours
+          {dict.pages.index.sales.hours}
         </p>
         <p className={tw("text-4xl max-2xl:text-2xl", interBoldFont.className)}>
           {time.hours}
@@ -70,7 +76,7 @@ export default function PrimaryTimeCalc({ date }: { date: Date }) {
             poppinsMediumFont.className
           )}
         >
-          minutes
+          {dict.pages.index.sales.minutes}
         </p>
         <p className={tw("text-4xl max-2xl:text-2xl", interBoldFont.className)}>
           {time.minutes}
@@ -91,7 +97,7 @@ export default function PrimaryTimeCalc({ date }: { date: Date }) {
             poppinsMediumFont.className
           )}
         >
-          seconds
+          {dict.pages.index.sales.seconds}
         </p>
         <p className={tw("text-4xl max-2xl:text-2xl", interBoldFont.className)}>
           {time.seconds}
