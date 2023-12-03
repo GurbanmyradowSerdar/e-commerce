@@ -26,6 +26,7 @@ export default async function page() {
       )}
     >
       <NavigationTrain />
+
       <div
         className="text-color-text-3 space-y-8 flex-[0_0_20%] shadow-[0px_0px_20px_1px_rgba(25,25,25,0.1)] p-5
       max-3xl:flex-[0_0_25%] max-2xl:justify-evenly max-2xl:flex max-2xl:flex-col"
