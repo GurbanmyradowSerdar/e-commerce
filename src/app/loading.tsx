@@ -1,6 +1,11 @@
+import { getDict } from "@/dictionaries/dictionaries";
+import { getLocaleInServer } from "@/shared/utils";
 import { poppinsMediumFont } from "fonts";
+import { headers } from "next/headers";
 
-export default function Loading() {
+export default async function Loading() {
+  const locale = getLocaleInServer(headers);
+  const dict = await getDict(locale);
   return (
     <div className="flex items-center justify-center h-screen bg-black/5">
       <div className="flex flex-col items-center gap-5">
@@ -9,7 +14,7 @@ export default function Loading() {
           role="status"
         ></div>
         <div className={`text-3xl ${poppinsMediumFont.className}`}>
-          Loading please wait...
+          {dict.pages.loading}
         </div>
       </div>
     </div>
