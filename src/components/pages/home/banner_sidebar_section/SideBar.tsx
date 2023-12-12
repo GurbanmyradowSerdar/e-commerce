@@ -17,7 +17,12 @@ export default async function SideBar() {
 
       {/* usual links */}
       {dict.pages.index.sideMenu.plainMenu.map((item, i) => (
-        <Link href={`/${locale}/${item.href}`} className="capitalize" key={i}>
+        <Link
+          href={`/${locale}/${item.href}`}
+          className="capitalize"
+          key={i}
+          prefetch={false}
+        >
           {item.name}
         </Link>
       ))}

@@ -9,6 +9,7 @@ export default function FooterLink({ href, text, isIndependent }: IFooterLink) {
   return (
     <Link
       href={isIndependent ? href : `/${locale}/${href}`}
+      prefetch={false}
       className="hover:text-color-text-2 transition-colors duration-300 ease-in-out text-base max-2xl:text-sm"
     >
       {text}

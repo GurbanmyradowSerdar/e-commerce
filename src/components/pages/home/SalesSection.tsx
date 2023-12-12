@@ -54,7 +54,7 @@ export default async function SalesSection({
         />
       </div>
       <div className="flex items-center justify-center mt-16 max-2xl:mt-8">
-        <Link href={`/${locale}/products/sales`}>
+        <Link href={`/${locale}/products/sales`} prefetch={false}>
           <PrimaryButton>{dict.pages.index.sales.viewAll}</PrimaryButton>
         </Link>
       </div>
