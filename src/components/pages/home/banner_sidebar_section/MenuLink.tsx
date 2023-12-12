@@ -23,7 +23,9 @@ export default function MenuLink({
             key={i}
             className="duration-300 transition-colors hover:bg-gray-200 rounded-sm"
           >
-            <Link href={`/en/${menuItem.href}`}>{menuItem.name}</Link>
+            <Link href={`/en/${menuItem.href}`} prefetch={false}>
+              {menuItem.name}
+            </Link>
           </MenuItem>
         ))}
       </MenuList>
