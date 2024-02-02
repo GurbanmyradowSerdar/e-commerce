@@ -47,7 +47,7 @@ export default async function page() {
         </div>
         <Image
           alt="girls"
-          src={"/images/about/girls.png"}
+          src={"/images/about/girls.webp"}
           width={700}
           height={700}
           className="w-[900px] object-contain

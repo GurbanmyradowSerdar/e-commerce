@@ -26,7 +26,7 @@ export default async function page() {
     >
       <Image
         alt="phones"
-        src={"/images/sign_up/phones.png"}
+        src={"/images/sign_up/phones.webp"}
         width={800}
         height={800}
         className="w-[1000px] object-contain max-3xl:w-[750px] max-2xl:w-[600px]"

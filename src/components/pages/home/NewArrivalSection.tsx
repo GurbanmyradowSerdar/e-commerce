@@ -17,7 +17,7 @@ export default async function NewArrivalSection() {
       </div>
       <div className="grid grid-cols-4 grid-rows-2 h-[600px] gap-10 max-2xl:h-[500px]">
         <div
-          className="col-span-2 row-span-2 bg-[url(/images/home/ps5.png)] bg-color-bg-1 bg-no-repeat bg-contain bg-bottom
+          className="col-span-2 row-span-2 bg-[url(/images/home/ps5.webp)] bg-color-bg-1 bg-no-repeat bg-contain bg-bottom
       flex items-end p-10 rounded-sm"
         >
           <BannerContent
@@ -26,7 +26,7 @@ export default async function NewArrivalSection() {
           />
         </div>
         <div
-          className="col-span-2 flex items-end p-10 rounded-sm bg-[url(/images/home/girl-with-hat.png)] bg-color-bg-1 bg-no-repeat bg-contain bg-right
+          className="col-span-2 flex items-end p-10 rounded-sm bg-[url(/images/home/girl-with-hat.webp)] bg-color-bg-1 bg-no-repeat bg-contain bg-right
         shadow-[inset_-100px_0_100px_10px_rgba(255,255,255,0.2)]"
         >
           <BannerContent
@@ -37,7 +37,7 @@ export default async function NewArrivalSection() {
         <div className="flex items-end p-10 rounded-sm bg-color-bg-1 relative">
           <Image
             alt="banner"
-            src={"/images/home/speakers.png"}
+            src={"/images/home/speakers.webp"}
             width={300}
             height={300}
             className="h-52 object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.2)] max-2xl:h-40"
@@ -51,7 +51,7 @@ export default async function NewArrivalSection() {
         <div className="flex items-end p-10 bg-color-bg-1 rounded-sm relative">
           <Image
             alt="banner"
-            src={"/images/home/perfume.png"}
+            src={"/images/home/perfume.webp"}
             width={300}
             height={300}
             className="h-52 object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.2)] max-2xl:h-40"

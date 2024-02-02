@@ -34,7 +34,7 @@ export default async function AloneBannerSection({
       </div>
       <Image
         alt="banner-image"
-        src={"/images/home/banner-1.png"}
+        src={"/images/home/banner-1.webp"}
         width={700}
         height={700}
         className="object-contain drop-shadow-[0_0_100px_rgba(255,255,255,0.5)] w-auto h-auto

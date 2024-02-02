@@ -90,7 +90,7 @@ export default async function Footer() {
                 >
                   <Image
                     alt=""
-                    src={"/google-play.png"}
+                    src={"/google-play.webp"}
                     width={100}
                     height={100}
                     className="w-6 h-6 object-contain max-2xl:w-5 max-2xl:h-5"

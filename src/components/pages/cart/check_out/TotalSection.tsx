@@ -92,7 +92,7 @@ export default function TotalSection({ dict }: IDict) {
               {new Array(4).fill(0).map((_, i) => (
                 <Image
                   alt="card"
-                  src={`/images/check_out/credit-card-${i}.png`}
+                  src={`/images/check_out/credit-card-${i}.webp`}
                   width={100}
                   height={100}
                   key={i}

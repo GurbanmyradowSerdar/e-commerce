@@ -2,17 +2,17 @@ import { IProductCard } from "types";
 
 // ! home page banners at start
 export const homeBanners = [
-  "banner.png",
-  "banner.png",
-  "banner.png",
-  "banner.png",
-  "banner.png",
+  "banner.webp",
+  "banner.webp",
+  "banner.webp",
+  "banner.webp",
+  "banner.webp",
 ];
 
 // ! home page > sales > swiper
 export const homeSalesSwiper: IProductCard[] = [
   {
-    images: ["gamepad-red.png"],
+    images: ["gamepad-red.webp"],
     name: "HAVIT HV-G92 Gamepad",
     price: 160,
     rating: [1, 1, 1, 1, 1],
@@ -20,7 +20,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 40,
   },
   {
-    images: ["keyboard.png"],
+    images: ["keyboard.webp"],
     name: "AK-900 Wired Keyboard",
     price: 1160,
     rating: [1, 1, 1, 1, 0],
@@ -28,7 +28,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 35,
   },
   {
-    images: ["monitor.png"],
+    images: ["monitor.webp"],
     name: "IPS LCD Gaming Monitor",
     price: 400,
     rating: [1, 1, 1, 1, 1],
@@ -36,7 +36,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 30,
   },
   {
-    images: ["chair.png"],
+    images: ["chair.webp"],
     name: "S-Series Comfort Chair ",
     price: 400,
     rating: [1, 1, 1, 1, 0.5],
@@ -44,7 +44,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 25,
   },
   {
-    images: ["keyboard.png"],
+    images: ["keyboard.webp"],
     name: "AK-900 Wired Keyboard",
     price: 1160,
     rating: [1, 1, 1, 1, 0],
@@ -52,7 +52,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 35,
   },
   {
-    images: ["monitor.png"],
+    images: ["monitor.webp"],
     name: "IPS LCD Gaming Monitor",
     price: 400,
     rating: [1, 1, 1, 1, 1],
@@ -60,7 +60,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 30,
   },
   {
-    images: ["chair.png"],
+    images: ["chair.webp"],
     name: "S-Series Comfort Chair ",
     price: 400,
     rating: [1, 1, 1, 1, 0.5],
@@ -68,7 +68,7 @@ export const homeSalesSwiper: IProductCard[] = [
     discount: 25,
   },
   {
-    images: ["gamepad-red.png"],
+    images: ["gamepad-red.webp"],
     name: "HAVIT HV-G92 Gamepad",
     price: 160,
     rating: [1, 1, 1, 1, 1],
@@ -80,7 +80,7 @@ export const homeSalesSwiper: IProductCard[] = [
 // ! home page > best selling > swiper
 export const homeBestSellingSwiper: IProductCard[] = [
   {
-    images: ["coat.png"],
+    images: ["coat.webp"],
     name: "the north coat",
     price: 360,
     rating: [1, 1, 1, 1, 1],
@@ -88,7 +88,7 @@ export const homeBestSellingSwiper: IProductCard[] = [
     discount: 27,
   },
   {
-    images: ["bag.png"],
+    images: ["bag.webp"],
     name: "gucci duffle bag",
     price: 1160,
     rating: [1, 1, 1, 1, 0.5],
@@ -96,7 +96,7 @@ export const homeBestSellingSwiper: IProductCard[] = [
     discount: 17,
   },
   {
-    images: ["cpu-cooler.png"],
+    images: ["cpu-cooler.webp"],
     name: "RGB liquid CPU Cooler",
     price: 170,
     rating: [1, 1, 1, 1, 0.5],
@@ -104,14 +104,14 @@ export const homeBestSellingSwiper: IProductCard[] = [
     discount: 5,
   },
   {
-    images: ["book-self.png"],
+    images: ["book-self.webp"],
     name: "Small BookSelf",
     price: 360,
     rating: [1, 1, 1, 1, 1],
     ratingAmount: 15,
   },
   {
-    images: ["coat.png"],
+    images: ["coat.webp"],
     name: "the north coat",
     price: 360,
     rating: [1, 1, 1, 1, 1],
@@ -119,7 +119,7 @@ export const homeBestSellingSwiper: IProductCard[] = [
     discount: 27,
   },
   {
-    images: ["bag.png"],
+    images: ["bag.webp"],
     name: "gucci duffle bag",
     price: 1160,
     rating: [1, 1, 1, 1, 0.5],
@@ -127,7 +127,7 @@ export const homeBestSellingSwiper: IProductCard[] = [
     discount: 17,
   },
   {
-    images: ["book-self.png"],
+    images: ["book-self.webp"],
     name: "Small BookSelf",
     price: 360,
     rating: [1, 1, 1, 1, 1],
@@ -138,35 +138,35 @@ export const homeBestSellingSwiper: IProductCard[] = [
 // ! home page > products > swiper
 export const homeProductsSwiper: IProductCard[] = [
   {
-    images: ["dog-food.png"],
+    images: ["dog-food.webp"],
     name: "Breed Dry Dog Food",
     price: 100,
     rating: [1, 1, 1, 0, 0],
     ratingAmount: 35,
   },
   {
-    images: ["camera.png"],
+    images: ["camera.webp"],
     name: "CANON EOS DSLR Camera",
     price: 360,
     rating: [1, 1, 1, 1, 0],
     ratingAmount: 95,
   },
   {
-    images: ["laptop.png"],
+    images: ["laptop.webp"],
     name: "ASUS FHD Gaming Laptop",
     price: 700,
     rating: [1, 1, 1, 1, 1],
     ratingAmount: 325,
   },
   {
-    images: ["cream.png"],
+    images: ["cream.webp"],
     name: "Curology Product Set ",
     price: 500,
     rating: [1, 1, 1, 1, 0],
     ratingAmount: 145,
   },
   {
-    images: ["kids-car.png"],
+    images: ["kids-car.webp"],
     name: "kids eletric car",
     price: 960,
     rating: [1, 1, 1, 1, 1],
@@ -175,7 +175,7 @@ export const homeProductsSwiper: IProductCard[] = [
     isNew: true,
   },
   {
-    images: ["soccers.png"],
+    images: ["soccers.webp"],
     name: "Jr. Zoom Soccer Cleats",
     price: 1160,
     rating: [1, 1, 1, 1, 0.5],
@@ -183,7 +183,7 @@ export const homeProductsSwiper: IProductCard[] = [
     colors: ["yellow", "green"],
   },
   {
-    images: ["black-gamepad.png"],
+    images: ["black-gamepad.webp"],
     name: "GP11 Shooter USB Gamepad",
     price: 660,
     rating: [1, 1, 1, 1, 0.5],
@@ -191,7 +191,7 @@ export const homeProductsSwiper: IProductCard[] = [
     colors: ["black", "purple"],
   },
   {
-    images: ["jacket.png"],
+    images: ["jacket.webp"],
     name: "Quilted Satin Jacket",
     price: 160,
     rating: [1, 1, 1, 1, 0.5],
@@ -199,14 +199,14 @@ export const homeProductsSwiper: IProductCard[] = [
     colors: ["darkblue", "red"],
   },
   {
-    images: ["cream.png"],
+    images: ["cream.webp"],
     name: "Curology Product Set ",
     price: 500,
     rating: [1, 1, 1, 1, 0],
     ratingAmount: 145,
   },
   {
-    images: ["kids-car.png"],
+    images: ["kids-car.webp"],
     name: "kids eletric car",
     price: 960,
     rating: [1, 1, 1, 1, 1],
@@ -215,21 +215,21 @@ export const homeProductsSwiper: IProductCard[] = [
     isNew: true,
   },
   {
-    images: ["dog-food.png"],
+    images: ["dog-food.webp"],
     name: "Breed Dry Dog Food",
     price: 100,
     rating: [1, 1, 1, 0, 0],
     ratingAmount: 35,
   },
   {
-    images: ["camera.png"],
+    images: ["camera.webp"],
     name: "CANON EOS DSLR Camera",
     price: 360,
     rating: [1, 1, 1, 1, 0],
     ratingAmount: 95,
   },
   {
-    images: ["laptop.png"],
+    images: ["laptop.webp"],
     name: "ASUS FHD Gaming Laptop",
     price: 700,
     rating: [1, 1, 1, 1, 1],
@@ -241,7 +241,7 @@ export const homeProductsSwiper: IProductCard[] = [
 // ! related products in wishlist && product[id] page
 export const relatedProducts: IProductCard[] = [
   {
-    images: ["gamepad-red.png"],
+    images: ["gamepad-red.webp"],
     name: "HAVIT HV-G92 Gamepad",
     price: 160,
     rating: [1, 1, 1, 1, 1],
@@ -249,14 +249,14 @@ export const relatedProducts: IProductCard[] = [
     discount: 40,
   },
   {
-    images: ["camera.png"],
+    images: ["camera.webp"],
     name: "CANON EOS DSLR Camera",
     price: 360,
     rating: [1, 1, 1, 1, 0],
     ratingAmount: 95,
   },
   {
-    images: ["jacket.png"],
+    images: ["jacket.webp"],
     name: "Quilted Satin Jacket",
     price: 160,
     rating: [1, 1, 1, 1, 0.5],
@@ -264,14 +264,14 @@ export const relatedProducts: IProductCard[] = [
     colors: ["darkblue", "red"],
   },
   {
-    images: ["cream.png"],
+    images: ["cream.webp"],
     name: "Curology Product Set ",
     price: 500,
     rating: [1, 1, 1, 1, 0],
     ratingAmount: 145,
   },
   {
-    images: ["kids-car.png"],
+    images: ["kids-car.webp"],
     name: "kids eletric car",
     price: 960,
     rating: [1, 1, 1, 1, 1],
